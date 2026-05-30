@@ -32,39 +32,7 @@ Mỗi mục đích có thể được phân rã thành **nhiều mục tiêu c�
 
 ## 2.2 Tài liệu phác thảo dự án (Statement of Work — SOW)
 
-### 2.2.0 Tổng quan về SOW
-
-**Statement of Work (SOW)** là văn bản thống nhất giữa **Lãnh đạo, Quản lý dự án, Khách hàng và Nhà tài trợ** về mục đích/mục tiêu rõ ràng của dự án. SOW có vai trò:
-- Liệt kê chi phí, lịch trình và kết quả dự kiến.
-- Xác định vai trò và trách nhiệm các bên.
-- Có thể xét duyệt và cập nhật trong quá trình triển khai.
-
-**Các thành phần chủ yếu của SOW:**
-1. Giới thiệu dự án
-2. Mục đích và mục tiêu
-3. Phạm vi
-4. Những người liên quan chính
-5. Tài nguyên dự án
-6. Các mốc thời gian
-7. Kinh phí
-8. Danh sách rủi ro
-9. Điều chỉnh và cập nhật
-10. Chữ ký các bên
-
-**Quy trình thực hiện SOW:**
-
-```
-Viết dự thảo → Chuyển cho đơn vị tài trợ/khách hàng → Tổ chức họp, xét duyệt
-    ↓                                                          ↓
-Đã thống nhất → Các bên ký                          Không đạt → Sửa chữa → Quay lại xét duyệt
-```
-
-**Các sai lầm cần tránh khi lập SOW:**
-- ❌ Nội dung không đầy đủ (đặc biệt là các ràng buộc).
-- ❌ Nhượng bộ các yêu cầu không khả thi.
-- ❌ Câu chữ mơ hồ, không rõ nghĩa.
-- ❌ Không công bố rộng rãi bản phác thảo đã ký.
-- ❌ Sau khi đã ký, những thay đổi (nếu có) mà không được cập nhật và thống nhất lại.
+Statement of Work (SOW) là văn bản thống nhất giữa các bên liên quan về mục đích, mục tiêu, phạm vi, lịch trình, kinh phí và kết quả chuyển giao của dự án. SOW được xây dựng từ đầu dự án và có thể điều chỉnh khi có thay đổi được các bên thống nhất.
 
 ---
 
@@ -163,72 +131,18 @@ SOW có thể được điều chỉnh khi có thay đổi phạm vi hoặc yêu
 
 ---
 
-## 2.3 Xác định vai trò và trách nhiệm trong dự án
+## 2.3 Vai trò và trách nhiệm trong dự án
 
-### 2.3.1 Ba đối tượng tham gia dự án (theo lý thuyết)
+### 2.3.1 Phân công vai trò
 
-Theo lý thuyết quản lý dự án, mọi dự án đều có **3 nhóm đối tượng chính** tham gia:
+| Vai trò | Người đảm nhiệm | Trách nhiệm chính |
+|---------|:----------------:|-------------------|
+| **Khách hàng / Nhà tài trợ** | Giảng viên hướng dẫn | Đặt yêu cầu, phản hồi tiến độ, đánh giá và chấm điểm |
+| **PM + AI Developer** | Thành viên A | Quản lý dự án, phân công, ARX/Kalman/MPC, tích hợp hệ thống |
+| **FW + HW Engineer** | Thành viên B | Thiết kế mạch, lập trình ESP32, cảm biến, relay, WebSocket client |
+| **Web + Backend Developer** | Thành viên C | Django Backend, ReactJS Dashboard, API, Database |
 
-**① Nhà tài trợ / Khách hàng:**
-
-| Đối tượng | Trách nhiệm |
-|-----------|-------------|
-| **Nhà tài trợ** | Cung cấp, giải quyết tài chính và phê duyệt dự án; Đề ra và đảm bảo mục tiêu của dự án được đáp ứng; Xét duyệt và nghiệm thu kết quả |
-| **Khách hàng** | Đưa ra yêu cầu dự án; Thụ hưởng kết quả và hỗ trợ cung cấp thông tin; Tham gia xét duyệt và nghiệm thu |
-
-**② Ban giám đốc / Quản lý dự án:**
-
-| Đối tượng | Trách nhiệm |
-|-----------|-------------|
-| **Ban giám đốc** | Bổ nhiệm nhân sự Ban quản lý dự án; Phụ trách giấy phép, thủ tục pháp lý và triển khai dự án |
-| **Quản lý dự án (PM)** | Tổ chức đội ngũ, báo cáo hiện trạng; Đảm bảo phạm vi, chất lượng sản phẩm; Quản lý thay đổi, kiểm soát kế hoạch, tài nguyên và chi phí |
-
-**③ Đội dự án:**
-- Thực hiện các nhiệm vụ chuyên môn cụ thể.
-- Cung cấp thông tin hỗ trợ quản lý (các công việc phải làm, ước lượng thời gian, các thay đổi nảy sinh).
-- Báo cáo hiện trạng công việc định kỳ cho Quản lý dự án.
-
-### 2.3.2 Áp dụng cho dự án Smart Greenhouse
-
-| Vai trò lý thuyết | Áp dụng trong dự án | Người đảm nhiệm |
-|-------------------|---------------------|:----------------:|
-| Nhà tài trợ | Cung cấp kinh phí (tự túc) | Cả nhóm A, B, C |
-| Khách hàng | Đặt yêu cầu, nghiệm thu, chấm điểm | Giảng viên hướng dẫn |
-| Ban giám đốc / PM | Quản lý dự án, điều phối, kiểm soát | **Thành viên A** |
-| Đội dự án | Thực hiện chuyên môn, báo cáo tiến độ | A, B, C |
-
-> **Lưu ý:** Trong bối cảnh đồ án sinh viên, một số vai trò bị gộp — giảng viên vừa là khách hàng vừa là nhà tài trợ (cho điểm); thành viên A vừa là PM vừa là developer.
-
-### 2.3.3 Quản lý dự án (PM) — Thành viên A
-
-**Vai trò:** Project Manager kiêm AI Developer.
-
-**Trách nhiệm:**
-- Lập kế hoạch tổng thể, phân công công việc, theo dõi tiến độ.
-- Điều phối họp nhóm, giải quyết xung đột, báo cáo cho giảng viên.
-- Phát triển và huấn luyện mô hình AI: ARX, Kalman Filter, MPC.
-- Tích hợp pipeline AI vào Backend.
-- Viết báo cáo QLDA (Chương 1, 2, 3, 9, 10).
-
-### 2.3.4 Nhóm phát triển — Vai trò & trách nhiệm từng thành viên
-
-| Thành viên | Vai trò | Trách nhiệm chính |
-|:----------:|---------|-------------------|
-| **A** | PM + AI Developer | Quản lý dự án, mô hình ARX/Kalman/MPC, tích hợp AI, báo cáo QLDA (Ch1,2,3,9,10) |
-| **B** | Firmware + Hardware Engineer | Thiết kế mạch, lập trình ESP32, cảm biến, relay, WebSocket client, báo cáo QLDA (Ch5,6,7) |
-| **C** | Web + Backend Developer | Django Backend, ReactJS Dashboard, API, Database, báo cáo QLDA (Ch4,8) + Phụ lục |
-
-### 2.3.5 Khách hàng / Giảng viên — Vai trò & trách nhiệm
-
-**Vai trò:** Khách hàng (Customer) kiêm Nhà tài trợ (Sponsor).
-
-**Trách nhiệm:**
-- Đặt ra yêu cầu đề tài và phạm vi dự án.
-- Cung cấp phản hồi trong các buổi báo cáo tiến độ.
-- Đánh giá và chấm điểm sản phẩm cuối cùng.
-- Hỗ trợ giải đáp thắc mắc kỹ thuật khi cần.
-
-### 2.3.6 Ma trận RACI
+### 2.3.2 Ma trận RACI
 
 Ma trận RACI xác định vai trò của từng thành viên đối với mỗi hoạt động:
 - **R** (Responsible): Người thực hiện
@@ -253,5 +167,34 @@ Ma trận RACI xác định vai trò của từng thành viên đối với mỗ
 | 13 | Kiểm thử tích hợp | **A** | R | R | C |
 | 14 | Viết báo cáo | **A** | R | R | I |
 | 15 | Bảo vệ đồ án | R | R | R | **A** |
+
+---
+
+### 2.3.3 Bảng phân công công việc chi tiết
+
+| Tuần | Công việc | Người thực hiện | Thời lượng (h) | Deliverable |
+|:----:|-----------|:---------------:|:--------------:|-------------|
+| 1 | Khảo sát yêu cầu đề tài | A, B, C | 15h/người | Tài liệu yêu cầu |
+| 2 | Viết SOW, lập WBS, phân công RACI | A | 20h | SOW + WBS + RACI |
+| 2 | Khảo sát linh kiện, báo giá | B | 15h | Danh sách BOM |
+| 2 | Khảo sát tech stack (Django, React) | C | 15h | Tài liệu so sánh |
+| 3 | Thiết kế kiến trúc tổng thể + AI pipeline | A | 18h | Sơ đồ kiến trúc |
+| 3–4 | Thiết kế mạch, sơ đồ nguyên lý | B | 16h | Sơ đồ mạch |
+| 3–4 | Thiết kế DB schema + UI wireframe | C | 16h | ER Diagram + Figma |
+| 4–6 | Lắp ráp phần cứng, test cảm biến | B | 20h | Prototype HW |
+| 5–7 | Lập trình Firmware ESP32 + WebSocket | B | 18h | FW hoàn chỉnh |
+| 5–7 | Setup Django, viết REST API | C | 18h | API endpoints |
+| 5–8 | Nghiên cứu + huấn luyện ARX | A | 25h | Mô hình ARX (FIT≥85%) |
+| 7–8 | Phát triển WebSocket server | C | 20h | WS real-time |
+| 8–10 | Phát triển Kalman Filter + MPC | A | 28h | Pipeline AI |
+| 8–10 | Fix bug FW, cải thiện ổn định | B | 12h | FW v2 |
+| 9–12 | Phát triển ReactJS Dashboard | C | 22h | Web Dashboard |
+| 11–12 | Tích hợp hệ thống, MPC tuning | A | 25h | End-to-end system |
+| 11–12 | Kiểm thử HW + FW | B | 15h | Test report HW |
+| 12–13 | Kiểm thử tích hợp toàn hệ thống | A, B, C | 15h/người | Bug list + fix |
+| 13–14 | Viết báo cáo PBL + QLDA | A, B, C | 18h/người | Báo cáo 10 chương |
+| 15 | Làm slide, chuẩn bị demo, bảo vệ | A, B, C | 10h/người | Slide + Demo |
+
+> **Tổng giờ công ước tính:** A = ~168h, B = ~119h, C = ~137h → Tổng = **424h** cho 15 tuần.
 
 ---
