@@ -14,39 +14,39 @@ Nhóm lựa chọn đề tài vì tính thực tiễn cao theo xu hướng nông
 
 ### 1.1.2 Bảng mô tả tổng quan dự án
 
-| Hạng mục | Chi tiết |
-|----------|---------|
-| **Project Name** | Hệ thống Nhà kính Thông minh (Smart Greenhouse) |
-| **Development** | Nhóm 3 thành viên (A, B, C) |
-| **Customer** | Giảng viên hướng dẫn PBL |
-| **Industry / Service** | Nông nghiệp thông minh (Smart Agriculture) |
-| **Technology** | ESP32, Django, ReactJS, WebSocket, ARX, Kalman, MPC |
-| **Project Manager** | Thành viên A |
-| **Thời gian thực hiện** | 15 tuần (Tuần 1 → Tuần 15) |
-| **Số lượng thành viên** | 3 người |
-| **Kinh phí dự án** | ~625.000 VNĐ (tự túc) |
-| **Phương pháp phát triển** | Waterfall |
+| Hạng mục                            | Chi tiết                                            |
+| ------------------------------------- | ---------------------------------------------------- |
+| **Project Name**                | Hệ thống Nhà kính Thông minh (Smart Greenhouse) |
+| **Development**                 | Nhóm 3 thành viên (A, B, C)                       |
+| **Customer**                    | Giảng viên hướng dẫn PBL                        |
+| **Industry / Service**          | Nông nghiệp thông minh (Smart Agriculture)        |
+| **Technology**                  | ESP32, Django, ReactJS, WebSocket, ARX, Kalman, MPC  |
+| **Project Manager**             | Thành viên A                                       |
+| **Thời gian thực hiện**      | 15 tuần (Tuần 1 → Tuần 15)                       |
+| **Số lượng thành viên**    | 3 người                                            |
+| **Kinh phí dự án**           | ~625.000 VNĐ (tự túc)                             |
+| **Phương pháp phát triển** | Waterfall                                            |
 
 ### 1.1.3 Nguồn nhân lực dự án
 
-| STT | Họ và tên | Lớp | Vai trò | Mô tả công việc |
-|:---:|-----------|:---:|---------|-----------------|
-| 1 | Thành viên A | 23T_DTx | **Project Manager** kiêm AI Developer | Quản lý dự án, thiết kế kiến trúc, phát triển pipeline AI (ARX, Kalman, MPC), tích hợp hệ thống |
-| 2 | Thành viên B | 23T_DTx | Firmware & Hardware Engineer | Thiết kế mạch, lắp ráp phần cứng, lập trình ESP32, cảm biến, relay, WebSocket client |
-| 3 | Thành viên C | 23T_DTx | Web & Backend Developer | Phát triển Django Backend, ReactJS Dashboard, REST API, Database MySQL |
+| STT | Họ và tên          |  Lớp  | Vai trò                                                              | Mô tả công việc                                                                                                                                                                                                                                                                        |
+| :-: | --------------------- | :-----: | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+|  1  | Hoàng Minh Trí      | 23T_DT1 | **Project Manager** kiêm AI Developer (ARX)                    | Quản lý tiến độ dự án, lập kế hoạch và phân công công việc; thiết kế kiến trúc tổng thể hệ thống; nghiên cứu và phát triển mô hình ARX; tích hợp hệ thống tổng thể                                                                                     |
+|  2  | Đinh Công Trung Sỹ | 23T_DT1 | **Firmware & Hardware** kiêm **Web & Backend Developer** | Thiết kế và lắp ráp phần cứng; lập trình ESP32; kết nối cảm biến nhiệt độ, độ ẩm, ánh sáng, độ ẩm đất; điều khiển relay; xây dựng WebSocket client/server; phát triển Django Backend & ReactJS Dashboard Full-stack; thiết kế REST API & MySQL Database |
+|  3  | Ngô Quang Sinh       | 23T_DT1 | **AI & Control Engineer** (Kalman & MPC)                        | Nghiên cứu và phát triển pipeline AI gồm Kalman Filter và MPC; tích hợp mô hình dự đoán ARX vào hệ thống điều khiển tối ưu MPC                                                                                                                                       |
 
 ### 1.1.4 Các mốc thời gian dự án (Milestones)
 
-| Mốc thời gian | Công việc | Deliverable |
-|:--------------:|-----------|-------------|
-| Tuần 1 – 2 | Khảo sát yêu cầu, phân tích bài toán | Tài liệu yêu cầu, SOW, WBS |
-| Tuần 3 – 4 | Thiết kế kiến trúc, sơ đồ mạch, DB schema | Tài liệu thiết kế hệ thống |
-| Tuần 4 – 6 | Phát triển phần cứng + Firmware | Prototype HW hoạt động |
-| Tuần 5 – 9 | Phát triển Backend + Web Dashboard | API + Dashboard cơ bản |
-| Tuần 5 – 12 | Phát triển AI (ARX, Kalman, MPC) | Mô hình AI hoàn chỉnh |
-| Tuần 11 – 13 | Kiểm thử tích hợp, fix bug | Test report, hệ thống ổn định |
-| Tuần 13 – 15 | Hoàn thiện tài liệu, báo cáo, demo | Báo cáo PBL + QLDA + Slide |
-| Tuần 15 | Bảo vệ đồ án, bàn giao sản phẩm | Demo hoàn chỉnh |
+| Mốc thời gian | Công việc                                       | Deliverable                        |
+| :-------------: | ------------------------------------------------- | ---------------------------------- |
+|  Tuần 1 – 2  | Khảo sát yêu cầu, phân tích bài toán      | Tài liệu yêu cầu, SOW, WBS     |
+|  Tuần 3 – 4  | Thiết kế kiến trúc, sơ đồ mạch, DB schema | Tài liệu thiết kế hệ thống   |
+|  Tuần 4 – 6  | Phát triển phần cứng + Firmware               | Prototype HW hoạt động          |
+|  Tuần 5 – 9  | Phát triển Backend + Web Dashboard              | API + Dashboard cơ bản           |
+|  Tuần 5 – 12  | Phát triển AI (ARX, Kalman, MPC)                | Mô hình AI hoàn chỉnh          |
+| Tuần 11 – 13 | Kiểm thử tích hợp, fix bug                    | Test report, hệ thống ổn định |
+| Tuần 13 – 15 | Hoàn thiện tài liệu, báo cáo, demo          | Báo cáo PBL + QLDA + Slide       |
+|    Tuần 15    | Bảo vệ đồ án, bàn giao sản phẩm           | Demo hoàn chỉnh                  |
 
 ## 1.2 Mục đích và mục tiêu dự án
 
@@ -65,11 +65,13 @@ Mô hình Waterfall (thác nước) là phương pháp phát triển phần mề
 **Các giai đoạn:** Phân tích yêu cầu → Thiết kế → Phát triển → Kiểm thử → Triển khai → Bảo trì.
 
 **Ưu điểm:**
+
 - Rõ ràng, có cấu trúc, dễ quản lý.
 - Tài liệu đầy đủ ở mỗi giai đoạn.
 - Phù hợp khi yêu cầu ổn định, ít thay đổi.
 
 **Nhược điểm:**
+
 - Khó quay lại giai đoạn trước khi phát hiện lỗi.
 - Không linh hoạt với thay đổi yêu cầu.
 
@@ -77,13 +79,13 @@ Mô hình Waterfall (thác nước) là phương pháp phát triển phần mề
 
 Nhóm lựa chọn **mô hình Waterfall** cho dự án Smart Greenhouse vì:
 
-| Tiêu chí | Lý do chọn Waterfall |
-|-----------|---------------------|
-| **Yêu cầu** | Ổn định, xác định rõ từ đầu, được giảng viên duyệt |
-| **Quy mô nhóm** | Chỉ 3 người — Scrum quá phức tạp |
-| **Tài liệu** | Mỗi giai đoạn tạo deliverable rõ ràng, thuận lợi cho báo cáo |
-| **Kiểm soát** | PM dễ kiểm soát tiến độ tuần tự |
-| **Thời gian** | 15 tuần cố định → cần lịch biểu tổng thể ngay từ đầu |
+| Tiêu chí              | Lý do chọn Waterfall                                                 |
+| ----------------------- | ---------------------------------------------------------------------- |
+| **Yêu cầu**     | Ổn định, xác định rõ từ đầu, được giảng viên duyệt     |
+| **Quy mô nhóm** | Chỉ 3 người — Scrum quá phức tạp                                |
+| **Tài liệu**    | Mỗi giai đoạn tạo deliverable rõ ràng, thuận lợi cho báo cáo |
+| **Kiểm soát**   | PM dễ kiểm soát tiến độ tuần tự                                |
+| **Thời gian**    | 15 tuần cố định → cần lịch biểu tổng thể ngay từ đầu      |
 
 ### 1.3.3 Các giai đoạn Waterfall áp dụng
 

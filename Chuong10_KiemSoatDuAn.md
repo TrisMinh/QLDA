@@ -46,17 +46,17 @@ Thu thập hiện trạng là quá trình **đo lường mức độ tiến tri�
 
 **b) Time sheet cá nhân**
 
-|      Tuần      |         Thành viên A (PM + AI)         |     Thành viên B (FW/HW)     |        Thành viên C (Web/BE)        |
+|      Tuần      |         Thành viên A (PM + ARX)         |     Thành viên B (HW/FW & Fullstack)     |        Thành viên C (Kalman & MPC)        |
 | :-------------: | :---------------------------------------: | :-----------------------------: | :------------------------------------: |
-|      1–2      |       20h (phân tích, khảo sát)       |       15h (khảo sát HW)       |      15h (khảo sát tech stack)      |
-|      3–4      | 18h (thiết kế kiến trúc, AI pipeline) |     16h (thiết kế mạch)     |        16h (thiết kế DB, UI)        |
-|      5–6      |  22h (nghiên cứu ARX, bắt đầu code)  |   20h (lắp ráp HW, code FW)   |        18h (setup Django, API)        |
-|      7–8      |      25h (huấn luyện ARX, Kalman)      |      18h (hoàn thiện FW)      |    20h (WebSocket, tiếp tục API)    |
-|      9–10      |         28h (MPC, tích hợp AI)         |        12h (fix bug FW)        |    22h (phát triển Web Dashboard)    |
-|     11–12     |      25h (MPC tuning, kiểm thử AI)      | 15h (kiểm thử HW, tích hợp) |   20h (hoàn thiện Web, kiểm thử)   |
-|     13–14     |  20h (kiểm thử tích hợp, báo cáo)  |   15h (kiểm thử, báo cáo)   | 18h (kiểm thử, báo cáo, phụ lục) |
-|       15       |           10h (slide, bảo vệ)           |       8h (demo, bảo vệ)       |          8h (demo, bảo vệ)          |
-| **Tổng** |              **168h**              |         **119h**         |             **137h**             |
+|      1–2      |       35h (phân tích, SOW, WBS, RACI)       |       30h (khảo sát HW & Web, BOM)       |      15h (khảo sát yêu cầu AI)      |
+|      3–4      | 18h (thiết kế kiến trúc hệ thống) |     32h (thiết kế mạch & DB, Figma)     |        5h (tham vấn thiết kế pipeline AI)        |
+|      5–6      |  12h (tiền xử lý dữ liệu cho ARX)  |   38h (lắp ráp HW, code FW & Django BE)   |        0h (nghiên cứu tài liệu lý thuyết)        |
+|      7–8      |      13h (huấn luyện & đánh giá ARX)      |      38h (hoàn thiện FW, WebSocket server)      |    0h (nghiên cứu giải thuật điều khiển)    |
+|      9–10      |         8h (PM giám sát & kiểm soát)         |        23h (fix bug FW, ReactJS Dashboard)        |    28h (phát triển Kalman Filter & MPC)    |
+|     11–12     |      25h (tích hợp hệ thống, MPC tuning)      | 26h (kiểm thử HW/FW, hoàn thiện Web) |   25h (tích hợp hệ thống, MPC tuning)   |
+|     13–14     |  25h (kiểm thử tích hợp, viết báo cáo)  |   25h (kiểm thử tích hợp, viết báo cáo)   | 28h (kiểm thử tích hợp, viết báo cáo) |
+|       15       |           10h (slide, bảo vệ)           |       10h (demo, bảo vệ)       |          10h (demo, bảo vệ)          |
+| **Tổng** |              **146h**              |         **245h**         |             **111h**             |
 
 ### 10.2.3 Phân tích sai biệt
 
@@ -83,6 +83,8 @@ Thu thập hiện trạng là quá trình **đo lường mức độ tiến tri�
 | Linh kiện phụ      |      50.000      |      65.000      |      -15.000      | Mua thêm dây nối           |
 | Dự phòng sử dụng |         0         |      60.000      |      -60.000      | Thay 1 cảm biến DHT22 hỏng |
 | **Tổng**      | **625.000** | **700.000** | **-75.000** | Vượt 12%                    |
+
+**Nhận xét:** Chi phí thực tế vượt 75.000 VNĐ (12%) so với kế hoạch ban đầu do phát sinh sự cố hỏng cảm biến DHT22 (phải thay thế bằng cảm biến dự phòng) và mua thêm dây nối. Tuy nhiên, phần chi phí vượt này đã được bù đắp hoàn toàn bởi quỹ dự phòng của dự án (165.000 VNĐ), giúp tổng chi phí thực tế (700.000 VNĐ) vẫn nằm an toàn dưới ngân sách tổng thể cho phép.
 
 ### 10.2.4 Quản lý giá trị thu được (EVM — Earned Value Management)
 
@@ -148,39 +150,33 @@ Giả sử tổng ngân sách BAC = 625.000 VNĐ, tổng giờ công KH = 675h.
 
 ## 10.3 Phát hiện và giải quyết vấn đề
 
-### 10.3.1 Dấu hiệu báo động sớm
-
-| # | Dấu hiệu                                        | Cảnh báo                                 |
-| :-: | ------------------------------------------------- | ------------------------------------------ |
-| 1 | Làm việc**không có kế hoạch**         | "Dự án nhỏ nên không cần kế hoạch" |
-| 2 | **Yêu cầu không rõ ràng**              | "Người dùng không biết muốn gì"     |
-| 3 | **Ước lượng đại khái**               | Bị áp đặt hoặc tùy tiện             |
-| 4 | **Báo cáo ra muộn**                      | Không có gì mới so với kỳ trước    |
-| 5 | Người chịu trách nhiệm**"mất tích"** | Không trả lời, né tránh               |
-
-> **Nguyên tắc vàng:** Phòng bệnh hơn chữa bệnh. Phát hiện sớm và can thiệp ngay khi thấy dấu hiệu bất thường.
-
-### 10.3.2 Quy trình xử lý vấn đề (5 bước)
-
-```
-1. Xác định vấn đề → 2. Phân tích nguyên nhân → 3. Đề xuất giải pháp → 4. Thực hiện xử lý → 5. Theo dõi & đánh giá
-```
-
-### 10.3.3 Root Cause Analysis: Phương pháp 5 Whys
+### 10.3.1 Phân tích nguyên nhân gốc (Phương pháp 5 Whys)
 
 Phương pháp tìm nguyên nhân gốc bằng cách hỏi "Tại sao?" nhiều lần:
 
-**Ví dụ áp dụng cho dự án Smart Greenhouse:**
+**Ví dụ áp dụng cho dự án Smart Greenhouse (Giải quyết trễ hạn bộ MPC):**
 
-| Lần | Câu hỏi                    | Trả lời                                                                                                |
+| Lần | Câu hỏi | Trả lời |
 | :--: | ---------------------------- | -------------------------------------------------------------------------------------------------------- |
-|  1  | Tại sao module AI trễ?     | Vì A làm chậm                                                                                         |
-|  2  | Vì sao A làm chậm?        | Vì thiếu kinh nghiệm MPC                                                                              |
-|  3  | Vì sao thiếu kinh nghiệm? | Vì chưa được training MPC                                                                           |
-|  4  | Vì sao chưa training?      | Vì không có kế hoạch đào tạo từ đầu                                                           |
-|  5  | **Nguyên nhân gốc** | **Thiếu kế hoạch đào tạo** → Đề xuất: dự trù 2 tuần tự nghiên cứu trước khi code |
+|  1  | Tại sao module AI & điều khiển bị trễ? | Vì thành viên C gặp khó khăn khi lập trình bộ điều khiển MPC |
+|  2  | Vì sao C gặp khó khăn khi lập trình MPC? | Vì mô hình dự báo ARX free-run bị tích lũy sai số lớn (chỉ đạt FIT 66,42%) khiến MPC hoạt động không ổn định |
+|  3  | Vì sao mô hình ARX bị sai số tích lũy? | Vì dữ liệu cảm biến đầu vào bị dính nhiễu thô mạnh và cấu hình dự báo free-run quá dài |
+|  4  | Vì sao không xử lý lọc nhiễu ngay từ đầu? | Vì chưa xây dựng bộ lọc Kalman Filter cho cảm biến và chưa áp dụng chiến lược Receding Horizon |
+|  5  | **Nguyên nhân gốc** | **Thiếu giải pháp lọc nhiễu cảm biến và chưa tối ưu luồng dự báo ngắn hạn** ➔ Đề xuất: C tập trung triển khai Adaptive Kalman Filter; A đổi luồng ARX sang Receding Horizon hỗ trợ MPC. |
 
 > **Ý nghĩa:** Giải quyết tận gốc nguyên nhân, tránh lặp lại vấn đề trong tương lai.
+
+### 10.3.2 Bảng theo dõi và giải quyết vấn đề thực tế (Issue Log)
+
+Để áp dụng thực hành kiểm soát trực quan, mọi vấn đề phát sinh thực tế trong quá trình phát triển hệ thống nhà kính thông minh đều được ghi nhận, phân tích và xử lý triệt để theo bảng dưới đây:
+
+| ID | Vấn đề phát sinh thực tế | Giai đoạn / Tuần | Cách phát hiện | Biện pháp giải quyết thực tế | Người phụ trách | Trạng thái |
+| :--: | ---------------------------------- | :--------------: | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | :-------------: | :--------: |
+| **VĐ01** | Lọc nhiễu cảm biến thô bị sai số và mô hình ARX free-run bị tích lũy sai số lớn. | Tuần 5–8 | Đồ thị giám sát nhiệt độ bị gai nhiễu mạnh; FIT free-run của ARX sụt giảm xuống còn 66,42%. | - **C** triển khai thuật toán lọc Adaptive Kalman Filter.<br>- **A** chuyển sang cấu trúc Receding Horizon (dự báo ngắn hạn) cung cấp cho MPC. | **A, C** | ✅ Đã xử lý |
+| **VĐ02** | Trễ tiến độ module điều khiển tối ưu MPC (chậm 1 tuần). | Tuần 9–10 | Báo cáo EVM tuần 10 hiển thị chỉ số SPI = 0,93 (chậm 7%), SV = -33h. | - **C** tăng cường giờ làm việc (20h ➔ 28h/tuần).<br>- **B** hỗ trợ kiểm thử tích hợp.<br>- **A** dùng dữ liệu mô phỏng chạy song song. | **C** (chính)<br>**A, B** (hỗ trợ) | ✅ Đã xử lý |
+| **VĐ03** | Cảm biến nhiệt độ/độ ẩm DHT22 đột ngột bị hỏng không phản hồi dữ liệu. | Tuần 11 | Màn hình LCD I2C hiển thị giá trị lỗi `NaN`; Web Dashboard không hiển thị được thông số. | - **B** sử dụng cảm biến DHT22 dự phòng sẵn có trong BOM để thay thế thiết bị hỏng.<br>- Thực hiện hiệu chuẩn lại thông số trong 1 ngày. | **B** | ✅ Đã xử lý |
+| **VĐ04** | Mất kết nối WebSocket ngắt quãng giữa ESP32 và Django Channels server. | Tuần 12 | Giao diện Web Dashboard ngừng cập nhật thời gian thực, console log báo lỗi kết nối. | - **B** bổ sung thư viện tự động kết nối lại (Auto-reconnect) trong ESP32 firmware.<br>- Thiết lập buffer dữ liệu tạm thời để tránh mất mát. | **B** | ✅ Đã xử lý |
+
 
 ## 10.4 Họp
 
@@ -211,40 +207,21 @@ Họp đột xuất được triệu tập khi:
 4. **Ghi biên bản** mọi quyết định.
 5. **Phân công rõ** ai làm gì sau họp.
 
-### 10.4.4 Biên bản họp nhóm (minh họa)
+### 10.4.4 Biên bản họp nhóm mẫu
 
-**Biên bản họp #1:**
+Dưới đây là biên bản họp kiểm soát và giải quyết các vấn đề phát sinh thực tế của dự án nhà kính thông minh:
 
-| Mục         | Nội dung                                                                                                     |
-| ------------ | ------------------------------------------------------------------------------------------------------------- |
-| Ngày        | Tuần 3, Thứ 7                                                                                               |
-| Tham dự     | A, B, C                                                                                                       |
-| Nội dung    | Phân công công việc chi tiết cho giai đoạn thiết kế                                                  |
-| Kết quả    | B: thiết kế mạch (tuần 3–4); C: thiết kế DB + UI (tuần 3–4); A: thiết kế kiến trúc + AI pipeline |
-| Vấn đề    | Chưa rõ cấu trúc ARX nào phù hợp → A nghiên cứu thêm                                               |
-| Hành động | A: Đọc tài liệu MathWorks về ARX trước tuần 4                                                         |
+| Mục | Nội dung |
+| :--- | :--- |
+| **Tên cuộc họp** | Họp kiểm soát tiến độ giữa kỳ & Giải quyết vướng mắc kỹ thuật |
+| **Thời gian** | 09:00 - 10:00, Thứ Bảy, Tuần 8 của dự án |
+| **Địa điểm** | Trực tuyến qua Discord và Google Meet |
+| **Thành viên tham dự** | - **Hoàng Minh Trí** (Chủ trì - PM & ARX)<br>- **Đinh Công Trung Sỹ** (Thành viên - HW/FW & Fullstack Web)<br>- **Ngô Quang Sinh** (Thành viên - Kalman & MPC) |
+| **Nội dung cuộc họp** | 1. Đánh giá hiện trạng hoàn thành các module so với tiến độ kế hoạch (Baseline schedule).<br>2. Phân tích nguyên nhân bộ lọc Kalman và MPC chưa chạy ổn định.<br>3. Thống nhất kế hoạch tăng tốc lập trình Web Dashboard và hoàn thiện firmware điều khiển hồi tiếp. |
+| **Kết quả đánh giá** | - Phần cứng & Firmware ESP32: Đã hoàn thành 100% việc lắp ráp mô hình và kết nối truyền thông.<br>- Backend Django: Đã hoàn thành 80% luồng cơ sở dữ liệu và API.<br>- Mô hình ARX: Đã được **Hoàng Minh Trí** huấn luyện xong, độ chính xác đạt FIT = 85,85%.<br>- Giao diện Web Dashboard: Mới đạt 60% do phát sinh thêm thiết kế WebSockets truyền dữ liệu thời gian thực.<br>- Bộ điều khiển MPC & Kalman Filter: Đang bị chậm tiến độ (chưa bắt đầu tích hợp thử nghiệm) do **Ngô Quang Sinh** gặp khó khăn trong việc lọc nhiễu cảm biến thô đầu vào. |
+| **Vấn đề & Rủi ro phát hiện** | - Thuật toán lọc nhiễu thô của cảm biến nhiệt độ/độ ẩm DHT22 có sai số lớn, gây dao động ngõ ra điều khiển của MPC.<br>- Tiến độ module điều khiển MPC bị trễ 1 tuần so với kế hoạch ban đầu, có nguy cơ làm ảnh hưởng đến thời gian kiểm thử tích hợp toàn hệ thống. |
+| **Hành động & Phân công xử lý** | 1. **Ngô Quang Sinh**: Tập trung nghiên cứu và lập trình Adaptive Kalman Filter để lọc nhiễu cảm biến thô, sẵn sàng tích hợp trước Tuần 9.<br>2. **Đinh Công Trung Sỹ**: Tập trung đẩy nhanh tiến độ lập trình giao diện Web Dashboard (ReactJS) và tối ưu hóa luồng WebSockets (Tuần 9-10).<br>3. **Hoàng Minh Trí**: Hỗ trợ chuẩn bị dữ liệu mô phỏng nhà kính từ mô hình ARX để Sinh chạy mô phỏng kiểm thử độc lập cho bộ MPC mà không cần đợi phần cứng hoàn thiện.<br>4. Thống nhất tăng giờ làm việc của nhóm (đặc biệt là Sinh và Sỹ) để bù đắp phần tiến độ bị chậm. |
 
-**Biên bản họp #2:**
-
-| Mục         | Nội dung                                                                                      |
-| ------------ | ---------------------------------------------------------------------------------------------- |
-| Ngày        | Tuần 8, Thứ 7                                                                                |
-| Tham dự     | A, B, C                                                                                        |
-| Nội dung    | Review tiến độ giữa kỳ                                                                    |
-| Kết quả    | HW + FW: hoàn thành 100%; Backend: 80%; AI (ARX): đang huấn luyện, FIT = 85,85%; Web: 60% |
-| Vấn đề    | Kalman Filter chưa bắt đầu → có nguy cơ trễ                                            |
-| Hành động | A: Ưu tiên Kalman tuần 9; C: Đẩy nhanh Web tuần 9–10                                    |
-
-**Biên bản họp #3:**
-
-| Mục         | Nội dung                                                                                 |
-| ------------ | ----------------------------------------------------------------------------------------- |
-| Ngày        | Tuần 12, Thứ 7                                                                          |
-| Tham dự     | A, B, C                                                                                   |
-| Nội dung    | Chuẩn bị kiểm thử tích hợp                                                          |
-| Kết quả    | Tất cả module hoàn thành; MPC đã tune xong; Web đã tích hợp biểu đồ dự báo |
-| Vấn đề    | Cảm biến DHT22 hỏng 1 chiếc → thay dự phòng                                        |
-| Hành động | B: Thay cảm biến; Cả nhóm: kiểm thử end-to-end tuần 13                             |
 
 ---
 
@@ -252,13 +229,13 @@ Họp đột xuất được triệu tập khi:
 
 ### 10.5.1 Khi dự án không đúng lịch biểu
 
-Trong dự án Smart Greenhouse, giai đoạn **Phát triển AI bị trễ 1 tuần** (MPC tuning phức tạp hơn dự kiến).
+Trong dự án Smart Greenhouse, giai đoạn **Phát triển AI bị trễ 1 tuần** (Kalman Filter và MPC tuning phức tạp hơn dự kiến).
 
 **Biện pháp đã áp dụng:**
 
-- Tăng giờ làm việc của thành viên A (từ 20h → 28h/tuần trong tuần 9–10).
+- Tăng giờ làm việc của thành viên C (từ 20h → 28h/tuần trong tuần 9–10).
 - Sử dụng dữ liệu mô phỏng để huấn luyện song song, không chờ dữ liệu thực.
-- B hỗ trợ kiểm thử phần tích hợp ESP32 ↔ Backend trong khi A tập trung MPC.
+- B hỗ trợ kiểm thử phần tích hợp ESP32 ↔ Backend trong khi C tập trung tối ưu Kalman Filter và MPC.
 
 ### 10.5.2 Khi chi phí có nguy cơ tăng
 
@@ -381,7 +358,7 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 | Hạng mục          |                Giá trị                |
 | ------------------- | :-------------------------------------: |
 | Tổng thời gian    |                15 tuần                |
-| Tổng giờ công    |  424 giờ (A: 168h, B: 119h, C: 137h)  |
+| Tổng giờ công    |  502 giờ (A: 146h, B: 245h, C: 111h)  |
 | Tổng chi phí      |              700.000 VNĐ              |
 | Số work packages   |                   45                   |
 | Số milestone       |                    9                    |
@@ -462,7 +439,7 @@ Toàn bộ hồ sơ dự án được lưu trữ tại:
 | Tình huống                                        | Cách xử lý                                                          |
 | --------------------------------------------------- | ---------------------------------------------------------------------- |
 | Cảm biến DHT22 hỏng đột ngột                  | Thay nhanh bằng cảm biến dự phòng, không ảnh hưởng tiến độ |
-| MPC tuning mất nhiều thời gian hơn dự kiến    | A tăng giờ làm, B hỗ trợ kiểm thử tích hợp                    |
+| MPC tuning mất nhiều thời gian hơn dự kiến    | C tăng giờ làm, B hỗ trợ kiểm thử tích hợp                    |
 | Thành viên không hiểu module của người khác | Tổ chức buổi sharing kiến thức nội bộ                           |
 
 ---

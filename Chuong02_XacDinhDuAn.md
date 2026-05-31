@@ -6,12 +6,9 @@
 
 ### 2.1.1 Mối quan hệ giữa mục đích và mục tiêu
 
-Trong quản lý dự án, **mục đích (Goal)** và **mục tiêu (Objective)** có mối quan hệ phân cấp:
-
-- **Mục đích** là định hướng tổng quát, mang tính **định tính**, mô tả "cái mà dự án muốn đạt tới" ở mức cao nhất.
-- **Mục tiêu** là tập hợp con cụ thể của mục đích, mang tính **định lượng**, có thể đo lường được theo tiêu chí SMART (Specific, Measurable, Achievable, Relevant, Time-bound).
-
-Mỗi mục đích có thể được phân rã thành **nhiều mục tiêu cụ thể**. Khi tất cả mục tiêu được hoàn thành, mục đích coi như đạt được.
+Trong quản lý dự án, **Mục đích (Goal)** và **Mục tiêu (Objective)** có quan hệ phân cấp chặt chẽ:
+* **Mục đích (Goal):** Định hướng tổng quát ở mức cao, mang tính **định tính** (xác định dự án hướng tới cái gì).
+* **Mục tiêu (Objective):** Tập hợp con cụ thể của mục đích, mang tính **định lượng** (đo lường được qua tiêu chí SMART). Khi toàn bộ mục tiêu hoàn thành, mục đích của dự án coi như đạt được.
 
 ### 2.1.2 Bảng mục đích – mục tiêu dự án nhà kính thông minh
 
@@ -38,14 +35,7 @@ Statement of Work (SOW) là văn bản thống nhất giữa các bên liên qua
 
 ### 2.2.1 Mục đích và mục tiêu
 
-**Mục đích:** Xây dựng hệ thống nhà kính thông minh tích hợp IoT và AI, cho phép giám sát, dự đoán và điều khiển tối ưu các thông số môi trường.
-
-**Mục tiêu chính:**
-1. Thu thập dữ liệu cảm biến realtime qua ESP32.
-2. Dự đoán độ ẩm đất bằng mô hình ARX với FIT ≥ 80%.
-3. Lọc nhiễu cảm biến bằng Adaptive Kalman Filter.
-4. Điều khiển tối ưu bằng MPC, duy trì độ ẩm 55–65%.
-5. Phát triển Web Dashboard giám sát và điều khiển.
+Để làm căn cứ pháp lý và phạm vi trong tài liệu SOW này, các mục đích và mục tiêu cốt lõi của dự án được kế thừa hoàn toàn từ phần phân tích SMART tại **Mục 2.1 (Bảng 2.1)**. Mục tiêu trọng tâm của SOW là xây dựng hệ thống IoT thu thập dữ liệu realtime (ESP32) kết hợp với mô hình AI (ARX, Kalman, MPC) nhằm duy trì độ ẩm đất ổn định trong khoảng tối ưu (55% - 65%) và hiển thị trực quan qua Web Dashboard.
 
 ### 2.2.2 Phạm vi dự án
 
@@ -80,26 +70,16 @@ Statement of Work (SOW) là văn bản thống nhất giữa các bên liên qua
 
 ### 2.2.5 Ước lượng sơ bộ
 
-**Thời gian:** 15 tuần × 3 người × ~15 giờ/tuần/người = ~675 giờ công.
+- **Thời gian:** 15 tuần × 3 người × ~15 giờ/tuần = ~675 giờ công.
+- **Chi phí thiết bị (BOM):** ~625.000 VNĐ.
 
-**Chi phí ước tính:**
-
-| Hạng mục | Chi phí (VNĐ) |
-|----------|:-------------:|
-| ESP32 DevKit | 120.000 |
-| Cảm biến DHT22 | 35.000 |
-| Cảm biến độ ẩm đất | 25.000 |
-| Cảm biến ánh sáng LDR | 10.000 |
-| Module relay 4 kênh | 45.000 |
-| Bơm nước mini | 30.000 |
-| Quạt mini | 25.000 |
-| Phun sương mini | 35.000 |
-| Đèn LED | 15.000 |
-| Breadboard + dây nối | 40.000 |
-| Mô hình nhà kính (khung) | 150.000 |
-| LCD I2C | 45.000 |
-| Linh kiện phụ (nguồn, cáp...) | 50.000 |
-| **Tổng** | **~625.000** |
+| Hạng mục | Chi tiết linh kiện | Chi phí (VNĐ) |
+|----------|-------------------|:-------------:|
+| Bộ điều khiển & LCD | ESP32 DevKit, Màn hình LCD I2C | 165.000 |
+| Module cảm biến | Nhiệt độ DHT22, Độ ẩm đất, Ánh sáng LDR | 70.000 |
+| Cơ cấu chấp hành | Relay 4 kênh, Bơm nước, Quạt mini, Phun sương, Đèn LED | 150.000 |
+| Khung mô hình & Phụ kiện | Mô hình nhà kính, Breadboard, dây nối, nguồn, cáp... | 240.000 |
+| **Tổng cộng** | **Toàn bộ phần cứng hệ thống** | **625.000** |
 
 ### 2.2.6 Danh sách rủi ro sơ bộ
 
@@ -113,22 +93,6 @@ Statement of Work (SOW) là văn bản thống nhất giữa các bên liên qua
 
 > *Chi tiết phân tích rủi ro sẽ được trình bày ở Chương 9.*
 
-### 2.2.7 Điều chỉnh và cập nhật
-
-SOW có thể được điều chỉnh khi có thay đổi phạm vi hoặc yêu cầu. Mọi điều chỉnh cần được:
-- Ghi nhận bằng văn bản.
-- Thảo luận và thống nhất giữa các bên.
-- Ký xác nhận lại nếu thay đổi lớn.
-
-### 2.2.8 Chữ ký các bên liên quan
-
-| Vai trò | Họ tên | Chữ ký | Ngày |
-|---------|--------|:------:|:----:|
-| Giảng viên hướng dẫn | _________________ | _______ | ___/___/2026 |
-| Quản lý dự án (PM) - A | _________________ | _______ | ___/___/2026 |
-| Thành viên B | _________________ | _______ | ___/___/2026 |
-| Thành viên C | _________________ | _______ | ___/___/2026 |
-
 ---
 
 ## 2.3 Vai trò và trách nhiệm trong dự án
@@ -138,9 +102,9 @@ SOW có thể được điều chỉnh khi có thay đổi phạm vi hoặc yêu
 | Vai trò | Người đảm nhiệm | Trách nhiệm chính |
 |---------|:----------------:|-------------------|
 | **Khách hàng / Nhà tài trợ** | Giảng viên hướng dẫn | Đặt yêu cầu, phản hồi tiến độ, đánh giá và chấm điểm |
-| **PM + AI Developer** | Thành viên A | Quản lý dự án, phân công, ARX/Kalman/MPC, tích hợp hệ thống |
-| **FW + HW Engineer** | Thành viên B | Thiết kế mạch, lập trình ESP32, cảm biến, relay, WebSocket client |
-| **Web + Backend Developer** | Thành viên C | Django Backend, ReactJS Dashboard, API, Database |
+| **PM + AI Developer (ARX)** | Hoàng Minh Trí (Thành viên A) | Quản lý tiến độ dự án, lập kế hoạch và phân công công việc; thiết kế kiến trúc tổng thể hệ thống; nghiên cứu và phát triển mô hình ARX; tích hợp hệ thống tổng thể |
+| **FW + HW & Web/BE Fullstack** | Đinh Công Trung Sỹ (Thành viên B) | Thiết kế và lắp ráp phần cứng; lập trình ESP32; kết nối cảm biến nhiệt độ, độ ẩm, ánh sáng, độ ẩm đất; điều khiển relay; xây dựng WebSocket client/server; phát triển Django Backend & ReactJS Dashboard Full-stack; thiết kế REST API & MySQL Database |
+| **AI & Control Engineer** | Ngô Quang Sinh (Thành viên C) | Nghiên cứu và phát triển pipeline AI gồm Kalman Filter và MPC; tích hợp mô hình dự đoán ARX vào bộ điều khiển MPC và hệ thống điều khiển tối ưu |
 
 ### 2.3.2 Ma trận RACI
 
@@ -150,51 +114,42 @@ Ma trận RACI xác định vai trò của từng thành viên đối với mỗ
 - **C** (Consulted): Người được tham vấn
 - **I** (Informed): Người được thông báo
 
-| STT | Hoạt động | A (PM + AI) | B (FW/HW) | C (Web/BE) | Giảng viên |
+| STT | Hoạt động | A (PM + ARX) | B (HW/FW & Fullstack) | C (Kalman & MPC) | Giảng viên |
 |:---:|-----------|:---:|:---:|:---:|:---:|
 | 1 | Lập kế hoạch dự án | **A/R** | C | C | I |
 | 2 | Phân tích yêu cầu | **A/R** | R | R | C |
 | 3 | Thiết kế kiến trúc tổng thể | **A/R** | C | C | I |
 | 4 | Thiết kế phần cứng | C | **A/R** | I | I |
 | 5 | Phát triển Firmware ESP32 | I | **A/R** | C | I |
-| 6 | Thiết kế Database | C | I | **A/R** | I |
-| 7 | Phát triển Backend | C | I | **A/R** | I |
-| 8 | Phát triển Web Dashboard | I | I | **A/R** | I |
+| 6 | Thiết kế Database | C | **A/R** | I | I |
+| 7 | Phát triển Backend | C | **A/R** | I | I |
+| 8 | Phát triển Web Dashboard | I | **A/R** | C | I |
 | 9 | Huấn luyện mô hình ARX | **A/R** | I | C | I |
-| 10 | Phát triển Kalman Filter | **A/R** | C | I | I |
-| 11 | Phát triển MPC | **A/R** | C | C | I |
-| 12 | Tích hợp hệ thống | **A** | R | R | I |
-| 13 | Kiểm thử tích hợp | **A** | R | R | C |
-| 14 | Viết báo cáo | **A** | R | R | I |
-| 15 | Bảo vệ đồ án | R | R | R | **A** |
+| 10 | Phát triển Kalman Filter | C | I | **A/R** | I |
+| 11 | Phát triển MPC | C | C | **A/R** | I |
+| 12 | Tích hợp ARX vào hệ thống MPC | C | I | **A/R** | I |
+| 13 | Tích hợp hệ thống | **A** | R | R | I |
+| 14 | Kiểm thử tích hợp | **A** | R | R | C |
+| 15 | Viết báo cáo | **A** | R | R | I |
+| 16 | Bảo vệ đồ án | R | R | R | **A** |
 
 ---
 
 ### 2.3.3 Bảng phân công công việc chi tiết
 
-| Tuần | Công việc | Người thực hiện | Thời lượng (h) | Deliverable |
-|:----:|-----------|:---------------:|:--------------:|-------------|
-| 1 | Khảo sát yêu cầu đề tài | A, B, C | 15h/người | Tài liệu yêu cầu |
-| 2 | Viết SOW, lập WBS, phân công RACI | A | 20h | SOW + WBS + RACI |
-| 2 | Khảo sát linh kiện, báo giá | B | 15h | Danh sách BOM |
-| 2 | Khảo sát tech stack (Django, React) | C | 15h | Tài liệu so sánh |
-| 3 | Thiết kế kiến trúc tổng thể + AI pipeline | A | 18h | Sơ đồ kiến trúc |
-| 3–4 | Thiết kế mạch, sơ đồ nguyên lý | B | 16h | Sơ đồ mạch |
-| 3–4 | Thiết kế DB schema + UI wireframe | C | 16h | ER Diagram + Figma |
-| 4–6 | Lắp ráp phần cứng, test cảm biến | B | 20h | Prototype HW |
-| 5–7 | Lập trình Firmware ESP32 + WebSocket | B | 18h | FW hoàn chỉnh |
-| 5–7 | Setup Django, viết REST API | C | 18h | API endpoints |
-| 5–8 | Nghiên cứu + huấn luyện ARX | A | 25h | Mô hình ARX (FIT≥85%) |
-| 7–8 | Phát triển WebSocket server | C | 20h | WS real-time |
-| 8–10 | Phát triển Kalman Filter + MPC | A | 28h | Pipeline AI |
-| 8–10 | Fix bug FW, cải thiện ổn định | B | 12h | FW v2 |
-| 9–12 | Phát triển ReactJS Dashboard | C | 22h | Web Dashboard |
-| 11–12 | Tích hợp hệ thống, MPC tuning | A | 25h | End-to-end system |
-| 11–12 | Kiểm thử HW + FW | B | 15h | Test report HW |
-| 12–13 | Kiểm thử tích hợp toàn hệ thống | A, B, C | 15h/người | Bug list + fix |
-| 13–14 | Viết báo cáo PBL + QLDA | A, B, C | 18h/người | Báo cáo 10 chương |
-| 15 | Làm slide, chuẩn bị demo, bảo vệ | A, B, C | 10h/người | Slide + Demo |
+| Giai đoạn | Nội dung công việc | Người thực hiện | Thời lượng (h) | Kết quả bàn giao (Deliverable) |
+|:---------:|---------------------|:---------------:|:--------------:|--------------------------------|
+| **Tuần 1** | Khảo sát yêu cầu đề tài | A, B, C | 15h / người | Tài liệu yêu cầu ban đầu |
+| **Tuần 2** | - Lập kế hoạch dự án (SOW, WBS, RACI)<br>- Khảo sát linh kiện và lựa chọn Tech Stack | A (PM)<br>B (Dev) | 20h<br>30h | SOW, WBS, RACI, BOM |
+| **Tuần 3–4** | - Thiết kế kiến trúc hệ thống và AI pipeline<br>- Thiết kế mạch nguyên lý, DB schema, UI wireframe | A (PM)<br>B (Dev) | 18h<br>32h | Sơ đồ mạch, ERD, Mockup Figma |
+| **Tuần 4–7** | - Lắp ráp phần cứng và phát triển Firmware ESP32<br>- Thiết lập Django Server, viết REST API | B (Dev) | 38h | Prototype HW, API endpoints |
+| **Tuần 5–8** | Nghiên cứu và huấn luyện mô hình dự đoán ARX | A (PM) | 25h | Mô hình ARX (FIT ≥ 85%) |
+| **Tuần 7–10**| - Phát triển WebSocket server & Web Dashboard (React)<br>- Nghiên cứu & lập trình Kalman Filter + MPC | B (Dev)<br>C (Dev) | 42h<br>28h | WS real-time, Web Dashboard, AI pipeline |
+| **Tuần 11–12**| - Tích hợp hệ thống tổng thể, tinh chỉnh bộ MPC<br>- Kiểm thử đơn vị phần cứng & firmware | A, C<br>B | 25h / người<br>15h | Hệ thống hoạt động End-to-End |
+| **Tuần 12–13**| Kiểm thử tích hợp toàn hệ thống và sửa lỗi | A, B, C | 15h / người | Hệ thống hoàn thiện, Báo cáo lỗi |
+| **Tuần 13–14**| Viết báo cáo kỹ thuật PBL và báo cáo QLDA | A, B, C | 18h / người | Báo cáo PBL & QLDA hoàn chỉnh |
+| **Tuần 15** | Chuẩn bị slide, chạy thử demo và bảo vệ đồ án | A, B, C | 10h / người | Slide thuyết trình, Demo hoàn chỉnh |
 
-> **Tổng giờ công ước tính:** A = ~168h, B = ~119h, C = ~137h → Tổng = **424h** cho 15 tuần.
+> **Tổng giờ công ước tính:** A = ~146h, B = ~245h, C = ~111h → Tổng = **502h** cho 15 tuần. (Do B đảm nhiệm cả phần cứng và phần mềm Web Full-stack nên khối lượng công việc kỹ thuật lớn nhất, A phụ trách quản lý dự án & mô hình hóa ARX, C chịu trách nhiệm phần lọc nhiễu Kalman & thuật toán điều khiển MPC và tích hợp ARX).
 
 ---

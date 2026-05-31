@@ -32,9 +32,9 @@ Sản phẩm tổng của dự án là **"Hệ thống Nhà kính Thông minh (S
 | 2.1 | Thiết kế kiến trúc tổng thể | Kiến trúc client-server + IoT, sơ đồ thành phần | 2 | A |
 | 2.2 | Thiết kế sơ đồ mạch điện | Sơ đồ kết nối ESP32, cảm biến, relay | 2 | B |
 | 2.3 | Thiết kế giao thức truyền thông | Định dạng JSON, WebSocket protocol, ACK mechanism | 2 | A, B |
-| 2.4 | Thiết kế cơ sở dữ liệu | Schema MySQL cho time-series data | 2 | C |
-| 2.5 | Thiết kế giao diện Web | Wireframe/mockup cho 6 màn hình | 2 | C |
-| 2.6 | Thiết kế pipeline AI | Luồng: Sensor → Kalman → ARX → MPC → Actuator | 2 | A |
+| 2.4 | Thiết kế cơ sở dữ liệu | Schema MySQL cho time-series data | 2 | B |
+| 2.5 | Thiết kế giao diện Web | Wireframe/mockup cho 6 màn hình | 2 | B |
+| 2.6 | Thiết kế pipeline AI | Luồng: Sensor → Kalman → ARX → MPC → Actuator | 2 | A, C |
 | **3.0** | **Phát triển phần cứng** | | **1** | **B** |
 | 3.1 | Lắp ráp mạch cảm biến | Kết nối DHT22, Soil Moisture, LDR vào ESP32 | 2 | B |
 | 3.2 | Lắp ráp mạch relay + actuator | Kết nối relay 4 kênh, bơm, quạt, phun sương, đèn | 2 | B |
@@ -46,30 +46,30 @@ Sản phẩm tổng của dự án là **"Hệ thống Nhà kính Thông minh (S
 | 4.3 | Lập trình điều khiển relay | Nhận lệnh → kích relay → gửi ACK | 2 | B |
 | 4.4 | Lập trình hiển thị LCD | Hiển thị thông số cảm biến lên LCD | 2 | B |
 | 4.5 | Lập trình chuyển chế độ | Nút bấm hoặc lệnh chuyển Manual/Auto | 2 | B |
-| **5.0** | **Phát triển Backend** | | **1** | **C** |
-| 5.1 | Phát triển Django Server | Setup project, models, views, serializers | 2 | C |
-| 5.2 | Phát triển REST API | API endpoints cho web dashboard | 2 | C |
-| 5.3 | Phát triển WebSocket Server | Django Channels consumer, routing | 2 | C |
-| 5.4 | Thiết lập Database MySQL | Migration, schema, seed data | 2 | C |
-| **6.0** | **Phát triển AI** | | **1** | **A** |
+| **5.0** | **Phát triển Backend** | | **1** | **B** |
+| 5.1 | Phát triển Django Server | Setup project, models, views, serializers | 2 | B |
+| 5.2 | Phát triển REST API | API endpoints cho web dashboard | 2 | B |
+| 5.3 | Phát triển WebSocket Server | Django Channels consumer, routing | 2 | B |
+| 5.4 | Thiết lập Database MySQL | Migration, schema, seed data | 2 | B |
+| **6.0** | **Phát triển AI** | | **1** | **A, C** |
 | 6.1 | Thu thập và xử lý dữ liệu | Dataset 105.120 mẫu, tiền xử lý, chia train/val/test | 2 | A |
 | 6.2 | Huấn luyện mô hình ARX | ARX(5,1,2), Least Squares, đánh giá FIT/RMSE | 2 | A |
-| 6.3 | Phát triển Kalman Filter | Adaptive Kalman Filter với IAE | 2 | A |
-| 6.4 | Phát triển MPC Controller | Hàm chi phí Zone/Range, ràng buộc, tối ưu | 2 | A |
-| 6.5 | Tích hợp AI vào Backend | Kết nối pipeline AI với Django | 2 | A |
-| **7.0** | **Phát triển Web Dashboard** | | **1** | **C** |
-| 7.1 | Phát triển trang đăng nhập | Form login, xác thực | 2 | C |
-| 7.2 | Phát triển dashboard tổng quan | Card hiển thị thông số, trạng thái thiết bị | 2 | C |
-| 7.3 | Phát triển biểu đồ realtime | Chart.js/Recharts cho time-series | 2 | C |
-| 7.4 | Phát triển trang điều khiển | Nút bật/tắt bơm, quạt, phun sương, đèn | 2 | C |
-| 7.5 | Phát triển trang cảnh báo | Hiển thị cảnh báo khi vượt ngưỡng | 2 | C |
-| 7.6 | Phát triển trang dự báo | Hiển thị dự đoán ARX + MPC | 2 | C |
+| 6.3 | Phát triển Kalman Filter | Adaptive Kalman Filter với IAE | 2 | C |
+| 6.4 | Phát triển MPC Controller | Hàm chi phí Zone/Range, ràng buộc, tối ưu | 2 | C |
+| 6.5 | Tích hợp AI vào Backend | Kết nối pipeline AI với Django | 2 | B, C |
+| **7.0** | **Phát triển Web Dashboard** | | **1** | **B** |
+| 7.1 | Phát triển trang đăng nhập | Form login, xác thực | 2 | B |
+| 7.2 | Phát triển dashboard tổng quan | Card hiển thị thông số, trạng thái thiết bị | 2 | B |
+| 7.3 | Phát triển biểu đồ realtime | Chart.js/Recharts cho time-series | 2 | B |
+| 7.4 | Phát triển trang điều khiển | Nút bật/tắt bơm, quạt, phun sương, đèn | 2 | B |
+| 7.5 | Phát triển trang cảnh báo | Hiển thị cảnh báo khi vượt ngưỡng | 2 | B |
+| 7.6 | Phát triển trang dự báo | Hiển thị dự đoán ARX + MPC | 2 | B |
 | **8.0** | **Kiểm thử** | | **1** | **A, B, C** |
 | 8.1 | Kiểm thử phần cứng | Test cảm biến đọc đúng, relay hoạt động | 2 | B |
 | 8.2 | Kiểm thử firmware | Test WebSocket, điều khiển, chế độ | 2 | B |
-| 8.3 | Kiểm thử Backend + API | Test endpoints, WebSocket server | 2 | C |
-| 8.4 | Kiểm thử Web Dashboard | Test UI, chức năng, responsive | 2 | C |
-| 8.5 | Kiểm thử mô hình AI | Đánh giá FIT, RMSE, MPC performance | 2 | A |
+| 8.3 | Kiểm thử Backend + API | Test endpoints, WebSocket server | 2 | B |
+| 8.4 | Kiểm thử Web Dashboard | Test UI, chức năng, responsive | 2 | B |
+| 8.5 | Kiểm thử mô hình AI | Đánh giá FIT, RMSE, MPC performance | 2 | A, C |
 | 8.6 | Kiểm thử tích hợp | Test end-to-end: ESP32 → Backend → Web | 2 | A, B, C |
 | **9.0** | **Triển khai & Tài liệu** | | **1** | **A, B, C** |
 | 9.1 | Triển khai demo hoàn chỉnh | Setup và chạy toàn bộ hệ thống | 2 | A, B, C |

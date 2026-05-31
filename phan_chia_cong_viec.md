@@ -4,6 +4,14 @@
 
 ---
 
+## 👥 THÀNH VIÊN VÀ VAI TRÒ KỸ THUẬT
+
+- **Thành viên A (PM & ARX):** Hoàng Minh Trí — Quản lý tiến độ, thiết kế kiến trúc và huấn luyện mô hình ARX.
+- **Thành viên B (HW/FW & Fullstack):** Đinh Công Trung Sỹ — Thiết kế phần cứng, Firmware ESP32 và phát triển Django Backend & ReactJS Dashboard Full-stack.
+- **Thành viên C (Kalman & MPC):** Ngô Quang Sinh — Nghiên cứu, lập trình bộ lọc Kalman Filter, thuật toán điều khiển tối ưu MPC và tích hợp hệ thống điều khiển.
+
+---
+
 ## PHÂN CÔNG THEO CHƯƠNG
 
 | STT | Chương | Người viết | Ghi chú |
