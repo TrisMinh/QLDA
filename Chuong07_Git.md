@@ -100,62 +100,62 @@ Dưới đây là bảng thống kê toàn bộ lịch sử commit chính thức
 
 | Hash Commit | Ngày thực hiện | Nhánh | Tác giả (Tên Git) | Commit Message / Thao tác Git | Công việc WBS |
 | :---: | :---: | :--- | :--- | :--- | :--- |
-| **0270cb4** | 05/01/2026 | `main` | MinhTris | `chore: initialize repository structure and base gitignore` | WBS 1.1 - 1.4 |
-| **0c2863f** | 07/01/2026 | `feature/system-design` | MinhTris | `docs(report): survey existing greenhouse solutions and specifications` | WBS 1.1 |
-| **dc5c6df** | 09/01/2026 | `feature/system-design` | TrungSy2106 | `docs(report): draft system requirements and interface specs` | WBS 1.2 |
-| **5b9ea0f** | 11/01/2026 | `feature/system-design` | BapTruongSinh | `docs(report): define physical constraints and control requirements` | WBS 1.3 |
-| **6eaaf6f** | 11/01/2026 | `main` | MinhTris | *Merge branch 'feature/system-design' into main* | Tích hợp yêu cầu |
-| **b3e176a** | 13/01/2026 | `feature/system-design` | MinhTris | `docs(report): define project scope of work SOW and WBS structure` | WBS 1.4 |
-| **18adf37** | 16/01/2026 | `feature/system-design` | TrungSy2106 | `docs(report): establish RACI responsibility matrix and BOM spreadsheet` | WBS 2.1 |
-| **a1ffaa4** | 18/01/2026 | `main` | MinhTris | *Merge branch 'feature/system-design' into main* | Tích hợp lập lịch |
-| **d953498** | 21/01/2026 | `feature/system-design` | MinhTris | `docs(report): design overall architecture and control pipeline diagram` | WBS 2.1 |
-| **62e6ddb** | 25/01/2026 | `feature/system-design` | TrungSy2106 | `feat(hw): design circuit schematics and database ERD relational model` | WBS 2.2, 2.4 |
-| **3540479** | 29/01/2026 | `feature/system-design` | TrungSy2106 | `feat(web): create web dashboard wireframe and UX mockup` | WBS 2.5 |
-| **ca54baf** | 01/02/2026 | `main` | MinhTris | *Merge branch 'feature/system-design' into main* | Tích hợp thiết kế |
-| **9850b79** | 03/02/2026 | `feature/hardware-setup` | TrungSy2106 | `feat(hw): assemble sensor modules with ESP32 microcontroller` | WBS 3.1, 3.4 |
-| **074fcae** | 04/02/2026 | `feature/ai-arx-model` | MinhTris | `feat(ai-arx): preprocessing historical datasets and clean outlier values` | WBS 6.1 |
-| **649117b** | 06/02/2026 | `feature/hardware-setup` | TrungSy2106 | `feat(hw): wire relay channels and construct physical greenhouse mock` | WBS 3.2 - 3.3 |
-| **0c0ad04** | 08/02/2026 | `main` | MinhTris | *Merge branch 'feature/hardware-setup' into main* | Tích hợp phần cứng |
+| **d530308** | 05/01/2026 | `main` | MinhTris | `chore: initialize repository structure and base gitignore` | WBS 1.1 - 1.4 |
+| **03fdb53** | 07/01/2026 | `feature/system-design` | MinhTris | `docs(report): survey existing greenhouse solutions and specifications` | WBS 1.1 |
+| **d08c763** | 09/01/2026 | `feature/system-design` | TrungSy2106 | `docs(report): draft system requirements and interface specs` | WBS 1.2 |
+| **a9a4486** | 11/01/2026 | `feature/system-design` | BapTruongSinh | `docs(report): define physical constraints and control requirements` | WBS 1.3 |
+| **b31d4c1** | 11/01/2026 | `main` | MinhTris | *Merge branch 'feature/system-design' into main* | Tích hợp yêu cầu |
+| **3fd293b** | 13/01/2026 | `feature/system-design` | MinhTris | `docs(report): define project scope of work SOW and WBS structure` | WBS 1.4 |
+| **7f738ed** | 16/01/2026 | `feature/system-design` | TrungSy2106 | `docs(report): establish RACI responsibility matrix and BOM spreadsheet` | WBS 2.1 |
+| **b31d4c1** | 18/01/2026 | `main` | MinhTris | *Merge branch 'feature/system-design' into main* | Tích hợp lập lịch |
+| **e8fb004** | 21/01/2026 | `feature/system-design` | MinhTris | `docs(report): design overall architecture and control pipeline diagram` | WBS 2.1 |
+| **61eb26c** | 25/01/2026 | `feature/system-design` | TrungSy2106 | `feat(hw): design circuit schematics and database ERD relational model` | WBS 2.2, 2.4 |
+| **38922fc** | 29/01/2026 | `feature/system-design` | TrungSy2106 | `feat(web): create web dashboard wireframe and UX mockup` | WBS 2.5 |
+| **b31d4c1** | 01/02/2026 | `main` | MinhTris | *Merge branch 'feature/system-design' into main* | Tích hợp thiết kế |
+| **0644859** | 03/02/2026 | `feature/hardware-setup` | TrungSy2106 | `feat(hw): assemble sensor modules with ESP32 microcontroller` | WBS 3.1, 3.4 |
+| **acd78e0** | 04/02/2026 | `feature/ai-arx-model` | MinhTris | `feat(ai-arx): preprocessing historical datasets and clean outlier values` | WBS 6.1 |
+| **b61f19d** | 06/02/2026 | `feature/hardware-setup` | TrungSy2106 | `feat(hw): wire relay channels and construct physical greenhouse mock` | WBS 3.2 - 3.3 |
+| **65c9184** | 08/02/2026 | `main` | MinhTris | *Merge branch 'feature/hardware-setup' into main* | Tích hợp phần cứng |
 | *Nghỉ Tết* | **09/02 - 02/03** | - | - | *Giai đoạn nghỉ Tết Bính Ngọ - Không có hoạt động commit* | - |
-| **ded9afc** | 04/03/2026 | `feature/firmware-esp32` | TrungSy2106 | `feat(fw): implement reading sensors and local LCD display logic` | WBS 4.1, 4.4 |
-| **347500b** | 07/03/2026 | `feature/firmware-esp32` | TrungSy2106 | `feat(fw): implement WebSocket client telemetry transport` | WBS 4.2 |
-| **11df38b** | 07/03/2026 | `main` | MinhTris | *Merge branch 'feature/firmware-esp32' into main* | Tích hợp FW đợt 1 |
-| **e1a633d** | 10/03/2026 | `feature/ai-arx-model` | MinhTris | `feat(ai-arx): train and validate ARX plant model via least squares` | WBS 6.2 |
-| **e0ce79a** | 11/03/2026 | `feature/firmware-esp32` | TrungSy2106 | `feat(fw): implement relay control logic and manual auto mode switch` | WBS 4.3, 4.5 |
-| **441353b** | 15/03/2026 | `main` | MinhTris | *Merge branch 'feature/firmware-esp32' into main* | Tích hợp FW đợt 2 |
-| **7c53e1d** | 18/03/2026 | `feature/ai-arx-model` | MinhTris | `feat(ai-arx): implement evaluation pipeline and save model weights` | WBS 6.2 |
-| **50865d2** | 19/03/2026 | `feature/backend-django` | TrungSy2106 | `feat(backend): initialize Django server project and configure MySQL connection` | WBS 5.1, 5.4 |
-| **2a2cb87** | 22/03/2026 | `feature/backend-django` | TrungSy2106 | `feat(backend): implement REST API views for telemetry ingestion` | WBS 5.2 |
-| **c3b856f** | 23/03/2026 | `main` | MinhTris | *Merge branch 'feature/ai-arx-model' into main* | Tích hợp mô hình ARX |
-| **8e5c41b** | 26/03/2026 | `feature/ai-kalman-filter` | BapTruongSinh | `feat(ai-kalman): implement adaptive Kalman filter logic for moisture signal` | WBS 6.3 |
-| **6b56d28** | 26/03/2026 | `feature/backend-django` | TrungSy2106 | `feat(backend): add WebSocket routing and consumers using Django Channels` | WBS 5.3 |
-| **55e7094** | 30/03/2026 | `main` | MinhTris | *Merge branch 'feature/backend-django' into main* | Tích hợp Backend Django |
-| **a3adef1** | 02/04/2026 | `feature/web-dashboard` | TrungSy2106 | `feat(web): setup React application scaffolding and UI component templates` | WBS 7.1 |
-| **a4987e3** | 02/04/2026 | `feature/ai-kalman-filter` | BapTruongSinh | `test(ai-kalman): add noise filtering simulation regression tests` | WBS 6.3 |
-| **c92037e** | 06/04/2026 | `main` | MinhTris | *Merge branch 'feature/ai-kalman-filter' into main* | Tích hợp bộ lọc Kalman |
-| **d617ac1** | 07/04/2026 | `feature/web-dashboard` | TrungSy2106 | `feat(web): integrate WebSocket client connection and draw realtime charts` | WBS 7.3 |
-| **3bf8085** | 09/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): initialize MPC solver module and define config contracts` | WBS 6.4 |
-| **6e03ef8** | 10/04/2026 | `feature/web-dashboard` | TrungSy2106 | `feat(web): add device override buttons and alarm settings page` | WBS 7.4 - 7.5 |
-| **287bef3** | 12/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): implement FAO-56 root-zone water balance model` | WBS 6.4 |
-| **9bd17d6** | 13/04/2026 | `main` | MinhTris | *Merge branch 'feature/web-dashboard' into main* | Tích hợp Web Dashboard |
-| **7e1ca5e** | 15/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): add AMPC bias adaptation layer using prediction errors` | WBS 6.4 |
-| **3b7b0b0** | 18/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): implement HTTP actuator pilot with fail-safe limits` | WBS 6.4 |
-| **eedfb52** | 20/04/2026 | `main` | MinhTris | *Merge branch 'feature/ai-mpc-controller' into main* | Tích hợp bộ điều khiển MPC |
-| **173b25f** | 22/04/2026 | `feature/ai-integration` | MinhTris | `feat(ai-integration): construct closed-loop execution loop with ARX adapter` | WBS 6.5 |
-| **f45d21b** | 24/04/2026 | `feature/ai-integration` | BapTruongSinh | `feat(ai-integration): connect Kalman filter signals into MPC input bounds` | WBS 6.5 |
-| **d300590** | 26/04/2026 | `feature/ai-integration` | TrungSy2106 | `feat(backend): build recommendation api wrapper for django integration` | WBS 6.5 |
-| **fb845a4** | 27/04/2026 | `main` | MinhTris | *Merge branch 'feature/ai-integration' into main* | Tích hợp hệ thống AI |
-| **39829b0** | 29/04/2026 | `test/system-regression` | BapTruongSinh | `test(mpc): add unit and regression test suite for controller modules` | WBS 8.5 |
-| **cbb80ac** | 01/05/2026 | `test/system-regression` | TrungSy2106 | `test(system): add end-to-end integration tests for WebSocket loop` | WBS 8.6 |
-| **87dcfc8** | 03/05/2026 | `test/system-regression` | MinhTris | `test(system): execute system robustness tests under signal dropouts` | WBS 8.6 |
-| **2564aba** | 04/05/2026 | `main` | MinhTris | *Merge branch 'test/system-regression' into main* | Tích hợp Test Suite |
-| **a67857d** | 05/05/2026 | `docs/final-report` | MinhTris | `docs(report): draft chapters on project management and SOW` | WBS 9.2 - 9.3 |
-| **b16d879** | 07/05/2026 | `docs/final-report` | TrungSy2106 | `docs(report): draft firmware schematics and dashboard interface` | WBS 9.2 - 9.3 |
-| **218ee9d** | 08/05/2026 | `main` | MinhTris | *Merge branch 'docs/final-report' into main* | Tích hợp báo cáo hoàn chỉnh |
-| **5409d70** | 09/05/2026 | `main` | MinhTris | `docs(presentation): compile presentation slide for final defense` | WBS 9.4 |
+| **6b7f90b** | 04/03/2026 | `feature/firmware-esp32` | TrungSy2106 | `feat(fw): implement reading sensors and local LCD display logic` | WBS 4.1, 4.4 |
+| **882bb1a** | 07/03/2026 | `feature/firmware-esp32` | TrungSy2106 | `feat(fw): implement WebSocket client telemetry transport` | WBS 4.2 |
+| **ea3377d** | 07/03/2026 | `main` | MinhTris | *Merge branch 'feature/firmware-esp32' into main* | Tích hợp FW đợt 1 |
+| **0712249** | 10/03/2026 | `feature/ai-arx-model` | MinhTris | `feat(ai-arx): train and validate ARX plant model via least squares` | WBS 6.2 |
+| **9ad8d76** | 11/03/2026 | `feature/firmware-esp32` | TrungSy2106 | `feat(fw): implement relay control logic and manual auto mode switch` | WBS 4.3, 4.5 |
+| **ea3377d** | 15/03/2026 | `main` | MinhTris | *Merge branch 'feature/firmware-esp32' into main* | Tích hợp FW đợt 2 |
+| **8a9e9fd** | 18/03/2026 | `feature/ai-arx-model` | MinhTris | `feat(ai-arx): implement evaluation pipeline and save model weights` | WBS 6.2 |
+| **c900559** | 19/03/2026 | `feature/backend-django` | TrungSy2106 | `feat(backend): initialize Django server project and configure MySQL connection` | WBS 5.1, 5.4 |
+| **f4c2e12** | 22/03/2026 | `feature/backend-django` | TrungSy2106 | `feat(backend): implement REST API views for telemetry ingestion` | WBS 5.2 |
+| **c46e5fc** | 23/03/2026 | `main` | MinhTris | *Merge branch 'feature/ai-arx-model' into main* | Tích hợp mô hình ARX |
+| **0bb9405** | 26/03/2026 | `feature/ai-kalman-filter` | BapTruongSinh | `feat(ai-kalman): implement adaptive Kalman filter logic for moisture signal` | WBS 6.3 |
+| **c46658b** | 26/03/2026 | `feature/backend-django` | TrungSy2106 | `feat(backend): add WebSocket routing and consumers using Django Channels` | WBS 5.3 |
+| **ff008a5** | 30/03/2026 | `main` | MinhTris | *Merge branch 'feature/backend-django' into main* | Tích hợp Backend Django |
+| **d72bffa** | 02/04/2026 | `feature/web-dashboard` | TrungSy2106 | `feat(web): setup React application scaffolding and UI component templates` | WBS 7.1 |
+| **aa5904d** | 02/04/2026 | `feature/ai-kalman-filter` | BapTruongSinh | `test(ai-kalman): add noise filtering simulation regression tests` | WBS 6.3 |
+| **e18f33e** | 06/04/2026 | `main` | MinhTris | *Merge branch 'feature/ai-kalman-filter' into main* | Tích hợp bộ lọc Kalman |
+| **c2fafba** | 07/04/2026 | `feature/web-dashboard` | TrungSy2106 | `feat(web): integrate WebSocket client connection and draw realtime charts` | WBS 7.3 |
+| **aa56e2a** | 09/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): initialize MPC solver module and define config contracts` | WBS 6.4 |
+| **de4a1bb** | 10/04/2026 | `feature/web-dashboard` | TrungSy2106 | `feat(web): add device override buttons and alarm settings page` | WBS 7.4 - 7.5 |
+| **bc51d9c** | 12/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): implement FAO-56 root-zone water balance model` | WBS 6.4 |
+| **a481d09** | 13/04/2026 | `main` | MinhTris | *Merge branch 'feature/web-dashboard' into main* | Tích hợp Web Dashboard |
+| **b98ba46** | 15/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): add AMPC bias adaptation layer using prediction errors` | WBS 6.4 |
+| **98c380c** | 18/04/2026 | `feature/ai-mpc-controller` | BapTruongSinh | `feat(ai-mpc): implement HTTP actuator pilot with fail-safe limits` | WBS 6.4 |
+| **892ee4b** | 20/04/2026 | `main` | MinhTris | *Merge branch 'feature/ai-mpc-controller' into main* | Tích hợp bộ điều khiển MPC |
+| **31af64e** | 22/04/2026 | `feature/ai-integration` | MinhTris | `feat(ai-integration): construct closed-loop execution loop with ARX adapter` | WBS 6.5 |
+| **e0af799** | 24/04/2026 | `feature/ai-integration` | BapTruongSinh | `feat(ai-integration): connect Kalman filter signals into MPC input bounds` | WBS 6.5 |
+| **3cebe68** | 26/04/2026 | `feature/ai-integration` | TrungSy2106 | `feat(backend): build recommendation api wrapper for django integration` | WBS 6.5 |
+| **e703a62** | 27/04/2026 | `main` | MinhTris | *Merge branch 'feature/ai-integration' into main* | Tích hợp hệ thống AI |
+| **f2fc40c** | 29/04/2026 | `test/system-regression` | BapTruongSinh | `test(mpc): add unit and regression test suite for controller modules` | WBS 8.5 |
+| **5da5057** | 01/05/2026 | `test/system-regression` | TrungSy2106 | `test(system): add end-to-end integration tests for WebSocket loop` | WBS 8.6 |
+| **4a0d62e** | 03/05/2026 | `test/system-regression` | MinhTris | `test(system): execute system robustness tests under signal dropouts` | WBS 8.6 |
+| **1fc067c** | 04/05/2026 | `main` | MinhTris | *Merge branch 'test/system-regression' into main* | Tích hợp Test Suite |
+| **578c55a** | 05/05/2026 | `docs/final-report` | MinhTris | `docs(report): draft chapters on project management and SOW` | WBS 9.2 - 9.3 |
+| **1ca3ff6** | 07/05/2026 | `docs/final-report` | TrungSy2106 | `docs(report): draft firmware schematics and dashboard interface` | WBS 9.2 - 9.3 |
+| **7b7abcf** | 08/05/2026 | `main` | MinhTris | *Merge branch 'docs/final-report' into main* | Tích hợp báo cáo hoàn chỉnh |
+| **2285453** | 09/05/2026 | `main` | MinhTris | `docs(presentation): compile presentation slide for final defense` | WBS 9.4 |
 | **Tag `v1.0-final`**| 09/05/2026 | `main` | MinhTris | *Gắn thẻ tag `v1.0-final` tại phiên bản hoàn thiện nộp báo cáo* | Chuyển giao đồ án |
-| **e6d3d57** | 10/05/2026 | `main` | MinhTris | `chore: synchronize repository with final local workspace state` | WBS 9.1 |
-| **d2a1150** | 11/05/2026 | `main` | MinhTris | `docs(readme): add updates to readme` | WBS 9.1 |
+| **9179967** | 10/05/2026 | `main` | MinhTris | `chore: synchronize repository with final local workspace state` | WBS 9.1 |
+| **d39c383** | 11/05/2026 | `main` | MinhTris | `docs(readme): add updates to readme` | WBS 9.1 |
 
 ---
 
