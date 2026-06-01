@@ -53,7 +53,7 @@ Thư mục này chứa toàn bộ các chương báo cáo môn học Quản lý 
 *   **`Chuong03_WBS.md`**: Sơ đồ phân rã công việc chi tiết (Work Breakdown Structure) từ cấp dự án đến các gói công việc nhỏ nhất.
 *   **`Chuong05_UocLuongThoiGian.md` & `.docx`**: Tài liệu ước lượng thời gian dự án theo giờ công và man-month dựa trên phương pháp ước lượng 3 điểm (PERT).
 *   **`Chuong06_LapLichBieu.md` & `.docx`**: Tài liệu lập lịch biểu dự án, sơ đồ PDM/AON, ADM/AOA và xác định đường găng (Critical Path) của dự án.
-*   **`Chuong07_Git.md` & `.docx`**: Báo cáo quản lý mã nguồn, sơ đồ phân nhánh Git, commit message rules, validation gate và bảng log chi tiết 57 commit thực tế.
+*   **`Chuong07_Git.md` & `.docx`**: Báo cáo quản lý mã nguồn, sơ đồ phân nhánh Git, commit message rules, validation gate và bảng log chi tiết 55 commit thực tế.
 *   **`Chuong09_QuanLyRuiRo.md`**: Bảng ma trận quản lý rủi ro dự án, các biện pháp ứng phó và bài học kinh nghiệm rút ra.
 *   **`Chuong10_KiemSoatDuAn.md`**: Tài liệu theo dõi tiến độ họp nhóm, cá nhân time sheet thực tế hàng tuần và nhật ký xử lý các tình huống phát sinh.
 *   **`nhat_ky_chinh_sua_vai_tro.md`**: Nhật ký lưu trữ chi tiết các nội dung đã thay đổi trong các chương báo cáo để đảm bảo đồng bộ thông tin vai trò nhân sự mới.

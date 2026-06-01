@@ -151,11 +151,11 @@ Dưới đây là bảng thống kê toàn bộ lịch sử commit chính thức
 | **2564aba** | 04/05/2026 | `main` | MinhTris | *Merge branch 'test/system-regression' into main* | Tích hợp Test Suite |
 | **a67857d** | 05/05/2026 | `docs/final-report` | MinhTris | `docs(report): draft chapters on project management and SOW` | WBS 9.2 - 9.3 |
 | **b16d879** | 07/05/2026 | `docs/final-report` | TrungSy2106 | `docs(report): draft firmware schematics and dashboard interface` | WBS 9.2 - 9.3 |
-| **7eebd69** | 08/05/2026 | `docs/final-report` | BapTruongSinh | `docs(report): complete chapter 7 git and control algorithm documentation` | WBS 9.2 - 9.3 |
-| **6922e9a** | 08/05/2026 | `main` | MinhTris | *Merge branch 'docs/final-report' into main* | Tích hợp báo cáo hoàn chỉnh |
-| **351525f** | 09/05/2026 | `main` | MinhTris | `docs(presentation): compile presentation slide for final defense` | WBS 9.4 |
+| **218ee9d** | 08/05/2026 | `main` | MinhTris | *Merge branch 'docs/final-report' into main* | Tích hợp báo cáo hoàn chỉnh |
+| **5409d70** | 09/05/2026 | `main` | MinhTris | `docs(presentation): compile presentation slide for final defense` | WBS 9.4 |
 | **Tag `v1.0-final`**| 09/05/2026 | `main` | MinhTris | *Gắn thẻ tag `v1.0-final` tại phiên bản hoàn thiện nộp báo cáo* | Chuyển giao đồ án |
-| **7f1d99c** | 10/05/2026 | `main` | MinhTris | `chore: synchronize repository with final local workspace state` | WBS 9.1 |
+| **e6d3d57** | 10/05/2026 | `main` | MinhTris | `chore: synchronize repository with final local workspace state` | WBS 9.1 |
+| **d2a1150** | 11/05/2026 | `main` | MinhTris | `docs(readme): add updates to readme` | WBS 9.1 |
 
 ---
 
