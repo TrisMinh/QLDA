@@ -37,7 +37,7 @@ Dự án tập trung xây dựng hệ thống nhà kính thông minh ở quy mô
 ## 2.4 Thời gian thực hiện dự án
 
 - **Tổng thời gian:** 15 tuần.
-- **Ngày bắt đầu:** 14/01/2026
+- **Ngày bắt đầu:** 05/01/2026
 - **Ngày kết thúc:** 10/05/2026
 
 ---
@@ -48,7 +48,7 @@ Bảng mốc các báo cáo, yêu cầu cần thực hiện:
 
 | Mã | Kết thúc giai đoạn | Ngày báo cáo | Yêu cầu |
 |:--:|---------------------|:------------:|----------|
-| 1 | Khởi động dự án | 14/01/2026 | Lựa chọn thành viên làm chung trong học phần |
+| 1 | Khởi động dự án | 05/01/2026 | Lựa chọn thành viên làm chung trong học phần |
 | 2 | Nộp đề xuất, lựa chọn đề tài | 21/01/2026 | Bản đề xuất đề tài, giới thiệu đề tài, các tài liệu tham khảo liên quan |
 | 3 | Báo cáo tiến độ lần 1 | 04/02/2026 | Trình bày đề xuất đề tài, các tài liệu đã đọc, mã nguồn tham khảo, thiết bị phần cứng cần thiết và BOM linh kiện |
 | 4 | Báo cáo tiến độ lần 2 | 25/02/2026 | Báo cáo tiến độ lắp ráp phần cứng ESP32, kết nối cảm biến, thiết kế sơ đồ mạch và các vấn đề kỹ thuật cần hướng dẫn |

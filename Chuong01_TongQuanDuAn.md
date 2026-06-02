@@ -33,9 +33,9 @@ Hệ thống giám sát các thông số môi trường (nhiệt độ, độ �
 
 Dự án triển khai từ ngày 31/12/2025 đến ngày 10/05/2026, cụ thể như sau:
 
-- **Từ ngày 31/12/2025 đến ngày 14/01/2026:** các sinh viên tổ chức thành nhóm để làm đồ án, giảng viên đề xuất các hướng nghiên cứu quan tâm và giới thiệu với sinh viên, sau đó giảng viên chia sẻ các bài báo, các tài liệu tham khảo liên quan.
-- **Từ ngày 14/01/2026 đến ngày 21/01/2026:** GV hướng dẫn gặp nhóm SV để thống nhất đề tài cụ thể sẽ triển khai.
-- **Từ ngày 21/01/2026 đến ngày 12/04/2026:** GV hướng dẫn gặp nhóm SV để hướng dẫn thực hiện và kiểm tra tiến độ đề tài.
+- **Từ ngày 31/12/2025 đến ngày 05/01/2026:** các sinh viên tổ chức thành nhóm để làm đồ án, giảng viên đề xuất các hướng nghiên cứu quan tâm và giới thiệu với sinh viên, sau đó giảng viên chia sẻ các bài báo, các tài liệu tham khảo liên quan.
+- **Từ ngày 05/01/2026 đến ngày 12/01/2026:** GV hướng dẫn gặp nhóm SV để thống nhất đề tài cụ thể sẽ triển khai.
+- **Từ ngày 12/01/2026 đến ngày 12/04/2026:** GV hướng dẫn gặp nhóm SV để hướng dẫn thực hiện và kiểm tra tiến độ đề tài.
 - **Từ ngày 12/04/2026 đến ngày 10/05/2026:** Nhóm SV làm dự án liên tục để hoàn thành dưới sự giám sát của giảng viên hướng dẫn.
 
 **Các mốc quan trọng của dự án Smart Greenhouse:**

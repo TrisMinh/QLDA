@@ -330,7 +330,7 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 | Tổng thời gian    |                15 tuần                |
 | Tổng giờ công    |  502 giờ (A: 146h, B: 245h, C: 111h)  |
 | Tổng chi phí      |            1.371.000 VNĐ              |
-| Số work packages   |                   22                   |
+| Số work packages   |                   23                   |
 | Số milestone       |                    9                    |
 | Số thay đổi      |                    5                    |
 | Số rủi ro xảy ra | 2 (R02: cảm biến hỏng, R03: trễ AI) |

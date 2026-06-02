@@ -158,8 +158,10 @@ Hệ thống Nhà kính Thông minh
 │   │   └── T3: Huấn luyện ARX(5,1,2), đánh giá FIT/RMSE
 │   ├── P3.4: Kalman Filter
 │   │   └── T3: Phát triển Adaptive Kalman Filter với IAE
-│   └── P3.5: MPC Controller
-│       └── T3: Phát triển hàm chi phí Zone/Range, ràng buộc, tối ưu
+│   ├── P3.5: MPC Controller
+│   │   └── T3: Phát triển hàm chi phí Zone/Range, ràng buộc, tối ưu
+│   └── P3.6: Tích hợp AI
+│       └── T3: Tích hợp mô hình ARX, Kalman, MPC vào Django Backend
 ├── P4: Web Dashboard
 │   ├── P4.1: Giao diện giám sát
 │   │   └── T3: Phát triển Dashboard, biểu đồ real-time, cảnh báo
@@ -167,8 +169,8 @@ Hệ thống Nhà kính Thông minh
 │       └── T3: Phát triển nút bật/tắt thiết bị, trang dự báo
 └── P5: Kiểm thử
     ├── P5.1: Kiểm thử hệ thống
-    │   ├── T4: Kiểm thử phần cứng và firmware
-    │   └── T4: Kiểm thử Backend, Web Dashboard và AI
+    │   ├── T4_HW: Kiểm thử phần cứng và firmware
+    │   └── T4_SW: Kiểm thử Backend, Web Dashboard và AI
     ├── P5.2: Hiệu chỉnh
     │   └── T4: Hiệu chỉnh cảm biến, tune tham số MPC, sửa lỗi
     └── P5.3: Hoàn thành dự án
@@ -198,12 +200,13 @@ Hệ thống Nhà kính Thông minh
 | P3.3.T3 | Mô hình ARX | Huấn luyện ARX | ARX(5,1,2), Least Squares, đánh giá FIT/RMSE | A |
 | P3.4.T3 | Kalman Filter | Phát triển Kalman | Adaptive Kalman Filter với IAE lọc nhiễu cảm biến | C |
 | P3.5.T3 | MPC Controller | Phát triển MPC | Hàm chi phí Zone/Range, ràng buộc, tối ưu điều khiển | C |
+| P3.6.T3 | Tích hợp AI | Tích hợp AI vào Backend | Tích hợp mô hình ARX, Kalman, MPC vào Django, API dự báo real-time | B, C |
 | **P4** | **Web Dashboard** | | | **B** |
 | P4.1.T3 | Giao diện giám sát | Phát triển giám sát | Dashboard tổng quan, biểu đồ real-time, cảnh báo ngưỡng | B |
 | P4.2.T3 | Giao diện điều khiển | Phát triển điều khiển | Nút bật/tắt thiết bị, trang dự báo xu hướng | B |
 | **P5** | **Kiểm thử** | | | **A, B, C** |
-| P5.1.T4 | Kiểm thử hệ thống | Kiểm thử HW & FW | Test cảm biến, relay, WebSocket, LCD | B |
-| P5.1.T4 | Kiểm thử hệ thống | Kiểm thử BE, Web & AI | Test API, Dashboard, mô hình ARX/Kalman/MPC | A, B, C |
+| P5.1.T4_HW | Kiểm thử hệ thống | Kiểm thử HW & FW | Test cảm biến, relay, WebSocket, LCD | B |
+| P5.1.T4_SW | Kiểm thử hệ thống | Kiểm thử BE, Web & AI | Test API, Dashboard, mô hình ARX/Kalman/MPC | A, B, C |
 | P5.2.T4 | Hiệu chỉnh | Hiệu chỉnh hệ thống | Calibrate cảm biến, tune tham số MPC, sửa lỗi tích hợp | A, B, C |
 | P5.3.T5 | Hoàn thành dự án | Báo cáo & bảo vệ | Demo hoàn chỉnh, viết báo cáo PBL + QLDA, slide, bảo vệ | A, B, C |
 

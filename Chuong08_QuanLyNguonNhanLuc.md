@@ -29,11 +29,11 @@ Việc phân công nhiệm vụ dựa trên năng lực chuyên môn giúp tối
 
 ## 8.3. Sơ đồ phụ tải nguồn nhân lực
 
-### Bảng 17. Bảng phân bố nguồn nhân lực (22 hoạt động)
+### Bảng 17. Bảng phân bố nguồn nhân lực (23 hoạt động)
 
 | Mã | Hoạt động | Công việc trước đó | Thời lượng | Nhân lực | Nhân sự chính |
 | :---: | --------- | :----------------: | :--------: | :------: | ------------- |
-| **A** | Thiết kế sơ đồ kết nối cảm biến | - | 19 ngày | 1 | Sỹ |
+| **A** | Thiết kế sơ đồ kết nối cảm biến | - | 28 ngày | 1 | Sỹ |
 | **B** | Lắp ráp & đấu nối cảm biến | A | 7 ngày | 1 | Sỹ |
 | **C** | Kiểm thử cảm biến | H | 4 ngày | 1 | Sỹ |
 | **D** | Lắp ráp relay & actuator | A | 7 ngày | 1 | Sỹ |
@@ -49,6 +49,7 @@ Việc phân công nhiệm vụ dựa trên năng lực chuyên môn giúp tối
 | **N** | Huấn luyện ARX | M | 21 ngày | 1 | Trí |
 | **O** | Phát triển Kalman Filter | N | 14 ngày | 1 | Sinh |
 | **P** | Phát triển MPC Controller | O | 14 ngày | 1 | Sinh |
+| **W** | Tích hợp AI vào Backend | L, P | 7 ngày | 2 | Sỹ, Sinh |
 | **Q** | Giao diện giám sát | K | 7 ngày | 1 | Sỹ |
 | **R** | Giao diện điều khiển | Q | 7 ngày | 1 | Sỹ |
 | **S** | Kiểm thử HW & FW | C, G, I, J | 7 ngày | 1 | Sỹ |

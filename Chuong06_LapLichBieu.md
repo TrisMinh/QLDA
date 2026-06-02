@@ -21,13 +21,13 @@ Từ đó, nhóm có cơ sở để đánh giá tính khả thi của mục tiê
 
 ### 6.2.1 Bảng hoạt động của dự án
 
-Bảng hoạt động dưới đây được xây dựng dựa trên **22 công việc chi tiết từ WBS** (Chương 3), xác định các mối quan hệ trước - sau, thời gian thực hiện (quy đổi sang ngày lịch làm việc thực tế) và phân công trách nhiệm:
+Bảng hoạt động dưới đây được xây dựng dựa trên **23 công việc chi tiết từ WBS** (Chương 3), xác định các mối quan hệ trước - sau, thời gian thực hiện (quy đổi sang ngày lịch làm việc thực tế) và phân công trách nhiệm:
 
-**Bảng 16. Bảng hoạt động của dự án (22 công việc WBS)**
+**Bảng 16. Bảng hoạt động của dự án (23 công việc WBS)**
 
 |       Mã WBS       | Hoạt động                             |      Công việc trước đó      |    Thời gian thực hiện    | Thời lượng | Nhân sự chính | Kết quả bàn giao                          |
 | :------------------: | ---------------------------------------- | :--------------------------------: | :---------------------------: | :-----------: | :--------------: | -------------------------------------------- |
-|  **A**  | Thiết kế sơ đồ kết nối cảm biến |                 -                 |    14/01/2026 - 01/02/2026    |   19 ngày   |       Sỹ       | Sơ đồ nguyên lý kết nối cảm biến    |
+|  **A**  | Thiết kế sơ đồ kết nối cảm biến |                 -                 |    05/01/2026 - 01/02/2026    |   28 ngày   |       Sỹ       | Sơ đồ nguyên lý kết nối cảm biến    |
 |  **B**  | Lắp ráp & đấu nối cảm biến        |              A              |    02/02/2026 - 08/02/2026    |    7 ngày    |       Sỹ       | Cụm cảm biến được đấu nối           |
 |  **C**  | Kiểm thử cảm biến                    |              H              |    10/03/2026 - 13/03/2026    |    4 ngày    |       Sỹ       | Báo cáo thông số cảm biến              |
 |  **D**  | Lắp ráp relay & actuator               |              A              |    02/02/2026 - 08/02/2026    |    7 ngày    |       Sỹ       | Khối điều khiển công suất              |
@@ -43,12 +43,13 @@ Bảng hoạt động dưới đây được xây dựng dựa trên **22 công 
 |  **N**  | Huấn luyện ARX                         |              M              |    03/03/2026 - 23/03/2026    |   21 ngày   |       Trí       | Trọng số mô hình ARX                     |
 |  **O**  | Phát triển Kalman Filter               |              N              |    24/03/2026 - 06/04/2026    |   14 ngày   |       Sinh       | Code thuật toán ước lượng trạng thái |
 |  **P**  | Phát triển MPC Controller              |              O              |    07/04/2026 - 20/04/2026    |   14 ngày   |       Sinh       | Code thuật toán điều khiển tối ưu     |
+|  **W**  | Tích hợp AI vào Backend              |           L, P              |    21/04/2026 - 27/04/2026    |    7 ngày    |   Sỹ, Sinh   | API dự báo real-time, tích hợp ARX/Kalman/MPC vào Django |
 |  **Q**  | Phát triển giao diện giám sát       |              K              |    10/03/2026 - 16/03/2026    |    7 ngày    |       Sỹ       | Dashboard hiển thị biểu đồ              |
 |  **R**  | Giao diện điều khiển                 |              Q              |    17/03/2026 - 23/03/2026    |    7 ngày    |       Sỹ       | Dashboard gửi lệnh điều khiển           |
 | **S** | Kiểm thử HW & FW                       | C, G, I, J |    17/03/2026 - 23/03/2026    |    7 ngày    |       Sỹ       | Báo cáo kiểm thử thiết bị              |
-| **T** | Kiểm thử BE, Web & AI                  |     L, R, P     |    21/04/2026 - 27/04/2026    |    7 ngày    | Trí, Sỹ, Sinh | Báo cáo kiểm thử tích hợp phần mềm   |
-|  **U**  | Hiệu chỉnh hệ thống                  |       S, T       |    28/04/2026 - 04/05/2026    |    7 ngày    | Trí, Sỹ, Sinh | Hệ thống vận hành đồng bộ             |
-|  **V**  | Báo cáo & bảo vệ                     |              U              |    05/05/2026 - 10/05/2026    |    6 ngày    | Trí, Sỹ, Sinh | Báo cáo hoàn chỉnh & Slide               |
+| **T** | Kiểm thử BE, Web & AI                  |     L, R, W     |    28/04/2026 - 04/05/2026    |    7 ngày    | Trí, Sỹ, Sinh | Báo cáo kiểm thử tích hợp phần mềm   |
+|  **U**  | Hiệu chỉnh hệ thống                  |       S, T       |    05/05/2026 - 07/05/2026    |    3 ngày    | Trí, Sỹ, Sinh | Hệ thống vận hành đồng bộ             |
+|  **V**  | Báo cáo & bảo vệ                     |              U              |    08/05/2026 - 10/05/2026    |    3 ngày    | Trí, Sỹ, Sinh | Báo cáo hoàn chỉnh & Slide               |
 
 *Ghi chú: Khoảng thời gian từ 09/02/2026 đến 02/03/2026 là kỳ nghỉ Tết Nguyên Đán (3 tuần) nên không có hoạt động phát triển nào được lên lịch.*
 
@@ -141,7 +142,7 @@ gantt
     axisFormat  %d/%m
   
     section Phần cứng (P1)
-    Thiết kế sơ đồ kết nối cảm biến (A)     :active, p1_1, 2026-01-14, 19d
+    Thiết kế sơ đồ kết nối cảm biến (A)     :active, p1_1, 2026-01-05, 28d
     Lắp ráp cảm biến (B)                  :active, p1_2, after p1_1, 7d
     Lắp ráp relay & actuator (D)          :active, p1_3, after p1_1, 7d
     Xây dựng khung nhà kính (E)           :active, p1_4, after p1_1, 7d
@@ -162,6 +163,7 @@ gantt
     Huấn luyện ARX (N)                     :active, p3_4, 2026-03-03, 21d
     Phát triển Kalman Filter (O)           :active, p3_5, after p3_4, 14d
     Phát triển MPC Controller (P)          :active, p3_6, after p3_5, 14d
+    Tích hợp AI vào Backend (W)           :active, p3_7, 2026-04-21, 7d
   
     section Web Dashboard (P4)
     Phát triển giao diện giám sát (Q)      :active, p4_1, 2026-03-10, 7d
@@ -169,9 +171,9 @@ gantt
   
     section Kiểm thử & Hoàn thành (P5)
     Kiểm thử HW & FW (S)                :active, p5_1_hw, 2026-03-17, 7d
-    Kiểm thử BE, Web & AI (T)           :active, p5_1_sw, 2026-04-21, 7d
-    Hiệu chỉnh hệ thống (U)                :active, p5_2, after p5_1_sw, 7d
-    Báo cáo & bảo vệ (V)                   :active, p5_3, after p5_2, 6d
+    Kiểm thử BE, Web & AI (T)           :active, p5_1_sw, 2026-04-28, 7d
+    Hiệu chỉnh hệ thống (U)                :active, p5_2, 2026-05-05, 3d
+    Báo cáo & bảo vệ (V)                   :active, p5_3, 2026-05-08, 3d
 ```
 
 ---
@@ -186,13 +188,13 @@ $$
 \text{Slack} = \text{LS} - \text{ES} = \text{LF} - \text{EF}
 $$
 
-Dưới đây là bảng tính toán các thông số thời gian của 22 hoạt động (chưa bao gồm 21 ngày nghỉ Tết):
+Dưới đây là bảng tính toán các thông số thời gian của 23 hoạt động (chưa bao gồm 21 ngày nghỉ Tết):
 
 **Bảng 18. Bảng tính toán thời gian dự trữ của các hoạt động**
 
 |       Mã WBS       | ES (ngày) | EF (ngày) | LS (ngày) | LF (ngày) | Thời lượng | Slack (ngày) | Nhận xét                        |
 | :------------------: | :--------: | :--------: | :--------: | :--------: | :-----------: | :-----------: | --------------------------------- |
-|  **A**  |     0     |     19     |     0     |     19     |      19      |       0       | Nằm trên đường găng         |
+|  **A**  |     0     |     28     |     0     |     28     |      28      |       0       | Nằm trên đường găng         |
 |  **B**  |     28     |     35     |     63     |     70     |       7       |      35      | Dự trữ lớn, thuộc nhánh phụ |
 |  **C**  |     42     |     46     |     80     |     84     |       4       |      38      | Thuộc nhánh phụ phần cứng    |
 |  **D**  |     28     |     35     |     70     |     77     |       7       |      42      | Nhánh phụ lắp ráp công suất |
@@ -311,14 +313,14 @@ $$
 
 Chuỗi này bao gồm các nhóm công việc có mối liên kết chặt chẽ và thời gian dự trữ thấp nhất trong toàn dự án ($\text{Slack} = 0$).
 
-- **A (Thiết kế kết nối cảm biến - 19 ngày):** Đóng vai trò là mốc bản lề cho toàn bộ công việc thiết kế, phân tích hệ thống ban đầu, quyết định toàn bộ đầu ra của phần cứng, phần mềm và thuật toán.
+- **A (Thiết kế kết nối cảm biến - 28 ngày):** Đóng vai trò là mốc bản lề cho toàn bộ công việc thiết kế, phân tích hệ thống ban đầu, quyết định toàn bộ đầu ra của phần cứng, phần mềm và thuật toán.
 - **M và N (Thu thập dữ liệu và huấn luyện ARX):** Là nền tảng bắt buộc để xây dựng mô hình toán học của hệ thống nhà kính. Bất kỳ sự chậm trễ nào ở đây sẽ làm trễ toàn bộ quy trình thiết kế bộ lọc Kalman và MPC tiếp theo.
 - **O và P (Phát triển Kalman và MPC):** Là lõi điều khiển thông minh của dự án, quyết định tính khả thi của hệ thống và bắt buộc phải hoàn thành trước khi tiến hành kiểm thử phần mềm tích hợp.
 - **Các công việc kiểm thử tích hợp (T), hiệu chỉnh (U) và báo cáo bảo vệ (V)** nằm ở cuối dự án, không có thời gian dự trữ và bất kỳ sự trễ hạn nào tại đây đều làm trễ ngày bảo vệ dự án.
 
 ### 6.6.2 Mốc kiểm soát dự án (Milestones)
 
-Các mốc kiểm soát dự án được xác định lại dựa trên tiến độ của 22 hoạt động WBS:
+Các mốc kiểm soát dự án được xác định lại dựa trên tiến độ của 23 hoạt động WBS:
 
 **Bảng 19. Bảng mốc kiểm soát dự án**
 
