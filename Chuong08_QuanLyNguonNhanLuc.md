@@ -29,33 +29,31 @@ Việc phân công nhiệm vụ dựa trên năng lực chuyên môn giúp tối
 
 ## 8.3. Sơ đồ phụ tải nguồn nhân lực
 
-### Bảng 17. Bảng phân bố nguồn nhân lực
+### Bảng 17. Bảng phân bố nguồn nhân lực (22 hoạt động)
 
 | Mã | Hoạt động | Công việc trước đó | Thời lượng | Nhân lực | Nhân sự chính |
 | :---: | --------- | :----------------: | :--------: | :------: | ------------- |
-| A | Khảo sát giải pháp nhà kính thông minh hiện có | - | 4 ngày | 3 | Cả nhóm |
-| B | Xác định yêu cầu, phạm vi và ràng buộc | A | 3 ngày | 3 | Cả nhóm |
-| C | Thiết kế kiến trúc tổng thể HW + SW | B | 7 ngày | 2 | Sỹ, Trí |
-| D | Thiết kế sơ đồ mạch điện | C | 3 ngày | 1 | Sỹ |
-| E | Thiết kế giao thức WebSocket/JSON | D | 4 ngày | 1 | Sỹ |
-| F | Thiết kế cơ sở dữ liệu và giao diện Web | C | 7 ngày | 1 | Sỹ |
-| G | Thiết kế pipeline ARX - Kalman - MPC | C | 7 ngày | 2 | Trí, Sinh |
-| H | Lắp ráp phần cứng | D | 7 ngày | 1 | Sỹ |
-| I | Lập trình firmware ESP32 | H, E | 14 ngày | 1 | Sỹ |
-| J | Phát triển Backend Django | F | 7 ngày | 1 | Sỹ |
-| K | Phát triển WebSocket Server | J, E | 7 ngày | 1 | Sỹ |
-| L | Huấn luyện mô hình ARX | G | 21 ngày | 1 | Trí |
-| M | Phát triển Kalman Filter | L | 14 ngày | 1 | Sinh |
-| N | Phát triển MPC Controller | M | 14 ngày | 1 | Sinh |
-| O | Phát triển Web Dashboard | F, J, K | 14 ngày | 1 | Sỹ |
-| P | Tích hợp AI vào Backend | K, N, O | 4 ngày | 3 | Cả nhóm |
-| Q | Kiểm thử phần cứng và firmware | H, I | 4 ngày | 1 | Sỹ |
-| R | Kiểm thử Backend/API/Database | J, K | 3 ngày | 1 | Sỹ |
-| S | Kiểm thử Web Dashboard | O | 3 ngày | 1 | Sỹ |
-| T | Kiểm thử mô hình AI/control | L, M, N | 3 ngày | 2 | Trí, Sinh |
-| U | Kiểm thử tích hợp end-to-end và sửa lỗi | P, Q, R, S, T | 7 ngày | 3 | Cả nhóm |
-| V | Triển khai demo hoàn chỉnh | U | 2 ngày | 1 | Sỹ |
-| W | Viết báo cáo PBL và QLDA | U | 4 ngày | 2 | Trí, Sinh |
-| X | Chuẩn bị slide thuyết trình và tổng duyệt | V, W | 2 ngày | 3 | Cả nhóm |
+| **A** | Thiết kế sơ đồ kết nối cảm biến | - | 19 ngày | 1 | Sỹ |
+| **B** | Lắp ráp & đấu nối cảm biến | A | 7 ngày | 1 | Sỹ |
+| **C** | Kiểm thử cảm biến | H | 4 ngày | 1 | Sỹ |
+| **D** | Lắp ráp relay & actuator | A | 7 ngày | 1 | Sỹ |
+| **E** | Xây dựng khung nhà kính | A | 7 ngày | 2 | Trí, Sỹ |
+| **F** | Lắp ráp Solar Tracking | A | 7 ngày | 1 | Sỹ |
+| **G** | Kiểm thử Solar Tracking | F | 3 ngày | 1 | Sỹ |
+| **H** | Lập trình đọc cảm biến | B | 7 ngày | 1 | Sỹ |
+| **I** | Lập trình WebSocket Client | H | 7 ngày | 1 | Sỹ |
+| **J** | Lập trình điều khiển relay | D, H | 7 ngày | 1 | Sỹ |
+| **K** | Phát triển API & Database | A | 14 ngày | 1 | Sỹ |
+| **L** | Phát triển WebSocket Server | K | 7 ngày | 1 | Sỹ |
+| **M** | Thu thập dữ liệu ARX | A | 7 ngày | 1 | Trí |
+| **N** | Huấn luyện ARX | M | 21 ngày | 1 | Trí |
+| **O** | Phát triển Kalman Filter | N | 14 ngày | 1 | Sinh |
+| **P** | Phát triển MPC Controller | O | 14 ngày | 1 | Sinh |
+| **Q** | Giao diện giám sát | K | 7 ngày | 1 | Sỹ |
+| **R** | Giao diện điều khiển | Q | 7 ngày | 1 | Sỹ |
+| **S** | Kiểm thử HW & FW | C, G, I, J | 7 ngày | 1 | Sỹ |
+| **T** | Kiểm thử BE, Web & AI | L, R, P | 7 ngày | 3 | Trí, Sỹ, Sinh |
+| **U** | Hiệu chỉnh hệ thống | S, T | 7 ngày | 3 | Trí, Sỹ, Sinh |
+| **V** | Báo cáo & bảo vệ | U | 6 ngày | 3 | Trí, Sỹ, Sinh |
 
 **Hình 8.** Sơ đồ phụ tải nguồn nhân lực

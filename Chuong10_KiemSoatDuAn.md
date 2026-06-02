@@ -34,15 +34,15 @@ Thu thập hiện trạng là quá trình **đo lường mức độ tiến tri�
 
 | Mã WBS | Công việc              | KH bắt đầu | KH kết thúc | TT bắt đầu | TT kết thúc | % Hoàn thành | Ghi chú                                |
 | :-----: | ------------------------ | :-----------: | :-----------: | :-----------: | :-----------: | :------------: | --------------------------------------- |
-|   1.0   | Phân tích yêu cầu    |    Tuần 1    |    Tuần 2    |    Tuần 1    |    Tuần 2    |      100%      | Đúng tiến độ                       |
-|   2.0   | Thiết kế hệ thống    |    Tuần 3    |    Tuần 4    |    Tuần 3    |    Tuần 5    |      100%      | Trễ 1 tuần (thiết kế AI phức tạp) |
-|   3.0   | Phát triển phần cứng |    Tuần 4    |    Tuần 6    |    Tuần 4    |    Tuần 6    |      100%      | Đúng tiến độ                       |
-|   4.0   | Phát triển Firmware    |    Tuần 5    |    Tuần 7    |    Tuần 5    |    Tuần 7    |      100%      | Đúng tiến độ                       |
-|   5.0   | Phát triển Backend     |    Tuần 5    |    Tuần 9    |    Tuần 5    |    Tuần 9    |      100%      | Đúng tiến độ                       |
-|   6.0   | Phát triển AI          |    Tuần 5    |   Tuần 11   |    Tuần 5    |   Tuần 12   |      100%      | Trễ 1 tuần (MPC tuning)               |
-|   7.0   | Phát triển Web         |    Tuần 6    |   Tuần 12   |    Tuần 6    |   Tuần 12   |      100%      | Đúng tiến độ                       |
-|   8.0   | Kiểm thử               |   Tuần 11   |   Tuần 13   |   Tuần 12   |   Tuần 13   |      100%      | Bắt đầu trễ do AI trễ              |
-|   9.0   | Triển khai & Tài liệu |   Tuần 13   |   Tuần 15   |   Tuần 13   |   Tuần 15   |      100%      | Đúng tiến độ                       |
+|  **T1**  | Phân tích yêu cầu    |    Tuần 1    |    Tuần 2    |    Tuần 1    |    Tuần 2    |      100%      | Đúng tiến độ                       |
+|  **T2**  | Thiết kế hệ thống    |    Tuần 3    |    Tuần 4    |    Tuần 3    |    Tuần 5    |      100%      | Trễ 1 tuần (thiết kế AI phức tạp) |
+| **T3.1** | Phát triển phần cứng |    Tuần 4    |    Tuần 6    |    Tuần 4    |    Tuần 6    |      100%      | Đúng tiến độ                       |
+| **T3.2** | Phát triển Firmware    |    Tuần 5    |    Tuần 7    |    Tuần 5    |    Tuần 7    |      100%      | Đúng tiến độ                       |
+| **T3.3** | Phát triển Backend     |    Tuần 5    |    Tuần 9    |    Tuần 5    |    Tuần 9    |      100%      | Đúng tiến độ                       |
+| **T3.5-T3.8** | Phát triển AI          |    Tuần 5    |   Tuần 11   |    Tuần 5    |   Tuần 12   |      100%      | Trễ 1 tuần (MPC tuning)               |
+| **T3.4** | Phát triển Web         |    Tuần 6    |   Tuần 12   |    Tuần 6    |   Tuần 12   |      100%      | Đúng tiến độ                       |
+|  **T4**  | Kiểm thử               |   Tuần 11   |   Tuần 13   |   Tuần 12   |   Tuần 14   |      100%      | Trễ 1 tuần do tích hợp AI trễ      |
+|  **T5**  | Triển khai & Tài liệu |   Tuần 13   |   Tuần 15   |   Tuần 13   |   Tuần 15   |      100%      | Đúng tiến độ                       |
 
 **b) Time sheet cá nhân**
 
@@ -62,16 +62,16 @@ Thu thập hiện trạng là quá trình **đo lường mức độ tiến tri�
 
 **a) Sai biệt lịch biểu (Schedule Variance — SV)**
 
-| Giai đoạn           | KH (tuần) | TT (tuần) | SV |     Đánh giá     |
-| --------------------- | :--------: | :--------: | :-: | :------------------: |
-| Phân tích yêu cầu |     2     |     2     | 0 |      ✅ Đúng      |
-| Thiết kế            |     2     |     3     | -1 |      ⚠️ Trễ      |
-| Phát triển HW + FW  |     3     |     3     | 0 |      ✅ Đúng      |
-| Phát triển Backend  |     5     |     5     | 0 |      ✅ Đúng      |
-| Phát triển AI       |     7     |     8     | -1 |      ⚠️ Trễ      |
-| Phát triển Web      |     7     |     7     | 0 |      ✅ Đúng      |
-| Kiểm thử            |     3     |     2     | +1 |    ✅ Nhanh hơn    |
-| Tổng dự án         |     15     |     15     | 0 | ✅ Đúng tổng thể |
+| Mã WBS | Giai đoạn           | KH (tuần) | TT (tuần) | SV |     Đánh giá     |
+| :-----: | --------------------- | :--------: | :--------: | :-: | :------------------: |
+|  **T1**  | Phân tích yêu cầu |     2     |     2     |  0  |      ✅ Đúng      |
+|  **T2**  | Thiết kế hệ thống    |     2     |     3     | -1  |      ⚠️ Trễ      |
+| **T3.1 + T3.2** | Phát triển HW + FW  |     3     |     3     |  0  |      ✅ Đúng      |
+| **T3.3** | Phát triển Backend  |     5     |     5     |  0  |      ✅ Đúng      |
+| **T3.5-T3.8** | Phát triển AI       |     7     |     8     | -1  |      ⚠️ Trễ      |
+| **T3.4** | Phát triển Web      |     7     |     7     |  0  |      ✅ Đúng      |
+|  **T4**  | Kiểm thử            |     3     |     2     | +1  |    ✅ Nhanh hơn    |
+| **Tổng** | Tổng dự án         |     15     |     15     |  0  | ✅ Đúng tổng thể |
 
 **Nhận xét:** Dự án có 2 giai đoạn trễ (thiết kế và AI), nhưng bù lại bằng việc kiểm thử nhanh hơn. Tổng thời gian dự án vẫn đúng 15 tuần.
 
