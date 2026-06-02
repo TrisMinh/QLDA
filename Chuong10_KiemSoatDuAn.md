@@ -48,13 +48,13 @@ Thu thập hiện trạng là quá trình **đo lường mức độ tiến tri�
 
 |      Tuần      |         Thành viên A (PM + ARX)         |     Thành viên B (HW/FW & Fullstack)     |        Thành viên C (Kalman & MPC)        |
 | :-------------: | :---------------------------------------: | :-----------------------------: | :------------------------------------: |
-|      1–2      |       35h (phân tích, SOW, WBS, RACI)       |       30h (khảo sát HW & Web, BOM)       |      15h (khảo sát yêu cầu AI)      |
+|      1–2      |       35h (phân tích, SOW, WBS, RACI)       |       30h (khảo sát HW & Web, BOM)       |      10h (khảo sát yêu cầu AI)      |
 |      3–4      | 18h (thiết kế kiến trúc hệ thống) |     32h (thiết kế mạch & DB, Figma)     |        5h (tham vấn thiết kế pipeline AI)        |
-|      5–6      |  12h (tiền xử lý dữ liệu cho ARX)  |   38h (lắp ráp HW, code FW & Django BE)   |        0h (nghiên cứu tài liệu lý thuyết)        |
-|      7–8      |      13h (huấn luyện & đánh giá ARX)      |      38h (hoàn thiện FW, WebSocket server)      |    0h (nghiên cứu giải thuật điều khiển)    |
+|      5–6      |  12h (tiền xử lý dữ liệu cho ARX)  |   38h (lắp ráp HW, code FW & Django BE)   |        8h (mô phỏng thuật toán Kalman)        |
+|      7–8      |      13h (huấn luyện & đánh giá ARX)      |      38h (hoàn thiện FW, WebSocket server)      |    8h (mô phỏng bộ điều khiển MPC)    |
 |      9–10      |         8h (PM giám sát & kiểm soát)         |        23h (fix bug FW, ReactJS Dashboard)        |    28h (phát triển Kalman Filter & MPC)    |
-|     11–12     |      25h (tích hợp hệ thống, MPC tuning)      | 26h (kiểm thử HW/FW, hoàn thiện Web) |   25h (tích hợp hệ thống, MPC tuning)   |
-|     13–14     |  25h (kiểm thử tích hợp, viết báo cáo)  |   25h (kiểm thử tích hợp, viết báo cáo)   | 28h (kiểm thử tích hợp, viết báo cáo) |
+|     11–12     |      25h (tích hợp hệ thống, MPC tuning)      | 26h (kiểm thử HW/FW, hoàn thiện Web) |   20h (tích hợp hệ thống, MPC tuning)   |
+|     13–14     |  25h (kiểm thử tích hợp, viết báo cáo)  |   25h (kiểm thử tích hợp, viết báo cáo)   | 22h (kiểm thử tích hợp, viết báo cáo) |
 |       15       |           10h (slide, bảo vệ)           |       10h (demo, bảo vệ)       |          10h (demo, bảo vệ)          |
 | **Tổng** |              **146h**              |         **245h**         |             **111h**             |
 
@@ -77,14 +77,25 @@ Thu thập hiện trạng là quá trình **đo lường mức độ tiến tri�
 
 **b) Sai biệt chi phí (Cost Variance — CV)**
 
-| Hạng mục           |     KH (VNĐ)     |     TT (VNĐ)     |        CV        | Ghi chú                      |
-| -------------------- | :---------------: | :---------------: | :---------------: | ----------------------------- |
-| Linh kiện chính    |      575.000      |      575.000      |         0         | Đúng dự toán              |
-| Linh kiện phụ      |      50.000      |      65.000      |      -15.000      | Mua thêm dây nối           |
-| Dự phòng sử dụng |         0         |      60.000      |      -60.000      | Thay 1 cảm biến DHT22 hỏng |
-| **Tổng**      | **625.000** | **700.000** | **-75.000** | Vượt 12%                    |
+Để quản lý kinh phí chặt chẽ theo yêu cầu, dưới đây là bảng đối chiếu chi tiết giữa kinh phí dự tính ban đầu (kế hoạch - KH) và kinh phí mua sắm thực tế (thực tế - TT) của từng hạng mục thiết bị:
 
-**Nhận xét:** Chi phí thực tế vượt 75.000 VNĐ (12%) so với kế hoạch ban đầu do phát sinh sự cố hỏng cảm biến DHT22 (phải thay thế bằng cảm biến dự phòng) và mua thêm dây nối. Tuy nhiên, phần chi phí vượt này đã được bù đắp hoàn toàn bởi quỹ dự phòng của dự án (165.000 VNĐ), giúp tổng chi phí thực tế (700.000 VNĐ) vẫn nằm an toàn dưới ngân sách tổng thể cho phép.
+| STT | Danh mục linh kiện / Hạng mục | KH (VNĐ) | TT (VNĐ) | Sai lệch (CV) | Lý do chênh lệch |
+|:---:|-------------------------------|:--------:|:--------:|:-------------:|------------------|
+| 1 | ESP32 DevKit V1 | 95.000 | 105.000 | -10.000 | Biến động giá thị trường & phí ship |
+| 2 | Màn hình LCD I2C 16×2 | 70.000 | 70.000 | 0 | Đúng dự toán |
+| 3 | Cảm biến (DHT22 + Soil + LDR) | 70.000 | 86.000 | -16.000 | Biến động giá thị trường & phí ship |
+| 4 | Relay + Bơm ×2 + Quạt + Phun sương + LED | 210.000 | 210.000 | 0 | Đúng dự toán |
+| 5 | Mô hình + Breadboard + Dây + Nguồn | 240.000 | 265.000 | -25.000 | Mua thêm dây cắm test và phụ kiện phát sinh |
+| 6 | Tấm pin NLMT 6V 5-7W | 130.000 | 130.000 | 0 | Đúng dự toán |
+| 7 | Pin 18650 ×2 + Sạc TP4056 + Đốc pin | 160.000 | 160.000 | 0 | Đúng dự toán |
+| 8 | Servo SG90 ×2 | 60.000 | 60.000 | 0 | Đúng dự toán |
+| 9 | LDR ×4 + Trở 10kΩ ×4 + Relay 1 kênh ×3 | 100.000 | 100.000 | 0 | Đúng dự toán |
+| 10 | Công tắc nguồn ON/OFF + Cáp USB | 65.000 | 65.000 | 0 | Đúng dự toán |
+| 11 | Cảm biến DHT22 (Thay thế linh kiện hỏng) | 0 | 60.000 | -60.000 | Dùng quỹ dự phòng thay cảm biến hỏng ở tuần 5 |
+| 12 | Chi phí vận chuyển phát sinh hỏa tốc | 0 | 60.000 | -60.000 | Ship hỏa tốc cảm biến và thiết bị dự phòng |
+| | **Tổng kinh phí** | **1.200.000** | **1.371.000** | **-171.000** | **Vượt 14.25% so với dự toán** |
+
+**Nhận xét:** Chi phí thực tế vượt 171.000 VNĐ (14.25%) so với kế hoạch ban đầu do biến động giá thị trường, mua thêm phụ kiện test (25.000 VNĐ), mua lại cảm biến DHT22 mới (60.000 VNĐ) khi cảm biến cũ gặp sự cố hỏng hóc trong tuần 5, và chi phí vận chuyển hỏa tốc phát sinh (60.000 VNĐ). Tuy nhiên, phần chi phí phát sinh này đã được bù đắp hoàn toàn bởi **quỹ dự phòng rủi ro** của dự án (255.000 VNĐ - quy định tại Chương 9), giúp tổng chi phí thực tế (1.371.000 VNĐ) vẫn nằm an toàn dưới giới hạn ngân sách tối đa cho phép (1.455.000 VNĐ bao gồm dự phòng).
 
 ### 10.2.4 Quản lý giá trị thu được (EVM — Earned Value Management)
 
@@ -109,19 +120,19 @@ EVM là phương pháp đo lường hiệu suất dự án bằng cách kết h�
 
 **Áp dụng EVM cho dự án Smart Greenhouse (tại tuần 10):**
 
-Giả sử tổng ngân sách BAC = 625.000 VNĐ, tổng giờ công KH = 675h.
+Giả sử tổng ngân sách BAC = 1.200.000 VNĐ, tổng giờ công KH = 502h.
 
 | Chỉ số |          Giá trị          | Diễn giải                                |
 | :------: | :-------------------------: | ------------------------------------------ |
-|    PV    |     ~70% × 675h = 472h     | Theo KH, tuần 10 phải hoàn thành 70%   |
-|    EV    |     ~65% × 675h = 439h     | Thực tế hoàn thành 65% (AI đang trễ) |
-|    AC    |            460h            | Công sức thực tế đã bỏ ra           |
-|    SV    | 439 − 472 =**−33h** | ⚠️ Chậm tiến độ                      |
-|    CV    | 439 − 460 =**−21h** | ⚠️ Vượt chi phí nhân công           |
-|   SPI   |   439/472 =**0.93**   | Chậm 7% so với KH                        |
-|   CPI   |   439/460 =**0.95**   | Chi phí vượt 5%                         |
+|    PV    |     ~70% × 502h = 351h     | Theo KH, tuần 10 phải hoàn thành 70%   |
+|    EV    |     ~65% × 502h = 326h     | Thực tế hoàn thành 65% (AI đang trễ) |
+|    AC    |            343h            | Công sức thực tế đã bỏ ra           |
+|    SV    | 326 − 351 =**−25h** | ⚠️ Chậm tiến độ                      |
+|    CV    | 326 − 343 =**−17h** | ⚠️ Vượt chi phí nhân công           |
+|   SPI   |   326/351 =**0.93**   | Chậm 7% so với KH                        |
+|   CPI   |   326/343 =**0.95**   | Chi phí vượt 5%                         |
 
-**Nhận xét:** SPI = 0.93 cho thấy dự án chậm 7% tại tuần 10, chủ yếu do module MPC. Sau can thiệp (tăng giờ A, B hỗ trợ), dự án đã hoàn thành đúng hạn tuần 15.
+**Nhận xét:** SPI = 0.93 cho thấy dự án chậm 7% tại tuần 10, chủ yếu do module MPC. Sau can thiệp (tăng giờ C và sự hỗ trợ của A, B), dự án đã hoàn thành đúng hạn tuần 15.
 
 **Ngưỡng cảnh báo:** Hầu hết tổ chức đặt ngưỡng khi CPI hoặc SPI nằm **ngoài khoảng 0.90–1.10**. Khi vượt ngưỡng → yêu cầu phân tích nguyên nhân và báo cáo giải trình.
 
@@ -137,9 +148,9 @@ Giả sử tổng ngân sách BAC = 625.000 VNĐ, tổng giờ công KH = 675h.
 
 | Chỉ số |                      Tính toán                      | Diễn giải                               |
 | :------: | :---------------------------------------------------: | ----------------------------------------- |
-|   EAC   |        625.000 ÷ 0.95 =**657.895 VNĐ**        | Dự kiến chi phí tổng khi hoàn thành |
-|   ETC   | 657.895 − 700.000 × (10/15) =**191.228 VNĐ** | Chi phí cần thêm cho phần còn lại   |
-|   VAC   |      625.000 − 657.895 =**−32.895 VNĐ**      | Dự kiến vượt ngân sách ~5.3%        |
+|   EAC   |        1.200.000 ÷ 0.95 =**1.263.158 VNĐ**        | Dự kiến chi phí tổng khi hoàn thành |
+|   ETC   | 1.263.158 − 1.371.000 × (10/15) =**349.158 VNĐ** | Chi phí cần thêm cho phần còn lại   |
+|   VAC   |      1.200.000 − 1.263.158 =**−63.158 VNĐ**      | Dự kiến vượt ngân sách ~5.3%        |
 
 **Các công thức EAC khác (tùy tình huống):**
 
@@ -239,12 +250,12 @@ Trong dự án Smart Greenhouse, giai đoạn **Phát triển AI bị trễ 1 tu
 
 ### 10.5.2 Khi chi phí có nguy cơ tăng
 
-Chi phí vượt 75.000 VNĐ (12%) do thay cảm biến hỏng và mua thêm dây nối.
+Chi phí vượt 171.000 VNĐ (14.25%) do biến động giá thị trường, mua thêm dây cắm, thay cảm biến hỏng và phí ship hỏa tốc.
 
 **Biện pháp:**
 
-- Sử dụng kinh phí dự phòng đã dự trù (165.000 VNĐ).
-- Tổng chi phí thực tế (700.000 VNĐ) vẫn nằm trong ngân sách tổng (625.000 + 165.000 = 790.000 VNĐ).
+- Sử dụng kinh phí dự phòng đã dự trù (255.000 VNĐ).
+- Tổng chi phí thực tế (1.371.000 VNĐ) vẫn nằm trong ngân sách tổng (1.200.000 + 255.000 = 1.455.000 VNĐ).
 
 ### 10.5.3 Khi chất lượng có nguy cơ giảm
 
@@ -359,8 +370,8 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 | ------------------- | :-------------------------------------: |
 | Tổng thời gian    |                15 tuần                |
 | Tổng giờ công    |  502 giờ (A: 146h, B: 245h, C: 111h)  |
-| Tổng chi phí      |              700.000 VNĐ              |
-| Số work packages   |                   45                   |
+| Tổng chi phí      |            1.371.000 VNĐ              |
+| Số work packages   |                   22                   |
 | Số milestone       |                    9                    |
 | Số thay đổi      |                    5                    |
 | Số rủi ro xảy ra | 2 (R02: cảm biến hỏng, R03: trễ AI) |
@@ -370,7 +381,7 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 | Tiêu chí           |  Kế hoạch  |     Thực tế     |  Sai lệch  |
 | -------------------- | :----------: | :----------------: | :----------: |
 | Thời gian tổng     |   15 tuần   |      15 tuần      |      0      |
-| Chi phí             | 625.000 VNĐ |    700.000 VNĐ    |     +12%     |
+| Chi phí             | 1.200.000 VNĐ |    1.371.000 VNĐ    |   +14.25%    |
 | FIT 1-step ARX       |    ≥ 80%    |       85,85%       |  +5,85% ✅  |
 | FIT free-run         |    ≥ 60%    |       66,42%       |  +6,42% ✅  |
 | RMSE free-run        |    ≤ 1.5    |       0,978       | Tốt hơn ✅ |
@@ -464,7 +475,7 @@ Dự án Smart Greenhouse áp dụng mô hình **Waterfall tuần tự**, kiểm
 
 - Mạch hoàn chỉnh trên breadboard: ESP32 + DHT22 + cảm biến độ ẩm đất + LDR + 4 relay + buzzer.
 - Hoạt động ổn định 24/7, truyền dữ liệu WebSocket real-time.
-- Chi phí linh kiện: ~625.000 VNĐ.
+- Chi phí linh kiện: ~1.200.000 VNĐ.
 
 ### 10.11.2 Firmware
 
@@ -506,7 +517,7 @@ Dự án Smart Greenhouse đã **hoàn thành đúng mục tiêu** đặt ra ban
 - ✅ Hệ thống hoạt động ổn định, truyền dữ liệu real-time.
 - ✅ Mô hình AI (ARX + Kalman + MPC) hoạt động đúng chức năng.
 - ✅ Web Dashboard trực quan, dễ sử dụng.
-- ✅ Dự án hoàn thành đúng hạn 15 tuần, chi phí vượt 12% nhưng trong phạm vi chấp nhận.
+- ✅ Dự án hoàn thành đúng hạn 15 tuần, chi phí vượt 6% nhưng trong phạm vi chấp nhận.
 - ✅ Tất cả thành viên hoàn thành nhiệm vụ, không có xung đột nhân sự.
 
 **Bài học từ dự án:**

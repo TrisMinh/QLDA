@@ -77,9 +77,11 @@ Rủi ro (Risk) trong quản lý dự án là **sự kiện hoặc điều kiệ
 | 2 | Relay dự phòng | Thay thế khi cháy | 30.000 |
 | 3 | Bơm + quạt dự phòng | Thay thế khi hỏng | 55.000 |
 | 4 | Dây nối + breadboard phụ | Đấu lại khi cần | 20.000 |
-| | **Tổng kinh phí dự phòng** | | **165.000** |
+| 5 | Servo SG90 dự phòng | Thay thế cho Solar Tracking | 35.000 |
+| 6 | Pin 18650 dự phòng (×1) | Thay thế khi chai pin | 55.000 |
+| | **Tổng kinh phí dự phòng** | | **255.000** |
 
-**Tỷ lệ dự phòng:** 165.000 / 625.000 ≈ **26%** tổng chi phí — cao hơn mức thông thường (10–15%) do đặc thù phần cứng prototype dễ hỏng.
+**Tỷ lệ dự phòng:** 255.000 / 1.200.000 ≈ **21%** tổng chi phí — cao hơn mức thông thường (10–15%) do đặc thù phần cứng prototype dễ hỏng.
 
 ---
 
@@ -112,7 +114,7 @@ Rủi ro (Risk) trong quản lý dự án là **sự kiện hoặc điều kiệ
 | Rủi ro mức Thấp (🟢) | 6 |
 | Rủi ro thực sự xảy ra | 2 (R02: trễ AI, R05: cảm biến hỏng) |
 | Rủi ro xử lý thành công | 2/2 (100%) |
-| Kinh phí dự phòng đã sử dụng | 60.000/165.000 VNĐ (36%) |
+| Kinh phí dự phòng đã sử dụng | 60.000/255.000 VNĐ (24%) |
 
 ### 9.4.2 Bài học rút ra từ quản lý rủi ro
 
@@ -126,7 +128,7 @@ Rủi ro (Risk) trong quản lý dự án là **sự kiện hoặc điều kiệ
 ### 9.4.3 Thành quả của quản lý rủi ro hiệu quả
 
 - ✅ **Dự án hoàn thành đúng hạn** (15 tuần) dù có 2 rủi ro xảy ra.
-- ✅ **Chi phí kiểm soát được** — chỉ sử dụng 36% kinh phí dự phòng.
+- ✅ **Chi phí kiểm soát được** — chỉ sử dụng 24% kinh phí dự phòng.
 - ✅ **Chất lượng đạt mục tiêu** — FIT 85,85% > 80% yêu cầu.
 - ✅ **Không có rủi ro bất ngờ** — tất cả sự cố xảy ra đều đã nằm trong danh sách nhận diện.
 
