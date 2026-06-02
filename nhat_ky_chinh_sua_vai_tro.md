@@ -80,9 +80,9 @@ Tài liệu này ghi lại chi tiết các tệp tin và các mục cụ thể �
 *   **Sau khi sửa:** Lập lại bảng phân bổ giờ chi tiết cho từng tuần khớp hoàn toàn với tổng giờ công mới:
     *   **Thành viên A (PM & ARX):** Tổng **146h** (Tập trung tuần 1-8 và tuần 11-15).
     *   **Thành viên B (HW/FW & Web Fullstack):** Tổng **245h** (Hoạt động liên tục cả phần cứng, firmware và web dashboard).
-    *   **Thành viên C (Kalman & MPC):** Tổng **111h** (Tập trung cao độ từ tuần 9 đến tuần 15 cho thuật toán).
+    *   **Thành viên C (Kalman & MPC):** Tổng **111h** (Tham gia khảo sát tuần 1-4, mô phỏng tuần 5-8 và tập trung phát triển tích hợp tuần 9-15).
 
-### 🔹 Phần 2: Phần điều chỉnh & Xử lý tình huống (Mục 10.5.1 & 10.9.3)
+### 🔹 Phần 2: Phần điều chỉnh & Xử lý tình huống (Mục 10.3.2 & 10.5)
 *   **Trước khi sửa:** Ghi nhận "Tăng giờ làm việc của thành viên A" và "A tăng giờ làm" khi xảy ra trễ tiến độ MPC tuning.
 *   **Sau khi sửa:** Đổi thành "Tăng giờ làm việc của thành viên **C** (từ 20h → 28h/tuần)" và "**C** tăng giờ làm" để phản ánh đúng việc Sinh là người chịu trách nhiệm thuật toán MPC.
 

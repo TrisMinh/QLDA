@@ -85,26 +85,9 @@ Rủi ro (Risk) trong quản lý dự án là **sự kiện hoặc điều kiệ
 
 ---
 
-## 9.3 Lưu ý trong quản lý rủi ro
+## 9.3 Tổng kết quản lý rủi ro
 
-1. **Dự báo rủi ro phụ thuộc kinh nghiệm PM:** Với nhóm sinh viên, kinh nghiệm còn hạn chế → cần tham khảo giảng viên và các nhóm PBL khóa trước.
-
-2. **Thiệt hại phải được lưu thành tài liệu:** Mọi sự cố xảy ra (cảm biến hỏng, bug nghiêm trọng, trễ deadline) đều phải ghi nhận vào nhật ký dự án, bao gồm:
-   - Thời điểm xảy ra
-   - Mô tả sự cố
-   - Tác động thực tế
-   - Biện pháp xử lý
-   - Bài học rút ra
-
-3. **Review rủi ro định kỳ:** Bảng rủi ro được review lại mỗi 2 tuần trong buổi họp nhóm, cập nhật xác suất và tác động dựa trên tình hình thực tế.
-
-4. **Rủi ro tích cực (Opportunity):** Không chỉ rủi ro tiêu cực, dự án cũng có rủi ro tích cực, ví dụ: mô hình ARX đạt FIT cao hơn kỳ vọng (85,85% so với mục tiêu 80%) → có thể dành thời gian cải thiện MPC thêm.
-
----
-
-## 9.4 Tổng kết quản lý rủi ro
-
-### 9.4.1 Thống kê kết quả
+### 9.3.1 Thống kê kết quả
 
 | Hạng mục | Giá trị |
 |----------|:-------:|
@@ -114,9 +97,9 @@ Rủi ro (Risk) trong quản lý dự án là **sự kiện hoặc điều kiệ
 | Rủi ro mức Thấp (🟢) | 6 |
 | Rủi ro thực sự xảy ra | 2 (R02: trễ AI, R05: cảm biến hỏng) |
 | Rủi ro xử lý thành công | 2/2 (100%) |
-| Kinh phí dự phòng đã sử dụng | 60.000/255.000 VNĐ (24%) |
+| Kinh phí dự phòng đã sử dụng | 171.000/255.000 VNĐ (67%) |
 
-### 9.4.2 Bài học rút ra từ quản lý rủi ro
+### 9.3.2 Bài học rút ra từ quản lý rủi ro
 
 | STT | Bài học | Chi tiết |
 |:---:|--------|----------|
@@ -125,10 +108,10 @@ Rủi ro (Risk) trong quản lý dự án là **sự kiện hoặc điều kiệ
 | 3 | **AI/ML cần buffer thời gian lớn** | R02 xảy ra (trễ 1 tuần) dù đã phòng ngừa → nên dự trù +30% thời gian cho module AI trong các dự án sau |
 | 4 | **Cross-training giảm rủi ro nhân sự** | Nhờ tài liệu code rõ ràng, B có thể hỗ trợ kiểm thử AI khi C cần tập trung MPC |
 
-### 9.4.3 Thành quả của quản lý rủi ro hiệu quả
+### 9.3.3 Thành quả của quản lý rủi ro hiệu quả
 
 - ✅ **Dự án hoàn thành đúng hạn** (15 tuần) dù có 2 rủi ro xảy ra.
-- ✅ **Chi phí kiểm soát được** — chỉ sử dụng 24% kinh phí dự phòng.
+- ✅ **Chi phí kiểm soát được** — chỉ sử dụng 67% kinh phí dự phòng.
 - ✅ **Chất lượng đạt mục tiêu** — FIT 85,85% > 80% yêu cầu.
 - ✅ **Không có rủi ro bất ngờ** — tất cả sự cố xảy ra đều đã nằm trong danh sách nhận diện.
 

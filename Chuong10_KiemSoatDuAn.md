@@ -311,50 +311,9 @@ Ghi nhận yêu cầu → Phân tích tác động → Phê duyệt (PM + nhóm)
 
 ---
 
-## 10.7 Lập kế hoạch lại (nếu có)
+## 10.7 Kết thúc dự án
 
-### 10.7.1 Khi nào cần lập kế hoạch lại
-
-Trong dự án, **không cần lập kế hoạch lại toàn bộ**. Tuy nhiên, có 2 điều chỉnh cục bộ:
-
-1. **Tuần 5:** Khi quyết định thêm Adaptive Kalman → kéo dài giai đoạn AI thêm 1 tuần, bù bằng rút ngắn kiểm thử.
-2. **Tuần 7:** Khi chuyển từ HTTP polling sang WebSocket → B cần refactor firmware 3 ngày, nhưng không ảnh hưởng tổng tiến độ vì B có thời gian dư.
-
-### 10.7.2 Các biện pháp điều chỉnh theo tình huống
-
-**① Khi dự án diễn ra không đúng lịch biểu:**
-
-- Điều chỉnh lại lịch biểu.
-- Nhờ người hỗ trợ (B hỗ trợ A kiểm thử AI).
-- Cải tiến cách làm việc (dùng dữ liệu mô phỏng song song).
-- Tập trung vào các công việc trên đường găng.
-
-**② Khi chi phí dự án có nguy cơ tăng:**
-
-- Dùng linh kiện thay thế giá thấp hơn nếu có thể.
-- Ưu tiên mua linh kiện cần thiết, trì hoãn mua dự phòng.
-- Áp dụng "Design to Cost" — chỉ làm trong đúng ngân sách.
-
-**③ Khi chất lượng có nguy cơ giảm:**
-
-- Tăng cường kiểm tra chất lượng (test tích hợp sớm hơn).
-- Tìm kiếm sự hỗ trợ từ giảng viên hướng dẫn.
-- Kiểm tra chéo giữa các thành viên.
-- Tập trung vào các khâu trọng yếu (MPC tuning, WebSocket).
-
-### 10.7.3 Quy trình tái cấu trúc kế hoạch
-
-1. Xác định phạm vi thay đổi.
-2. Đánh giá tác động lên đường găng (Critical Path).
-3. Điều chỉnh WBS, ước lượng thời gian, lịch biểu.
-4. Thông báo cho tất cả thành viên.
-5. Cập nhật Trello Board.
-
----
-
-## 10.8 Kết thúc dự án
-
-### 10.8.1 Các lý do kết thúc
+### 10.7.1 Các lý do kết thúc
 
 Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian quy định (15 tuần). Tất cả deliverables đã được chuyển giao:
 
@@ -364,7 +323,7 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 - ✅ Web Dashboard đầy đủ 6 màn hình.
 - ✅ Báo cáo PBL + QLDA hoàn thành.
 
-### 10.8.2 Thống kê số liệu
+### 10.7.2 Thống kê số liệu
 
 | Hạng mục          |                Giá trị                |
 | ------------------- | :-------------------------------------: |
@@ -376,7 +335,7 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 | Số thay đổi      |                    5                    |
 | Số rủi ro xảy ra | 2 (R02: cảm biến hỏng, R03: trễ AI) |
 
-### 10.8.3 So sánh kế hoạch vs thực tế
+### 10.7.3 So sánh kế hoạch vs thực tế
 
 | Tiêu chí           |  Kế hoạch  |     Thực tế     |  Sai lệch  |
 | -------------------- | :----------: | :----------------: | :----------: |
@@ -389,7 +348,7 @@ Dự án kết thúc vì **hoàn thành mục tiêu đề ra** trong thời gian
 | Số màn hình Web   |     ≥ 6     |         6         |      ✅      |
 | Giai đoạn trễ     |      0      | 2 (thiết kế, AI) |     ⚠️     |
 
-### 10.8.4 Bài học kinh nghiệm (Lessons Learned)
+### 10.7.4 Bài học kinh nghiệm (Lessons Learned)
 
 Rút kinh nghiệm theo **4 bước** theo phương pháp luận quản lý dự án:
 
@@ -418,10 +377,10 @@ Rút kinh nghiệm theo **4 bước** theo phương pháp luận quản lý dự
 |  1  | Dự trù +30% thời gian cho module AI/ML                     | MPC tuning phức tạp hơn dự kiến       |
 |  2  | Bắt đầu nghiên cứu AI từ tuần 1 (không chờ tuần 5)  | Giảm áp lực cuối dự án               |
 |  3  | Áp dụng code review bắt buộc qua Pull Request             | Phát hiện bug sớm, chia sẻ kiến thức |
-|  4  | WebSocket nên chọn từ đầu thay vì refactor giữa chừng | Tiết kiệm 3 ngày refactor firmware      |
+|  4  | WebSocket nên chọn từ đầu thay vị refactor giữa chừng | Tiết kiệm 3 ngày refactor firmware      |
 |  5  | Tổ chức buổi sharing kiến thức nội bộ 2 tuần/lần     | Giảm rủi ro phụ thuộc 1 người        |
 
-### 10.8.5 Lưu trữ hồ sơ dự án
+### 10.7.5 Lưu trữ hồ sơ dự án
 
 Toàn bộ hồ sơ dự án được lưu trữ tại:
 
@@ -431,59 +390,21 @@ Toàn bộ hồ sơ dự án được lưu trữ tại:
 
 ---
 
-## 10.9 Kỹ năng mềm trong quản lý dự án
+## 10.8 Kết quả dự án
 
-### 10.9.1 Giao tiếp
-
-- **Giao tiếp nội bộ:** Nhóm sử dụng Zalo/Discord cho trao đổi hàng ngày, họp online khi không gặp trực tiếp.
-- **Giao tiếp với giảng viên:** Báo cáo tiến độ định kỳ, gửi email khi cần hỗ trợ.
-- **Nguyên tắc:** Thông tin rõ ràng, kịp thời, không giấu vấn đề.
-
-### 10.9.2 Tổ chức
-
-- PM (thành viên A) duy trì **Trello Board** cập nhật, đảm bảo mọi công việc có người phụ trách và deadline.
-- **WBS + RACI** giúp phân công rõ ràng, tránh chồng chéo.
-- **Git workflow** (branching, pull request) giúp quản lý mã nguồn có tổ chức.
-
-### 10.9.3 Xử lý tình huống
-
-| Tình huống                                        | Cách xử lý                                                          |
-| --------------------------------------------------- | ---------------------------------------------------------------------- |
-| Cảm biến DHT22 hỏng đột ngột                  | Thay nhanh bằng cảm biến dự phòng, không ảnh hưởng tiến độ |
-| MPC tuning mất nhiều thời gian hơn dự kiến    | C tăng giờ làm, B hỗ trợ kiểm thử tích hợp                    |
-| Thành viên không hiểu module của người khác | Tổ chức buổi sharing kiến thức nội bộ                           |
-
----
-
-## 10.10 Kiểm soát theo mô hình Waterfall và công cụ sử dụng
-
-Dự án Smart Greenhouse áp dụng mô hình **Waterfall tuần tự**, kiểm soát tại **điểm chuyển giao giữa các giai đoạn** (Phase Gate Review):
-
-| Giai đoạn | Thời gian | Đầu ra | Điểm kiểm soát |
-|-----------|:---------:|--------|----------------|
-| Phân tích yêu cầu | Tuần 1–2 | Tài liệu yêu cầu, SOW, WBS | **Gate 1:** Giảng viên duyệt phạm vi |
-| Thiết kế | Tuần 3–4 | Kiến trúc, sơ đồ mạch, DB schema | **Gate 2:** Review thiết kế nhóm |
-| Phát triển | Tuần 4–12 | HW, FW, Backend, AI, Web | **Gate 3:** Demo từng module |
-| Kiểm thử | Tuần 11–13 | Test report, bug fix | **Gate 4:** Hệ thống chạy end-to-end |
-| Triển khai | Tuần 13–15 | Báo cáo, slide, demo | **Gate 5:** Bảo vệ đồ án |
-
-**Công cụ kiểm soát nhóm đã sử dụng:** Trello (quản lý task), Excel/Google Sheets (time sheet, EVM, rủi ro), GitHub (version control, issue tracking), Zalo/Discord (giao tiếp, họp online).
-
-## 10.11 Kết quả dự án
-
-### 10.11.1 Phần cứng
+### 10.8.1 Phần cứng
 
 - Mạch hoàn chỉnh trên breadboard: ESP32 + DHT22 + cảm biến độ ẩm đất + LDR + 4 relay + buzzer.
 - Hoạt động ổn định 24/7, truyền dữ liệu WebSocket real-time.
 - Chi phí linh kiện: ~1.200.000 VNĐ.
 
-### 10.11.2 Firmware
+### 10.8.2 Firmware
 
 - ESP32 thu thập dữ liệu cảm biến mỗi 2 giây.
 - Giao tiếp WebSocket hai chiều với Backend Django.
 - State machine không blocking, xử lý mất kết nối tự động.
 
-### 10.11.3 Backend + AI
+### 10.8.3 Backend + AI
 
 | Thành phần             | Kết quả                                                    |
 | ------------------------ | ------------------------------------------------------------ |
@@ -492,13 +413,13 @@ Dự án Smart Greenhouse áp dụng mô hình **Waterfall tuần tự**, kiểm
 | **Kalman Filter**  | Lọc nhiễu cảm biến, giảm sai số ~30%                   |
 | **MPC Controller** | Điều khiển tối ưu tưới tiêu, tiết kiệm nước ~25% |
 
-### 10.11.4 Web Dashboard
+### 10.8.4 Web Dashboard
 
 - ReactJS Dashboard: giám sát real-time, biểu đồ lịch sử, cảnh báo ngưỡng.
 - Điều khiển thủ công bơm/quạt/đèn từ giao diện web.
 - Responsive trên desktop và mobile.
 
-### 10.11.5 Tài liệu
+### 10.8.5 Tài liệu
 
 - Báo cáo PBL: 10 chương đầy đủ.
 - Báo cáo QLDA: 5 chương (Ch1, Ch2, Ch3, Ch9, Ch10).
@@ -506,9 +427,9 @@ Dự án Smart Greenhouse áp dụng mô hình **Waterfall tuần tự**, kiểm
 
 ---
 
-## 10.12 Kết luận và hướng phát triển
+## 10.9 Kết luận và hướng phát triển
 
-### 10.12.1 Kết luận
+### 10.9.1 Kết luận
 
 Dự án Smart Greenhouse đã **hoàn thành đúng mục tiêu** đặt ra ban đầu, tạo ra một hệ thống nhà kính thông minh tích hợp IoT và AI có khả năng giám sát, dự đoán và điều khiển tối ưu các thông số môi trường.
 
@@ -517,7 +438,7 @@ Dự án Smart Greenhouse đã **hoàn thành đúng mục tiêu** đặt ra ban
 - ✅ Hệ thống hoạt động ổn định, truyền dữ liệu real-time.
 - ✅ Mô hình AI (ARX + Kalman + MPC) hoạt động đúng chức năng.
 - ✅ Web Dashboard trực quan, dễ sử dụng.
-- ✅ Dự án hoàn thành đúng hạn 15 tuần, chi phí vượt 6% nhưng trong phạm vi chấp nhận.
+- ✅ Dự án hoàn thành đúng hạn 15 tuần, chi phí vượt 14.25% nhưng trong phạm vi chấp nhận.
 - ✅ Tất cả thành viên hoàn thành nhiệm vụ, không có xung đột nhân sự.
 
 **Bài học từ dự án:**
@@ -526,7 +447,7 @@ Dự án Smart Greenhouse đã **hoàn thành đúng mục tiêu** đặt ra ban
 - Phân công RACI ngay từ đầu giúp tránh chồng chéo.
 - Dự trù thời gian nghiên cứu trước khi code (đặc biệt với MPC) là cần thiết.
 
-### 10.12.2 Hướng phát triển
+### 10.9.2 Hướng phát triển
 
 1. **Mở rộng phạm vi:** Thêm cảm biến CO₂, pH đất; mở rộng quy mô nhà kính thực tế.
 2. **Nâng cao AI:** Chuyển từ ARX sang mô hình Deep Learning (LSTM, Transformer) cho dự đoán chính xác hơn.
