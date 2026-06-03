@@ -30,19 +30,27 @@ a) Time sheet nhiệm vụ (Task Time Sheet)
 
 Bảng 29. TimeSheet nhiệm vụ
 
-| Mã WBS | Công việc | KH bắt đầu | KH kết thúc | TT bắt đầu | TT kết thúc | % Hoàn thành | Ghi chú |
-|--------|-----------|------------|-------------|------------|-------------|--------------|---------|
-| T1.1 - T1.4 | Phân tích yêu cầu | Tuần 1 | Tuần 2 | Tuần 1 | Tuần 2 | 100% | Đúng tiến độ |
-| T2.1 - T2.6 | Thiết kế hệ thống | Tuần 3 | Tuần 4 | Tuần 3 | Tuần 5 | 100% | Trễ 1 tuần (thiết kế AI phức tạp) |
-| T3.1 | Phát triển phần cứng | Tuần 4 | Tuần 6 | Tuần 4 | Tuần 6 | 100% | Đúng tiến độ |
-| T3.2 | Phát triển Firmware | Tuần 5 | Tuần 7 | Tuần 5 | Tuần 7 | 100% | Đúng tiến độ |
-| T3.3 | Phát triển Backend | Tuần 5 | Tuần 9 | Tuần 5 | Tuần 9 | 100% | Đúng tiến độ |
-| T3.4 | Phát triển Web | Tuần 6 | Tuần 12 | Tuần 6 | Tuần 12 | 100% | Đúng tiến độ |
-| T3.5 - T3.8 | Phát triển AI | Tuần 5 | Tuần 11 | Tuần 5 | Tuần 12 | 100% | Trễ 1 tuần (MPC tuning) |
-| T4.1 - T4.3 | Kiểm thử | Tuần 11 | Tuần 13 | Tuần 12 | Tuần 13 | 100% | Bắt đầu trễ do AI trễ |
-| T5.1 - T5.2 | Hoàn thành | Tuần 13 | Tuần 15 | Tuần 13 | Tuần 15 | 100% | Đúng tiến độ |
+| AC | WBS | Công việc | KH bắt đầu | KH kết thúc | TT bắt đầu | TT kết thúc | % Hoàn thành | Ghi chú |
+|:--:|:---:|-----------|------------|-------------|------------|-------------|:------------:|---------|
+| A | T1.1 | Khảo sát các giải pháp nhà kính thông minh hiện có | 05/01 | 08/01 | 05/01 | 08/01 | 100% | Đúng tiến độ |
+| B | T1.2 | Xác định yêu cầu chức năng | 09/01 | 12/01 | 09/01 | 12/01 | 100% | Đúng tiến độ |
+| C | T1.3 | Xác định yêu cầu phi chức năng | 13/01 | 16/01 | 13/01 | 16/01 | 100% | Đúng tiến độ |
+| D | T1.4 | Xác định phạm vi và ràng buộc | 17/01 | 20/01 | 17/01 | 20/01 | 100% | Đúng tiến độ |
+| E | T2.1 - T2.5 | Thiết kế kiến trúc tổng thể HW + SW | 21/01 | 24/01 | 21/01 | 24/01 | 100% | Đúng tiến độ |
+| F | T2.6 | Thiết kế pipeline AI ARX - Kalman - MPC | 25/01 | 05/02 | 25/01 | 05/02 | 100% | Đúng tiến độ |
+| G | T3.1 | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | 25/01 | 05/02 | 25/01 | 05/02 | 100% | Đúng tiến độ |
+| H | T3.2 | Lập trình firmware ESP32 | 03/03 | 16/03 | 03/03 | 16/03 | 100% | Đúng tiến độ |
+| I | T3.3 | Phát triển Backend Django + WebSocket Server | 17/03 | 01/04 | 17/03 | 01/04 | 100% | Đúng tiến độ |
+| J | T3.4 | Phát triển Web Dashboard ReactJS | 02/04 | 15/04 | 02/04 | 15/04 | 100% | Đúng tiến độ |
+| K | T3.5 | Huấn luyện mô hình ARX | 03/03 | 23/03 | 03/03 | 23/03 | 100% | Đúng tiến độ |
+| L | T3.6 | Phát triển Kalman Filter | 24/03 | 06/04 | 24/03 | 09/04 | 100% | Trễ 3 ngày do xử lý nhiễu cảm biến |
+| M | T3.7 | Phát triển MPC Controller | 07/04 | 20/04 | 10/04 | 27/04 | 100% | Trễ do tuning MPC |
+| N | T3.8 | Tích hợp AI vào Web | 21/04 | 24/04 | 28/04 | 01/05 | 100% | Dời theo tiến độ MPC |
+| O | T4.1 - T4.3 | Kiểm thử tích hợp chức năng | 25/04 | 02/05 | 02/05 | 04/05 | 100% | Rút ngắn để bù tiến độ |
+| P | T5.1 | Hiệu chỉnh phần cứng và mô hình AI | 03/05 | 06/05 | 05/05 | 06/05 | 100% | Rút ngắn nhưng vẫn đạt yêu cầu |
+| Q | T5.2 | Hoàn thành báo cáo và bảo vệ đồ án | 07/05 | 10/05 | 07/05 | 10/05 | 100% | Đúng mốc kết thúc |
 
-Sơ đồ Gantt thực tế của dự án được trình bày tại Hình 7b trong mục 5.4, thể hiện rõ các hoạt động J, P, Q, R bị trễ/dời lịch và các hoạt động T, U, V, W được rút ngắn để bù tiến độ.
+Sơ đồ Gantt trong mục 5.4 thể hiện kế hoạch theo bảng AC A-Q. Trong quá trình kiểm soát, các hoạt động L, M và N bị trễ/dời lịch do xử lý Kalman Filter, tuning MPC và tích hợp AI vào Web; các hoạt động O và P được rút ngắn để bảo đảm mốc kết thúc dự án.
 
 b) Time sheet cá nhân
 
@@ -50,14 +58,14 @@ Bảng 30. TimeSheet cá nhân
 
 | Tuần | Thành viên A (PM + ARX) | Thành viên B (HW/FW & Fullstack) | Thành viên C (Kalman & MPC) |
 |------|--------------------------|-----------------------------------|-----------------------------|
-| 1–2 | 35h (phân tích, SOW, WBS, RACI) | 30h (khảo sát HW & Web, BOM) | 15h (khảo sát yêu cầu AI) |
+| 1–2 | 35h (phân tích, SOW, WBS, RACI) | 30h (khảo sát HW & Web, BOM) | 10h (khảo sát yêu cầu AI) |
 | 3–4 | 18h (thiết kế kiến trúc hệ thống) | 32h (thiết kế mạch & DB, Figma) | 5h (tham vấn thiết kế pipeline AI) |
 | 5–6 | 12h (tiền xử lý dữ liệu cho ARX) | 38h (lắp ráp HW, code FW & Django BE) | 8h (mô phỏng thuật toán Kalman) |
 | 7–8 | 13h (huấn luyện & đánh giá ARX) | 38h (hoàn thiện FW, WebSocket server) | 8h (mô phỏng bộ điều khiển MPC) |
 | 9–10 | 8h (PM giám sát & kiểm soát) | 23h (fix bug FW, ReactJS Dashboard) | 28h (phát triển Kalman Filter & MPC) |
-| 11–12 | 25h (tích hợp hệ thống, MPC tuning) | 26h (kiểm thử HW/FW, hoàn thiện Web) | 20h (tích hợp hệ thống, MPC tuning) |
-| 13–14 | 25h (kiểm thử tích hợp, viết báo cáo) | 25h (kiểm thử tích hợp, viết báo cáo) | 22h (kiểm thử tích hợp, viết báo cáo) |
-| 15 | 10h (slide, bảo vệ) | 10h (demo, bảo vệ) | 10h (demo, bảo vệ) |
+| 11–12 | 25h (tích hợp hệ thống, MPC tuning) | 36h (kiểm thử HW/FW, hoàn thiện Web) | 20h (tích hợp hệ thống, MPC tuning) |
+| 13–14 | 25h (kiểm thử tích hợp, viết báo cáo) | 33h (kiểm thử tích hợp, viết báo cáo) | 22h (kiểm thử tích hợp, viết báo cáo) |
+| 15 | 10h (slide, bảo vệ) | 15h (demo, bảo vệ) | 10h (demo, bảo vệ) |
 | Tổng | 146h | 245h | 111h |
 
 ### 8.2.3 Phân tích sai biệt
@@ -69,7 +77,7 @@ Bảng 31. Sai biệt lịch biểu
 | Giai đoạn | KH (tuần) | TT (tuần) | SV | Đánh giá |
 |-----------|-----------|-----------|----|----------|
 | Phân tích yêu cầu | 2 | 2 | 0 | Đúng |
-| Thiết kế | 2 | 3 | -1 | Trễ |
+| Thiết kế | 3 | 3 | 0 | Đúng |
 | Phát triển HW + FW | 3 | 3 | 0 | Đúng |
 | Phát triển Backend | 5 | 5 | 0 | Đúng |
 | Phát triển AI | 7 | 8 | -1 | Trễ |
@@ -77,7 +85,7 @@ Bảng 31. Sai biệt lịch biểu
 | Kiểm thử | 3 | 2 | +1 | Nhanh hơn |
 | Tổng dự án | 15 | 15 | 0 | Đúng tổng thể |
 
-Nhận xét: Dự án có 2 giai đoạn trễ (thiết kế và AI), nhưng bù lại bằng việc kiểm thử nhanh hơn. Tổng thời gian dự án vẫn đúng 15 tuần.
+Nhận xét: Dự án có 1 giai đoạn trễ chính là phát triển AI/control, chủ yếu ở Kalman Filter và MPC Controller. Nhóm bù lại bằng cách rút ngắn kiểm thử, hiệu chỉnh cuối kỳ và tăng hỗ trợ tích hợp, nên tổng thời gian dự án vẫn đúng 15 tuần.
 
 b) Sai biệt chi phí (Cost Variance — CV)
 
@@ -95,7 +103,7 @@ Bảng 32. Sai biệt chi phí
 | 8 | Servo SG90 ×2 | 60.000 | 60.000 | 0 | Đúng dự toán |
 | 9 | LDR ×4 + Trở 10kΩ ×4 + Relay 1 kênh ×3 | 100.000 | 100.000 | 0 | Đúng dự toán |
 | 10 | Công tắc nguồn ON/OFF + Cáp USB | 65.000 | 65.000 | 0 | Đúng dự toán |
-| 11 | Cảm biến DHT22 (Thay thế linh kiện hỏng) | 0 | 60.000 | -60.000 | Dùng quỹ dự phòng thay cảm biến hỏng ở tuần 5 |
+| 11 | Cảm biến DHT22 (Thay thế linh kiện hỏng) | 0 | 60.000 | -60.000 | Dùng quỹ dự phòng thay cảm biến hỏng ở tuần 11 |
 | 12 | Chi phí vận chuyển phát sinh hỏa tốc | 0 | 60.000 | -60.000 | Ship hỏa tốc cảm biến và thiết bị dự phòng |
 | | Tổng kinh phí | 1.200.000 | 1.371.000 | -171.000 | Vượt 14.25% so với dự toán |
 
@@ -122,7 +130,7 @@ Bảng 33. Bảng các chỉ số phân tích giá trị thu được
 
 Áp dụng EVM cho dự án Smart Greenhouse (tại tuần 10):
 
-Giả sử tổng ngân sách BAC = 625.000 VNĐ, tổng giờ công KH = 675h.
+Áp dụng EVM theo giờ công, tổng khối lượng kế hoạch của dự án là BAC = 502h.
 
 Bảng 34. Áp dụng EVM cho tuần 10
 
@@ -246,7 +254,7 @@ Biện pháp đã áp dụng:
 
 - Tăng giờ làm việc của thành viên C (từ 20h → 28h/tuần trong tuần 9–10) để tập trung xử lý Kalman Filter và MPC Controller.
 - A hỗ trợ C chuẩn bị dữ liệu mô phỏng từ mô hình ARX để kiểm thử MPC độc lập, không chờ dữ liệu thực.
-- B hỗ trợ kiểm thử phần tích hợp ESP32 ↔ Backend trong khi C tập trung MPC.
+- B hỗ trợ kiểm thử phần tích hợp ESP32 ↔ Backend/Web trong khi C tập trung MPC.
 
 ### 8.5.2 Khi chi phí có nguy cơ tăng
 
@@ -285,10 +293,10 @@ Bảng 42. Nhật ký kiểm soát thay đổi
 
 | STT | Ngày | Mô tả thay đổi | Người chịu trách nhiệm | Loại | Tác động | Quyết định |
 |-----|------|----------------|-------------------------|------|----------|------------|
-| 1 | Tuần 3 | Kéo dài thiết kế pipeline AI do cần bổ sung Kalman Filter và MPC | A, C | Quan trọng | Hoạt động J trễ 1 tuần, từ 19/01-25/01 thành 19/01-01/02 | Chấp nhận |
-| 2 | Tuần 8-9 | Kéo dài phát triển Kalman Filter để xử lý nhiễu cảm biến | C | Quan trọng | Hoạt động P kéo dài đến 09/04 | Chấp nhận |
-| 3 | Tuần 9-10 | Điều chỉnh tiến độ MPC Controller do tuning phức tạp hơn dự kiến | C | Quan trọng | Hoạt động Q dời thành 10/04-27/04, kéo theo R dời sang 28/04-01/05 | Chấp nhận |
-| 4 | Tuần 12-13 | Rút ngắn kiểm thử module và kiểm thử tích hợp để bù tiến độ | A, B, C | Điều chỉnh tiến độ | T, U, V được rút ngắn nhưng vẫn đảm bảo kiểm thử các chức năng chính | Chấp nhận |
+| 1 | Tuần 3 | Bổ sung và hoàn thiện nội dung thiết kế pipeline AI gồm ARX, Kalman Filter và MPC | A, C | Quan trọng | Hoạt động F hoàn thành đúng kế hoạch trong giai đoạn 25/01-05/02, không phát sinh trễ | Chấp nhận |
+| 2 | Tuần 8-9 | Kéo dài phát triển Kalman Filter để xử lý nhiễu cảm biến | C | Quan trọng | Hoạt động L kéo dài đến 09/04 | Chấp nhận |
+| 3 | Tuần 9-10 | Điều chỉnh tiến độ MPC Controller do tuning phức tạp hơn dự kiến | C | Quan trọng | Hoạt động M dời thành 10/04-27/04, kéo theo N dời sang 28/04-01/05 | Chấp nhận |
+| 4 | Tuần 12-13 | Rút ngắn kiểm thử tích hợp và hiệu chỉnh để bù tiến độ | A, B, C | Điều chỉnh tiến độ | O và P được rút ngắn nhưng vẫn đảm bảo kiểm thử các chức năng chính | Chấp nhận |
 | 5 | Tuần 11 | Thay cảm biến DHT22 hỏng bằng cảm biến dự phòng | B | Ít quan trọng | Phát sinh 60.000 VNĐ chi phí, không làm trễ mốc cuối | Chấp nhận |
 
 ## 8.7 Kết thúc dự án
@@ -299,7 +307,7 @@ Dự án kết thúc vì hoàn thành mục tiêu đề ra trong thời gian quy
 
 - Hệ thống phần cứng hoạt động.
 - Firmware ESP32 ổn định.
-- Backend + AI tích hợp thành công.
+- Backend, AI và Web tích hợp thành công.
 - Web Dashboard đầy đủ 6 màn hình.
 - Báo cáo PBL + QLDA hoàn thành.
 
@@ -312,8 +320,8 @@ Bảng 43. Số liệu thống kê khi kết thúc dự án
 | Tổng thời gian | 15 tuần |
 | Tổng giờ công | 502 giờ (A: 146h, B: 245h, C: 111h) |
 | Tổng chi phí | 1.371.000 VNĐ |
-| Số work packages | 23 |
-| Số mốc | 10 |
+| Số work packages theo WBS | 23 |
+| Số hoạt động AC trong lịch biểu | 17 |
 | Số thay đổi | 5 |
 | Số rủi ro xảy ra | 2 (R02: trễ AI, R05: cảm biến hỏng) |
 
@@ -330,7 +338,7 @@ Bảng 44. So sánh số liệu kế hoạch với thực tế khi kết thúc d
 | RMSE free-run | ≤ 1.5 | 0,978 | Tốt hơn |
 | MPC vùng mục tiêu | 55–65% | Đạt | Đạt |
 | Số màn hình Web | ≥ 6 | 6 | Đạt |
-| Giai đoạn trễ | 0 | 2 (thiết kế, AI) | |
+| Giai đoạn trễ | 0 | 1 (AI/control) | Đã bù bằng rút ngắn kiểm thử và hiệu chỉnh |
 
 ### 8.7.4 Lưu trữ hồ sơ dự án
 

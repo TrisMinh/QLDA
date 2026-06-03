@@ -33,32 +33,26 @@ Bảng 20. Bảng phân bố nguồn nhân lực
 
 | Mã | Hoạt động | Công việc trước đó | Thời lượng | Nhân lực | Nhân sự chính |
 |----|-----------|--------------------|------------|----------|---------------|
-| A | Khảo sát các giải pháp nhà kính thông minh hiện có | - | 3 ngày | 3 | Trí, Sỹ, Sinh |
-| B | Xác định yêu cầu chức năng | A | 3 ngày | 3 | Trí, Sỹ, Sinh |
-| C | Xác định yêu cầu phi chức năng | B | 2 ngày | 3 | Trí, Sỹ, Sinh |
-| D | Xác định phạm vi và ràng buộc | C | 2 ngày | 3 | Trí, Sỹ, Sinh |
+| A | Khảo sát các giải pháp nhà kính thông minh hiện có | - | 4 ngày | 3 | Trí, Sỹ, Sinh |
+| B | Xác định yêu cầu chức năng | A | 4 ngày | 3 | Trí, Sỹ, Sinh |
+| C | Xác định yêu cầu phi chức năng | B | 4 ngày | 3 | Trí, Sỹ, Sinh |
+| D | Xác định phạm vi và ràng buộc | C | 4 ngày | 3 | Trí, Sỹ, Sinh |
 | E | Thiết kế kiến trúc tổng thể HW + SW | D | 4 ngày | 3 | Trí, Sỹ, Sinh |
-| F | Thiết kế sơ đồ mạch điện | E | 3 ngày | 1 | Sỹ |
-| G | Thiết kế giao thức truyền thông WebSocket/JSON | E | 3 ngày | 1 | Sỹ |
-| H | Thiết kế cơ sở dữ liệu | E | 3 ngày | 1 | Sỹ |
-| I | Thiết kế giao diện Web wireframe/mockup | E | 3 ngày | 1 | Sỹ |
-| J | Thiết kế pipeline AI ARX - Kalman - MPC | E | 7 ngày | 2 | Trí, Sinh |
-| K | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | F | 9 ngày | 1 | Sỹ |
-| L | Lập trình firmware ESP32 | K, G | 14 ngày | 1 | Sỹ |
-| M | Phát triển Backend Django + WebSocket Server | G, H | 14 ngày | 1 | Sỹ |
-| N | Phát triển Web Dashboard ReactJS | I, M | 14 ngày | 1 | Sỹ |
-| O | Huấn luyện mô hình ARX | J | 21 ngày | 1 | Trí |
-| P | Phát triển Kalman Filter | O, J | 14 ngày | 1 | Sinh |
-| Q | Phát triển MPC Controller | P | 14 ngày | 1 | Sinh |
-| R | Tích hợp AI vào Backend | M, N, Q | 4 ngày | 3 | Trí, Sỹ, Sinh |
-| S | Kiểm thử phần cứng và firmware | K, L | 4 ngày | 1 | Sỹ |
-| T | Kiểm thử Backend, Web và AI | M, N, Q, R | 3 ngày | 3 | Trí, Sỹ, Sinh |
-| U | Kiểm thử tích hợp end-to-end | S, T | 5 ngày | 3 | Trí, Sỹ, Sinh |
-| V | Hiệu chỉnh phần cứng và mô hình AI | U | 4 ngày | 3 | Trí, Sỹ, Sinh |
-| W | Hoàn thành báo cáo và bảo vệ đồ án | V | 4 ngày | 3 | Trí, Sỹ, Sinh |
+| F | Thiết kế pipeline AI ARX - Kalman - MPC | E | 12 ngày | 2 | Trí, Sinh |
+| G | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | E | 12 ngày | 1 | Sỹ |
+| H | Lập trình firmware ESP32 | G | 14 ngày | 1 | Sỹ |
+| I | Phát triển Backend Django + WebSocket Server | H | 16 ngày | 1 | Sỹ |
+| J | Phát triển Web Dashboard ReactJS | I | 14 ngày | 1 | Sỹ |
+| K | Huấn luyện mô hình ARX | F | 21 ngày | 1 | Trí |
+| L | Phát triển Kalman Filter | K | 14 ngày | 1 | Sinh |
+| M | Phát triển MPC Controller | L | 14 ngày | 1 | Sinh |
+| N | Tích hợp AI vào Web | J, M | 4 ngày | 3 | Trí, Sỹ, Sinh |
+| O | Kiểm thử tích hợp chức năng | N | 8 ngày | 3 | Trí, Sỹ, Sinh |
+| P | Hiệu chỉnh phần cứng và mô hình AI | O | 4 ngày | 3 | Trí, Sỹ, Sinh |
+| Q | Hoàn thành báo cáo và bảo vệ đồ án | P | 4 ngày | 3 | Trí, Sỹ, Sinh |
 
 ![Hình 12. Sơ đồ phụ tải nguồn nhân lực](image/Chuong08_NguonNhanLuc/so_do_phu_tai_nguon_nhan_luc.png)
 
 Hình 12. Sơ đồ phụ tải nguồn nhân lực
 
-Ghi chú: Khoảng trống phụ tải từ sau ngày 08/02/2026 đến trước ngày 03/03/2026 là giai đoạn nghỉ Tết/nghỉ giữa tiến độ, nên không có công việc phát triển chính được phân bổ.
+Ghi chú: Khoảng trống phụ tải từ sau ngày 05/02/2026 đến trước ngày 03/03/2026 là giai đoạn nghỉ Tết/nghỉ giữa tiến độ, nên không có công việc phát triển chính được phân bổ.

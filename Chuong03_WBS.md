@@ -1,4 +1,4 @@
-# CHƯƠNG 3: LIỆT KÊ CÔNG VIỆC DỰ ÁN
+﻿# CHƯƠNG 3: LIỆT KÊ CÔNG VIỆC DỰ ÁN
 
 ## 3.1 Tổng quan về WBS
 
@@ -94,7 +94,7 @@ T3 — Phát triển:
 - T3.5: Huấn luyện mô hình ARX
 - T3.6: Phát triển Kalman Filter
 - T3.7: Phát triển MPC Controller
-- T3.8: Tích hợp AI vào Backend
+- T3.8: Tích hợp AI vào Web
 
 T4 — Kiểm thử:
 

@@ -12,7 +12,7 @@ Báo cáo được tổ chức thành 8 chương chính, một phần công cụ
 | 02 | Chương 2: Xác định dự án | Mục đích, mục tiêu, phạm vi, nhân lực, thời gian, mốc thực hiện và kinh phí |
 | 03 | Chương 3: Liệt kê công việc dự án | PBS, TBS, bảng WBS và kiểm soát phiên bản WBS |
 | 04 | Chương 4: Ước lượng thời gian dự án | Phương pháp ước lượng, PERT, giờ công, chi phí nhân lực và GEF |
-| 05 | Chương 5: Lập lịch biểu cho dự án | Bảng hoạt động, ADM, Gantt, PDM, đường găng và mốc kiểm soát |
+| 05 | Chương 5: Lập lịch biểu cho dự án | Bảng hoạt động, ADM, Gantt và PDM |
 | 06 | Chương 6: Quản lý nguồn nhân lực dự án | Nguồn nhân lực, quy tắc điều phối và sơ đồ phụ tải nhân lực |
 | 07 | Chương 7: Quản lý rủi ro dự án | Nhận diện rủi ro, kế hoạch ứng phó, kinh phí dự phòng và bài học rút ra |
 | 08 | Chương 8: Kiểm soát dự án | Theo dõi hiện trạng, họp, điều chỉnh, kiểm soát thay đổi và kết thúc dự án |
@@ -82,8 +82,6 @@ Báo cáo được tổ chức thành 8 chương chính, một phần công cụ
 ### 5.4 Sơ đồ Gantt
 
 ### 5.5 Sơ đồ PDM
-
-### 5.6 Đường găng và mốc kiểm soát
 
 ## CHƯƠNG 6: QUẢN LÝ NGUỒN NHÂN LỰC DỰ ÁN
 

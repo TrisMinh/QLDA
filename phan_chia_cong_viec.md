@@ -20,7 +20,7 @@
 | 02 | Xác định dự án | **A** | Phác thảo dự án (SOW), vai trò & trách nhiệm, ma trận RACI |
 | 03 | Liệt kê công việc (WBS) | **A** | PBS, TBS, bảng WBS hoàn chỉnh, sơ đồ cây WBS |
 | 04 | Ước lượng thời gian | **B** | Kỹ thuật PERT, GEF, man-month, bảng ước lượng chi tiết |
-| 05 | Lập lịch biểu | **B** | Sơ đồ PDM/AON, đường găng, float, sơ đồ Gantt |
+| 05 | Lập lịch biểu | **B** | Bảng hoạt động, sơ đồ PDM/AON, float, sơ đồ Gantt |
 | 06 | Quản lý nguồn nhân lực | **C** | Phân công công việc, biểu đồ phụ tải, điều phối nhân lực |
 | 07 | Quản lý rủi ro | **A** | Nhận diện rủi ro, phân loại, bảng quản lý rủi ro, kế hoạch ứng phó |
 | 08 | Kiểm soát dự án | **A** | Thu thập hiện trạng, họp, điều chỉnh, kiểm soát thay đổi, kết thúc dự án |
@@ -41,7 +41,7 @@
 > [!NOTE]
 > - **A** phụ trách Ch7 (Rủi ro) và Ch8 (Kiểm soát dự án), chủ yếu lập bảng, theo dõi sai biệt và tổng kết.
 > - **C** ít chương hơn nhưng bù bằng việc phụ trách **Phụ lục** và phần Trello trong công cụ quản lý.
-> - **B** phụ trách Ch4 + Ch5 là cụm **tính toán nặng nhất** (PERT, PDM, đường găng, Gantt) và phần Git/GitHub.
+> - **B** phụ trách Ch4 + Ch5 là cụm **tính toán nặng nhất** (PERT, PDM, float, Gantt) và phần Git/GitHub.
 
 > [!IMPORTANT]
 > **Thứ tự nên làm:** A hoàn thành Ch3 (WBS) trước → B dựa vào đó làm Ch4, Ch5 → C dùng kết quả để làm Ch6

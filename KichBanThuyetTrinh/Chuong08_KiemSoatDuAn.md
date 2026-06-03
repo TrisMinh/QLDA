@@ -8,7 +8,7 @@ Chương 8 cần trình bày rõ phần thực tế: dự án lệch ở đâu, 
 
 Kính thưa thầy/cô và các bạn, Chương 8 là phần kiểm soát dự án. Nếu các chương trước nói về kế hoạch, thì chương này trả lời câu hỏi: khi làm thật, kế hoạch có chạy đúng không, nếu không đúng thì nhóm xử lý như thế nào?
 
-Trong dự án này, nhóm không hoàn toàn đi đúng kế hoạch ở mọi công việc. Thực tế có hai điểm trễ quan trọng: thiết kế pipeline AI và phát triển AI, đặc biệt là Kalman Filter và MPC Controller. Tuy nhiên, nhóm đã phát hiện sớm, điều chỉnh nhân lực và nén tiến độ ở giai đoạn cuối nên dự án vẫn hoàn thành đúng ngày 10/05/2026.
+Trong dự án này, nhóm không hoàn toàn đi đúng kế hoạch ở mọi công việc. Thực tế điểm trễ quan trọng nằm ở phát triển AI/control, đặc biệt là Kalman Filter, MPC Controller và tích hợp AI vào Web. Tuy nhiên, nhóm đã phát hiện sớm, điều chỉnh nhân lực và nén tiến độ ở giai đoạn cuối nên dự án vẫn hoàn thành đúng ngày 10/05/2026.
 
 ## 1. Nhóm kiểm soát dự án bằng những gì
 
@@ -25,19 +25,13 @@ Nhờ những công cụ này, nhóm không chỉ cảm nhận là "dự án đa
 
 Trong TimeSheet nhiệm vụ, hầu hết các phần như phân tích yêu cầu, phần cứng, firmware, backend và web đều đúng tiến độ. Phần bị lệch chủ yếu nằm ở AI.
 
-Có hai sai lệch chính:
+Sai lệch chính nằm ở **cụm L-M-N bị trễ/dời lịch**. Đây là phần ảnh hưởng trực tiếp đến cuối dự án:
 
-Thứ nhất, **thiết kế pipeline AI bị trễ 1 tuần**. Trong Gantt kế hoạch, hoạt động J dự kiến từ 19/01 đến 25/01. Thực tế hoạt động này kéo dài đến 01/02 vì nhóm cần làm rõ thêm cách kết hợp ARX, Kalman Filter và MPC.
+- L - Kalman Filter kế hoạch kết thúc 06/04, thực tế kéo dài đến 09/04.
+- M - MPC Controller kế hoạch 07/04-20/04, thực tế dời thành 10/04-27/04.
+- N - Tích hợp AI vào Web kế hoạch 21/04-24/04, thực tế dời thành 28/04-01/05.
 
-Tuy nhiên, cần giải thích kỹ: J trễ so với kế hoạch, nhưng giai đoạn sau đó có khoảng nghỉ Tết từ 09/02 đến 02/03. Vì vậy phần trễ của J chưa làm dời ngay hoạt động O, do O vẫn bắt đầu sau kỳ nghỉ vào 03/03. Nói cách khác, J là sai lệch cần ghi nhận, nhưng chưa phải nguyên nhân trực tiếp làm dời toàn bộ lịch sau Tết.
-
-Thứ hai, **cụm P-Q-R bị trễ/dời lịch**. Đây mới là phần ảnh hưởng trực tiếp đến cuối dự án:
-
-- P - Kalman Filter kế hoạch kết thúc 06/04, thực tế kéo dài đến 09/04.
-- Q - MPC Controller kế hoạch 07/04-20/04, thực tế dời thành 10/04-27/04.
-- R - Tích hợp AI vào Backend kế hoạch 21/04-24/04, thực tế dời thành 28/04-01/05.
-
-Vì R bị dời sát giai đoạn kiểm thử, nhóm buộc phải điều chỉnh các công việc cuối như T, U, V và W.
+Vì N bị dời sát giai đoạn kiểm thử, nhóm buộc phải điều chỉnh các công việc cuối như O và P.
 
 ## 3. Vấn đề đường găng và thời gian dự trữ
 
@@ -49,14 +43,13 @@ Vì vậy, nhóm không được hiểu là "lấy thời gian dự trữ của 
 
 Cách hiểu đúng trong dự án này là:
 
-- J bị trễ so với kế hoạch, nhưng phần trễ này chưa làm dời công việc sau Tết vì J vẫn hoàn thành trước khi O bắt đầu.
-- P-Q-R bị trễ/dời sát giai đoạn cuối, nên tạo nguy cơ làm trễ toàn bộ dự án.
+- L-M-N bị trễ/dời sát giai đoạn cuối, nên tạo nguy cơ làm trễ toàn bộ dự án.
 - Để giữ mốc cuối, nhóm phải dùng biện pháp nén tiến độ, không phải dùng float của công việc khác.
 
 Nén tiến độ ở đây gồm hai cách:
 
 - Crashing: tăng giờ làm, tăng nguồn lực cho phần đang chậm.
-- Fast-tracking: cho một số hoạt động kiểm thử/tích hợp/hoàn thiện diễn ra gọn hơn hoặc song song hơn.
+- Fast-tracking: sắp xếp một số hoạt động kiểm thử, tích hợp và hoàn thiện theo cách gọn hơn.
 
 ## 4. Nhóm đã điều chỉnh như thế nào
 
@@ -66,22 +59,19 @@ Thành viên C là người phụ trách Kalman Filter và MPC Controller, nên 
 
 Thành viên A phụ trách ARX và quản lý dự án, nên A hỗ trợ C bằng cách chuẩn bị dữ liệu mô phỏng từ mô hình ARX. Việc này giúp C kiểm thử MPC độc lập, không phải chờ dữ liệu thực từ phần cứng.
 
-Thành viên B phụ trách phần cứng, firmware, backend và web, nên B hỗ trợ kiểm thử tích hợp giữa ESP32 và backend. Nhờ vậy C không phải chia thời gian quá nhiều cho phần tích hợp kỹ thuật.
+Thành viên B phụ trách phần cứng, firmware, backend và web, nên B hỗ trợ kiểm thử tích hợp giữa ESP32 và Backend/Web. Nhờ vậy C không phải chia thời gian quá nhiều cho phần tích hợp kỹ thuật.
 
 Ở giai đoạn cuối, nhóm rút ngắn các hoạt động:
 
-- T - kiểm thử Backend, Web và AI.
-- U - kiểm thử tích hợp end-to-end.
-- V - hiệu chỉnh hệ thống.
-- W - hoàn thành báo cáo và bảo vệ.
+- O - kiểm thử tích hợp chức năng.
+- P - hiệu chỉnh phần cứng và mô hình AI.
 
-Việc rút ngắn này không có nghĩa là bỏ kiểm thử, mà là tập trung vào các chức năng chính, kiểm thử song song và giảm các phần phụ để giữ mốc bảo vệ.
+Việc rút ngắn này không có nghĩa là bỏ kiểm thử, mà là tập trung vào các chức năng chính, ưu tiên các ca kiểm thử quan trọng và giảm các phần phụ để giữ mốc bảo vệ.
 
 ## 5. Số liệu kiểm soát cho thấy điều gì
 
 Trong bảng sai biệt lịch biểu:
 
-- Thiết kế có SV = -1, nghĩa là trễ 1 tuần.
 - Phát triển AI có SV = -1, nghĩa là trễ 1 tuần.
 - Kiểm thử có SV = +1, nghĩa là thực tế được rút ngắn hơn kế hoạch 1 tuần.
 - Tổng dự án có SV = 0, nghĩa là dự án vẫn đúng thời gian tổng thể.
@@ -94,11 +84,10 @@ Issue Log ghi lại các vấn đề thật sự xảy ra. Vấn đề quan tr�
 
 Nhật ký kiểm soát thay đổi ghi rõ các thay đổi trong lịch:
 
-- J kéo dài đến 01/02.
-- P kéo dài đến 09/04.
-- Q dời sang 10/04-27/04.
-- R dời sang 28/04-01/05.
-- T, U, V được rút ngắn để bù tiến độ.
+- L kéo dài đến 09/04.
+- M dời sang 10/04-27/04.
+- N dời sang 28/04-01/05.
+- O và P được rút ngắn để bù tiến độ.
 - Cảm biến DHT22 hỏng được thay bằng cảm biến dự phòng.
 
 Điểm quan trọng là mỗi thay đổi đều có người chịu trách nhiệm và quyết định chấp nhận, chứ không phải thay đổi tùy tiện.
@@ -117,7 +106,6 @@ Tóm lại, Chương 8 cho thấy dự án không phải lúc nào cũng chạy 
 
 ## Gợi ý khi nói trên slide
 
-- Đừng nói "J trễ nhưng không ảnh hưởng" vì câu đó dễ sai. Hãy nói: "J trễ so với kế hoạch nhưng chưa làm dời công việc sau Tết; phần nguy hiểm hơn là P-Q-R dời sát giai đoạn kiểm thử."
+- Đừng dùng mã hoạt động cũ như J/P/Q/R/T/U/V. Hãy nói theo bảng AC mới: L-M-N là cụm bị dời sát giai đoạn kiểm thử, còn O-P được rút ngắn để bù tiến độ.
 - Nhấn mạnh: "Không lấy float của công việc khác để bù đường găng, mà nhóm dùng nén tiến độ."
 - Khi nói giải pháp, trình bày đúng vai trò: C chính AI/MPC, A hỗ trợ dữ liệu ARX, B hỗ trợ tích hợp.
-

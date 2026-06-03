@@ -34,7 +34,7 @@ Trong bảng nhận diện, nhóm xác định hai rủi ro có độ ưu tiên 
 
 Rủi ro thứ nhất là **R01 - thiếu kinh nghiệm AI/MPC**. Đây là rủi ro kỹ thuật, vì MPC không phải là phần điều khiển đơn giản theo ngưỡng. MPC cần mô hình dự đoán, cần dữ liệu đầu vào ổn định và cần tinh chỉnh tham số để không tưới quá nhiều hoặc quá ít.
 
-Rủi ro thứ hai là **R02 - trễ tiến độ module AI**. Đây là rủi ro về tiến độ. Nếu ARX, Kalman hoặc MPC trễ thì hoạt động tích hợp AI vào backend và kiểm thử end-to-end cũng có nguy cơ bị dời theo.
+Rủi ro thứ hai là **R02 - trễ tiến độ module AI**. Đây là rủi ro về tiến độ. Nếu ARX, Kalman hoặc MPC trễ thì hoạt động tích hợp AI vào Web và kiểm thử end-to-end cũng có nguy cơ bị dời theo.
 
 Hai rủi ro này được ưu tiên cao vì chúng liên quan trực tiếp đến đường găng và mốc hoàn thành cuối dự án.
 
@@ -88,4 +88,3 @@ Tóm lại, Chương 7 cho thấy nhóm đã không chỉ liệt kê rủi ro tr
 - Đừng đọc hết bảng rủi ro.
 - Tập trung nói 2 rủi ro thật sự xảy ra: R02 và R05.
 - Nhấn mạnh câu: "Rủi ro đã xảy ra, nhưng không làm dự án thất bại vì nhóm có phương án xử lý trước."
-

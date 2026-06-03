@@ -40,7 +40,7 @@ Các mốc minh họa Trello Board trong dự án:
 
 ### 3.1 Mục đích quản lý mã nguồn
 
-Git và GitHub được sử dụng để quản lý mã nguồn dự án nhằm lưu trữ lịch sử phát triển, hỗ trợ làm việc nhóm song song, hạn chế xung đột mã nguồn và kiểm soát chất lượng thông qua Pull Request, Code Review cũng như các bước kiểm thử tự động trước khi triển khai.
+Git và GitHub được sử dụng để quản lý mã nguồn dự án nhằm lưu trữ lịch sử phát triển, hỗ trợ làm việc nhóm theo nhánh riêng, hạn chế xung đột mã nguồn và kiểm soát chất lượng thông qua Pull Request, Code Review cũng như các bước kiểm thử tự động trước khi triển khai.
 
 ### 3.2 Tổng quan Repository trên GitHub
 
@@ -56,7 +56,7 @@ Hình 9. Cấu trúc mã nguồn dự án
 
 ### 3.3 Chiến lược phân nhánh
 
-Nhóm sử dụng cơ chế phân nhánh để phát triển song song các module mà không ảnh hưởng trực tiếp đến nhánh chính.
+Nhóm sử dụng cơ chế phân nhánh để phát triển từng module trên nhánh riêng mà không ảnh hưởng trực tiếp đến nhánh chính.
 
 | Loại nhánh | Mục đích sử dụng | Ví dụ |
 |------------|------------------|-------|
@@ -80,4 +80,4 @@ Hình 11. Một số commit tiêu biểu
 
 ### 3.5 Đánh giá việc sử dụng Git/GitHub
 
-Việc sử dụng Git/GitHub giúp nhóm tách branch theo module, phát triển song song, truy vết thay đổi và sao lưu mã nguồn an toàn. Tuy nhiên, ở giai đoạn đầu nhóm gặp một số khó khăn do chênh lệch kỹ năng sử dụng Git, dẫn đến xung đột khi merge. Sau khi thống nhất quy trình làm việc và quy tắc commit, việc quản lý mã nguồn trở nên ổn định hơn.
+Việc sử dụng Git/GitHub giúp nhóm tách branch theo module, truy vết thay đổi và sao lưu mã nguồn an toàn. Tuy nhiên, ở giai đoạn đầu nhóm gặp một số khó khăn do chênh lệch kỹ năng sử dụng Git, dẫn đến xung đột khi merge. Sau khi thống nhất quy trình làm việc và quy tắc commit, việc quản lý mã nguồn trở nên ổn định hơn.

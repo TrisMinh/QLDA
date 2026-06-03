@@ -10,7 +10,7 @@
 
 ### 4.2.1 Ước lượng theo PERT
 
-Công thức PERT dùng để ước lượng thời gian cho các nhóm công việc chính. PERT phù hợp với dự án vì nhiều công việc có độ bất định, đặc biệt là các phần ARX, Kalman Filter, MPC Controller và tích hợp AI vào backend.
+Công thức PERT dùng để ước lượng thời gian cho các nhóm công việc chính. PERT phù hợp với dự án vì nhiều công việc có độ bất định, đặc biệt là các phần ARX, Kalman Filter, MPC Controller và tích hợp AI vào Web.
 
 Các tham số:
 
@@ -37,17 +37,36 @@ Chi phí nhân lực không quy đổi thành tiền lương thực tế mà dù
 
 Ước lượng thời gian theo PERT.
 
-| WBS | Nhóm công việc | Nhân sự chính | MO | ML | MP | EST |
-|-----|----------------|---------------|----|----|----|-----|
-| T1 | Phân tích yêu cầu | A, B, C | 7 | 10 | 14 | 10,2 ngày |
-| T2 | Thiết kế hệ thống | A, B, C | 12 | 18 | 24 | 18,0 ngày |
-| T3.1 | Phát triển phần cứng | B | 14 | 20 | 28 | 20,3 ngày |
-| T3.2 | Phát triển Firmware | B | 14 | 20 | 28 | 20,3 ngày |
-| T3.3 | Phát triển Backend | B | 18 | 25 | 35 | 25,5 ngày |
-| T3.4 | Phát triển Web Dashboard | B | 24 | 35 | 49 | 35,5 ngày |
-| T3.5 - T3.8 | Phát triển AI | A, C | 35 | 49 | 63 | 49,0 ngày |
-| T4 | Kiểm thử | A, B, C | 14 | 21 | 30 | 21,3 ngày |
-| T5 | Hoàn thành | A, B, C | 14 | 20 | 28 | 20,3 ngày |
+| AC | WBS | Hoạt động | MO | ML | MP | EST (ngày) |
+|:--:|:---:|-----------|:--:|:--:|:--:|:----------:|
+| **T1** | | **Phân tích yêu cầu** | | | | |
+| A | T1.1 | Khảo sát các giải pháp nhà kính thông minh hiện có | 2 | 4 | 6 | 4,00 |
+| B | T1.2 | Xác định yêu cầu chức năng | 2 | 4 | 6 | 4,00 |
+| C | T1.3 | Xác định yêu cầu phi chức năng | 2 | 4 | 6 | 4,00 |
+| D | T1.4 | Xác định phạm vi và ràng buộc | 2 | 4 | 6 | 4,00 |
+| | | **Tổng T1** | | | | **16,00** |
+| **T2** | | **Thiết kế** | | | | |
+| E | T2.1 - T2.5 | Thiết kế kiến trúc tổng thể HW + SW | 3 | 4 | 6 | 4,17 |
+| F | T2.6 | Thiết kế pipeline AI ARX - Kalman - MPC | 8 | 12 | 16 | 12,00 |
+| | | **Tổng T2** | | | | **16,17** |
+| **T3** | | **Phát triển** | | | | |
+| G | T3.1 | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | 8 | 12 | 16 | 12,00 |
+| H | T3.2 | Lập trình firmware ESP32 | 10 | 14 | 21 | 14,50 |
+| I | T3.3 | Phát triển Backend Django + WebSocket Server | 12 | 16 | 22 | 16,33 |
+| J | T3.4 | Phát triển Web Dashboard ReactJS | 10 | 14 | 21 | 14,50 |
+| K | T3.5 | Huấn luyện mô hình ARX | 14 | 21 | 30 | 21,33 |
+| L | T3.6 | Phát triển Kalman Filter | 10 | 14 | 21 | 14,50 |
+| M | T3.7 | Phát triển MPC Controller | 10 | 14 | 22 | 14,67 |
+| N | T3.8 | Tích hợp AI vào Web | 3 | 4 | 7 | 4,33 |
+| | | **Tổng T3** | | | | **112,16** |
+| **T4** | | **Kiểm thử** | | | | |
+| O | T4.1 - T4.3 | Kiểm thử tích hợp chức năng | 5 | 8 | 11 | 8,00 |
+| | | **Tổng T4** | | | | **8,00** |
+| **T5** | | **Hoàn thành** | | | | |
+| P | T5.1 | Hiệu chỉnh phần cứng và mô hình AI | 3 | 4 | 7 | 4,33 |
+| Q | T5.2 | Hoàn thành báo cáo và bảo vệ đồ án | 3 | 4 | 7 | 4,33 |
+| | | **Tổng T5** | | | | **8,66** |
+| | | **Tổng cộng** | | | | **160,99** |
 
 ### 4.3.2 Cơ sở ước lượng cho từng nhóm công việc
 
@@ -61,7 +80,7 @@ Cơ sở ước lượng cho từng nhóm công việc
 | T3.2 | Phát triển Firmware | Đọc cảm biến, gửi dữ liệu, nhận lệnh, điều khiển relay | Kết nối WiFi/WebSocket không ổn định |
 | T3.3 | Phát triển Backend | Xây dựng Django, REST API, WebSocket Server, MySQL | Thay đổi khi kết nối dữ liệu với frontend và AI |
 | T3.4 | Phát triển Web Dashboard | Dashboard realtime, biểu đồ, điều khiển, cảnh báo, dự báo | UI phải đồng bộ với dữ liệu backend |
-| T3.5 - T3.8 | Phát triển AI | Thu thập dữ liệu, ARX, Kalman, MPC và tích hợp AI vào Backend | Độ khó thuật toán và tinh chỉnh tham số |
+| T3.5 - T3.8 | Phát triển AI | Thu thập dữ liệu, ARX, Kalman, MPC và tích hợp AI vào Web | Độ khó thuật toán và tinh chỉnh tham số |
 | T4 | Kiểm thử | Kiểm thử phần cứng, firmware, backend, web, AI và end-to-end | Lỗi tích hợp xuất hiện muộn |
 | T5 | Hoàn thành | Hiệu chỉnh, báo cáo PBL, báo cáo QLDA, slide, bảo vệ | Dồn việc vào cuối kỳ |
 
@@ -77,7 +96,7 @@ Bảng ước lượng giờ công theo WBS
 | T3.2 | Phát triển Firmware | 50h | B | Đọc cảm biến, WebSocket Client, điều khiển relay, Manual/Auto. |
 | T3.3 | Phát triển Backend | 60h | B | Django Server, REST API, Django Channels, MySQL. |
 | T3.4 | Phát triển Web Dashboard | 55h | B | Dashboard tổng quan, biểu đồ realtime, điều khiển, cảnh báo, trang dự báo. |
-| T3.5 - T3.8 | Phát triển AI | 95h | A, C | Dữ liệu, ARX, Kalman Filter, MPC Controller và tích hợp AI vào Backend. |
+| T3.5 - T3.8 | Phát triển AI | 95h | A, C | Dữ liệu, ARX, Kalman Filter, MPC Controller và tích hợp AI vào Web. |
 | T4 | Kiểm thử | 52h | A, B, C | Kiểm thử phần cứng, firmware, backend, web, AI và end-to-end. |
 | T5 | Hoàn thành | 40h | A, B, C | Hiệu chỉnh, demo, báo cáo PBL, báo cáo QLDA, slide thuyết trình. |
 | | Tổng | 502h | | |
@@ -123,7 +142,7 @@ Man-month hiệu chỉnh = 590,6 / 160 = 3,69 man-month
 
 | Yếu tố ảnh hưởng | Tỷ lệ suy giảm | Giải thích |
 |------------------|----------------|------------|
-| Khoảng nghỉ 09/02/2026 - 02/03/2026 | 5% | Làm gián đoạn mạch phát triển và kiểm thử. |
+| Khoảng nghỉ 06/02/2026 - 02/03/2026 | 5% | Làm gián đoạn mạch phát triển và kiểm thử. |
 | Độ phức tạp IoT - Backend - Web - AI | 4% | Hệ thống gồm nhiều lớp kỹ thuật cần tích hợp với nhau. |
 | Rủi ro phần cứng, cảm biến và WebSocket | 2% | Có thể phát sinh lỗi kết nối, sai số cảm biến, mất WiFi. |
 | Rủi ro Kalman/MPC | 4% | MPC cần tuning và kiểm thử nhiều kịch bản điều khiển. |
