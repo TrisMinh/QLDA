@@ -62,7 +62,7 @@ Bảng 24. Kế hoạch ứng phó rủi ro
 | ID | Rủi ro | Phương pháp phòng ngừa | Phương pháp khắc phục | Phụ trách |
 |----|--------|------------------------|----------------------|-----------|
 | R01 | Thiếu kinh nghiệm AI/MPC | Nghiên cứu lý thuyết 2 tuần trước khi code; tham khảo MathWorks, APMonitor; xây prototype nhỏ | Tham vấn giảng viên; sử dụng thư viện có sẵn thay vì tự viết từ đầu | A, C |
-| R02 | Trễ tiến độ AI | Bắt đầu AI song song với HW; dùng dữ liệu mô phỏng; review tiến độ hàng tuần | Tăng giờ làm; cắt bớt tính năng phụ; B hỗ trợ kiểm thử | A |
+| R02 | Trễ tiến độ AI | Bắt đầu AI song song với HW; dùng dữ liệu mô phỏng; review tiến độ hàng tuần | Tăng giờ làm của C; A hỗ trợ dữ liệu mô phỏng ARX; B hỗ trợ kiểm thử tích hợp | A, C |
 | R03 | MPC không ổn định | Tune tham số trên dữ liệu mô phỏng trước; thêm ràng buộc safety constraints | Chuyển sang điều khiển rule-based đơn giản; giới hạn biên độ actuator | C |
 | R04 | ARX không đạt FIT | Thử nhiều cấu trúc (na, nb, nk); dùng Ridge regularization; đánh giá validation | Tăng dữ liệu huấn luyện; chuyển sang mô hình đơn giản hơn (AR) | A |
 | R05 | Cảm biến hỏng | Mua 2 bộ cảm biến dự phòng; dùng Kalman lọc nhiễu; lấy trung bình nhiều lần đo | Thay cảm biến dự phòng ngay; hiệu chuẩn lại sau khi thay | B |
@@ -113,7 +113,7 @@ Bảng 27. Bài học rút ra từ quản lý rủi ro
 | 1 | Nhận diện sớm = xử lý rẻ | R01 (thiếu kinh nghiệm AI) được nhận diện từ tuần 1 → phòng ngừa bằng nghiên cứu 2 tuần → không phát sinh chi phí thêm |
 | 2 | Dự phòng thiết bị là bắt buộc | R05 xảy ra thực tế (DHT22 hỏng) → thay nhanh nhờ mua sẵn dự phòng → không ảnh hưởng tiến độ |
 | 3 | AI/ML cần buffer thời gian lớn | R02 xảy ra (trễ 1 tuần) dù đã phòng ngừa → nên dự trù +30% thời gian cho module AI trong các dự án sau |
-| 4 | Cross-training giảm rủi ro nhân sự | Nhờ tài liệu code rõ ràng, B có thể hỗ trợ kiểm thử AI khi A cần tập trung MPC |
+| 4 | Cross-training giảm rủi ro nhân sự | A hỗ trợ C bằng dữ liệu mô phỏng ARX, B hỗ trợ kiểm thử tích hợp để C tập trung xử lý Kalman/MPC |
 
 ### 7.3.3 Thành quả của quản lý rủi ro hiệu quả
 
