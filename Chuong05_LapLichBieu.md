@@ -12,31 +12,31 @@ Lập lịch biểu là quá trình sắp xếp các công việc trong WBS theo
 
 Bảng 15. Bảng hoạt động của dự án.
 
-| AC | WBS | Hoạt động | Công việc trước đó | Thời gian | Thời lượng | Nhân sự chính | Kết quả bàn giao |
-|:--:|:---:|-----------|--------------------|-----------|:----------:|:-------------:|------------------|
-| A | T1.1 | Khảo sát các giải pháp nhà kính thông minh hiện có | - | 05/01/2026 - 07/01/2026 | 3 ngày | A, B, C | Tài liệu khảo sát giải pháp |
-| B | T1.2 | Xác định yêu cầu chức năng | A | 08/01/2026 - 10/01/2026 | 3 ngày | A, B, C | Danh sách chức năng hệ thống |
-| C | T1.3 | Xác định yêu cầu phi chức năng | B | 11/01/2026 - 12/01/2026 | 2 ngày | A, B, C | Yêu cầu hiệu năng, ổn định, bảo mật |
-| D | T1.4 | Xác định phạm vi và ràng buộc | C | 13/01/2026 - 14/01/2026 | 2 ngày | A, B, C | Phạm vi demo và ràng buộc dự án |
-| E | T2.1 | Thiết kế kiến trúc tổng thể HW + SW | D | 15/01/2026 - 18/01/2026 | 4 ngày | A, B, C | Kiến trúc ESP32 - Django - React - AI |
-| F | T2.2 | Thiết kế sơ đồ mạch điện | E | 19/01/2026 - 21/01/2026 | 3 ngày | B | Sơ đồ mạch phần cứng |
-| G | T2.3 | Thiết kế giao thức truyền thông WebSocket/JSON | E | 22/01/2026 - 24/01/2026 | 3 ngày | B | Định dạng telemetry, command, ACK |
-| H | T2.4 | Thiết kế cơ sở dữ liệu | E | 25/01/2026 - 27/01/2026 | 3 ngày | B | Schema database |
-| I | T2.5 | Thiết kế giao diện Web wireframe/mockup | E | 28/01/2026 - 30/01/2026 | 3 ngày | B | Wireframe/mockup dashboard |
-| J | T2.6 | Thiết kế pipeline AI ARX - Kalman - MPC | E | 19/01/2026 - 25/01/2026 | 7 ngày | A, C | Sơ đồ pipeline AI/control |
-| K | T3.1 | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | F | 31/01/2026 - 08/02/2026 | 9 ngày | B | Prototype phần cứng |
-| L | T3.2 | Lập trình firmware ESP32 | K, G | 03/03/2026 - 16/03/2026 | 14 ngày | B | Firmware đọc cảm biến, relay, WebSocket Client |
-| M | T3.3 | Phát triển Backend Django + WebSocket Server | G, H | 21/03/2026 - 03/04/2026 | 14 ngày | B | Django API, Database, WebSocket Server |
-| N | T3.4 | Phát triển Web Dashboard ReactJS | I, M | 04/04/2026 - 17/04/2026 | 14 ngày | B | Dashboard giám sát và điều khiển |
-| O | T3.5 | Huấn luyện mô hình ARX | J | 03/03/2026 - 23/03/2026 | 21 ngày | A | Mô hình ARX |
-| P | T3.6 | Phát triển Kalman Filter | O, J | 24/03/2026 - 06/04/2026 | 14 ngày | C | Bộ lọc Kalman |
-| Q | T3.7 | Phát triển MPC Controller | P | 07/04/2026 - 20/04/2026 | 14 ngày | C | Bộ điều khiển MPC |
-| R | T3.8 | Tích hợp AI vào Backend | M, N, Q | 21/04/2026 - 24/04/2026 | 4 ngày | A, B, C | Pipeline AI/control tích hợp backend |
-| S | T4.1 | Kiểm thử phần cứng và firmware | K, L | 17/03/2026 - 20/03/2026 | 4 ngày | B | Báo cáo kiểm thử HW/FW |
-| T | T4.2 | Kiểm thử Backend, Web và AI | M, N, Q, R | 25/04/2026 - 27/04/2026 | 3 ngày | A, B, C | Báo cáo kiểm thử module |
-| U | T4.3 | Kiểm thử tích hợp end-to-end | S, T | 28/04/2026 - 02/05/2026 | 5 ngày | A, B, C | Báo cáo kiểm thử tích hợp |
-| V | T5.1 | Hiệu chỉnh phần cứng và mô hình AI | U | 03/05/2026 - 06/05/2026 | 4 ngày | A, B, C | Hệ thống sau hiệu chỉnh |
-| W | T5.2 | Hoàn thành báo cáo và bảo vệ đồ án | V | 07/05/2026 - 10/05/2026 | 4 ngày | A, B, C | Báo cáo, slide, kịch bản demo |
+| AC | WBS | Hoạt động | Công việc trước đó | Thời gian | Thời lượng |
+|:--:|:---:|-----------|--------------------|-----------|:----------:|
+| A | T1.1 | Khảo sát các giải pháp nhà kính thông minh hiện có | - | 05/01/2026 - 07/01/2026 | 3 ngày |
+| B | T1.2 | Xác định yêu cầu chức năng | A | 08/01/2026 - 10/01/2026 | 3 ngày |
+| C | T1.3 | Xác định yêu cầu phi chức năng | B | 11/01/2026 - 12/01/2026 | 2 ngày |
+| D | T1.4 | Xác định phạm vi và ràng buộc | C | 13/01/2026 - 14/01/2026 | 2 ngày |
+| E | T2.1 | Thiết kế kiến trúc tổng thể HW + SW | D | 15/01/2026 - 18/01/2026 | 4 ngày |
+| F | T2.2 | Thiết kế sơ đồ mạch điện | E | 19/01/2026 - 21/01/2026 | 3 ngày |
+| G | T2.3 | Thiết kế giao thức truyền thông WebSocket/JSON | E | 22/01/2026 - 24/01/2026 | 3 ngày |
+| H | T2.4 | Thiết kế cơ sở dữ liệu | E | 25/01/2026 - 27/01/2026 | 3 ngày |
+| I | T2.5 | Thiết kế giao diện Web wireframe/mockup | E | 28/01/2026 - 30/01/2026 | 3 ngày |
+| J | T2.6 | Thiết kế pipeline AI ARX - Kalman - MPC | E | 19/01/2026 - 25/01/2026 | 7 ngày |
+| K | T3.1 | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | F | 31/01/2026 - 08/02/2026 | 9 ngày |
+| L | T3.2 | Lập trình firmware ESP32 | K | 03/03/2026 - 16/03/2026 | 14 ngày |
+| M | T3.3 | Phát triển Backend Django + WebSocket Server | G, H | 21/03/2026 - 03/04/2026 | 14 ngày |
+| N | T3.4 | Phát triển Web Dashboard ReactJS | I | 04/04/2026 - 17/04/2026 | 14 ngày |
+| O | T3.5 | Huấn luyện mô hình ARX | J | 03/03/2026 - 23/03/2026 | 21 ngày |
+| P | T3.6 | Phát triển Kalman Filter | O, J | 24/03/2026 - 06/04/2026 | 14 ngày |
+| Q | T3.7 | Phát triển MPC Controller | P | 07/04/2026 - 20/04/2026 | 14 ngày |
+| R | T3.8 | Tích hợp AI vào Backend | M, Q | 21/04/2026 - 24/04/2026 | 4 ngày |
+| S | T4.1 | Kiểm thử phần cứng và firmware | K, L | 17/03/2026 - 20/03/2026 | 4 ngày |
+| T | T4.2 | Kiểm thử Backend, Web và AI | M, N, Q, R | 25/04/2026 - 27/04/2026 | 3 ngày |
+| U | T4.3 | Kiểm thử tích hợp end-to-end | S, T | 28/04/2026 - 02/05/2026 | 5 ngày |
+| V | T5.1 | Hiệu chỉnh phần cứng và mô hình AI | U | 03/05/2026 - 06/05/2026 | 4 ngày |
+| W | T5.2 | Hoàn thành báo cáo và bảo vệ đồ án | V | 07/05/2026 - 10/05/2026 | 4 ngày |
 
 Ghi chú: Khoảng thời gian từ 09/02/2026 đến 02/03/2026 là giai đoạn nghỉ Tết/nghỉ giữa tiến độ nên nhóm không bố trí công việc phát triển chính. Các công việc sau kỳ nghỉ bắt đầu lại từ ngày 03/03/2026.
 
@@ -75,13 +75,13 @@ Bảng phân công thời gian
 | I | Thiết kế giao diện Web wireframe/mockup | 28/01 | 30/01 | 3 | E |
 | J | Thiết kế pipeline AI ARX - Kalman - MPC | 19/01 | 25/01 | 7 | E |
 | K | Lắp ráp phần cứng mạch, cảm biến, relay, Solar Tracking | 31/01 | 08/02 | 9 | F |
-| L | Lập trình firmware ESP32 | 03/03 | 16/03 | 14 | K, G |
+| L | Lập trình firmware ESP32 | 03/03 | 16/03 | 14 | K |
 | M | Phát triển Backend Django + WebSocket Server | 21/03 | 03/04 | 14 | G, H |
-| N | Phát triển Web Dashboard ReactJS | 04/04 | 17/04 | 14 | I, M |
+| N | Phát triển Web Dashboard ReactJS | 04/04 | 17/04 | 14 | I |
 | O | Huấn luyện mô hình ARX | 03/03 | 23/03 | 21 | J |
 | P | Phát triển Kalman Filter | 24/03 | 06/04 | 14 | O, J |
 | Q | Phát triển MPC Controller | 07/04 | 20/04 | 14 | P |
-| R | Tích hợp AI vào Backend | 21/04 | 24/04 | 4 | M, N, Q |
+| R | Tích hợp AI vào Backend | 21/04 | 24/04 | 4 | M, Q |
 | S | Kiểm thử phần cứng và firmware | 17/03 | 20/03 | 4 | K, L |
 | T | Kiểm thử Backend, Web và AI | 25/04 | 27/04 | 3 | M, N, Q, R |
 | U | Kiểm thử tích hợp end-to-end | 28/04 | 02/05 | 5 | S, T |
@@ -92,7 +92,26 @@ Từ bảng phân công thời gian, nhóm có thể xây dựng sơ đồ GANTT
 
 Trên sơ đồ Gantt, khoảng trống từ 09/02/2026 đến 02/03/2026 thể hiện giai đoạn nghỉ Tết/nghỉ giữa tiến độ, không phải thiếu công việc trong lịch biểu.
 
-Hình 7. Gantt tổng quan theo tuần làm việc
+![Hình 7a. Gantt lý thuyết theo kế hoạch dự án](image/Chuong05_LapLichBieu/gantt_ly_thuyet.png)
+
+Hình 7a. Gantt lý thuyết theo kế hoạch dự án
+
+Trong quá trình thực hiện, dự án phát sinh trễ ở hai giai đoạn chính: thiết kế pipeline AI và phát triển bộ điều khiển MPC. Để không làm thay đổi mốc kết thúc dự án, nhóm rút ngắn thời gian kiểm thử module, kiểm thử tích hợp và hiệu chỉnh hệ thống ở giai đoạn cuối.
+
+| Hoạt động | Kế hoạch | Thực tế | Ghi chú |
+|-----------|----------|---------|---------|
+| J - Thiết kế pipeline AI | 19/01 - 25/01 | 19/01 - 01/02 | Trễ do thiết kế AI/control phức tạp hơn dự kiến |
+| P - Phát triển Kalman Filter | 24/03 - 06/04 | 24/03 - 09/04 | Kéo dài do cần xử lý nhiễu cảm biến |
+| Q - Phát triển MPC Controller | 07/04 - 20/04 | 10/04 - 27/04 | Trễ do tuning tham số MPC |
+| R - Tích hợp AI vào Backend | 21/04 - 24/04 | 28/04 - 01/05 | Bị dời theo tiến độ MPC |
+| T - Kiểm thử Backend, Web và AI | 25/04 - 27/04 | 02/05 - 03/05 | Rút ngắn để bù tiến độ |
+| U - Kiểm thử tích hợp end-to-end | 28/04 - 02/05 | 04/05 - 05/05 | Rút ngắn nhờ kiểm thử song song |
+| V - Hiệu chỉnh phần cứng và mô hình AI | 03/05 - 06/05 | 06/05 - 07/05 | Rút ngắn các hạng mục hiệu chỉnh phụ |
+| W - Hoàn thành báo cáo và bảo vệ đồ án | 07/05 - 10/05 | 08/05 - 10/05 | Dồn hoàn thiện báo cáo và demo |
+
+![Hình 7b. Gantt thực tế khi dự án bị trễ và bù tiến độ](image/Chuong05_LapLichBieu/gantt_thuc_te.png)
+
+Hình 7b. Gantt thực tế khi dự án bị trễ và bù tiến độ
 
 ## 5.5 Sơ đồ PDM
 
