@@ -42,6 +42,8 @@ Bảng 29. TimeSheet nhiệm vụ
 | T4.1 - T4.3 | Kiểm thử | Tuần 11 | Tuần 13 | Tuần 12 | Tuần 13 | 100% | Bắt đầu trễ do AI trễ |
 | T5.1 - T5.2 | Hoàn thành | Tuần 13 | Tuần 15 | Tuần 13 | Tuần 15 | 100% | Đúng tiến độ |
 
+Sơ đồ Gantt thực tế của dự án được trình bày tại Hình 7b trong mục 5.4, thể hiện rõ các hoạt động J, P, Q, R bị trễ/dời lịch và các hoạt động T, U, V, W được rút ngắn để bù tiến độ.
+
 b) Time sheet cá nhân
 
 Bảng 30. TimeSheet cá nhân
@@ -134,7 +136,7 @@ Bảng 34. Áp dụng EVM cho tuần 10
 | SPI | 326/351 = 0.93 | Chậm 7% so với KH |
 | CPI | 326/343 = 0.95 | Chi phí vượt 5% |
 
-Nhận xét: SPI = 0.93 cho thấy dự án chậm 7% tại tuần 10, chủ yếu do module MPC. Sau can thiệp (tăng giờ A, B hỗ trợ), dự án đã hoàn thành đúng hạn tuần 15.
+Nhận xét: SPI = 0.93 cho thấy dự án chậm 7% tại tuần 10, chủ yếu do module MPC. Sau can thiệp (tăng giờ C, A hỗ trợ dữ liệu mô phỏng ARX và B hỗ trợ kiểm thử tích hợp), dự án đã hoàn thành đúng hạn tuần 15.
 
 Ngưỡng cảnh báo: Hầu hết tổ chức đặt ngưỡng khi CPI hoặc SPI nằm ngoài khoảng 0.90–1.10. Khi vượt ngưỡng → yêu cầu phân tích nguyên nhân và báo cáo giải trình.
 
@@ -186,7 +188,7 @@ Bảng 38. Theo dõi và giải quyết vấn đề thực tế
 | ID | Vấn đề phát sinh | Giai đoạn | Biện pháp xử lý | Trạng thái |
 |----|------------------|-----------|-----------------|------------|
 | VĐ01 | Sai số lớn trong mô hình ARX và dữ liệu cảm biến nhiễu | Tuần 5–8 | Áp dụng Adaptive Kalman Filter và Receding Horizon | Đã xử lý |
-| VĐ02 | Trễ tiến độ module MPC | Tuần 9–10 | Tăng giờ làm việc và hỗ trợ kiểm thử tích hợp | Đã xử lý |
+| VĐ02 | Trễ tiến độ module MPC | Tuần 9–10 | Tăng giờ làm việc của C, A hỗ trợ dữ liệu mô phỏng ARX và B hỗ trợ kiểm thử tích hợp | Đã xử lý |
 | VĐ03 | Cảm biến DHT22 bị hỏng | Tuần 11 | Thay thế cảm biến dự phòng và hiệu chuẩn lại | Đã xử lý |
 | VĐ04 | Mất kết nối WebSocket giữa ESP32 và Server | Tuần 12 | Bổ sung Auto-reconnect và buffer dữ liệu | Đã xử lý |
 
@@ -242,8 +244,8 @@ Trong dự án Smart Greenhouse, giai đoạn Phát triển AI bị trễ 1 tu�
 
 Biện pháp đã áp dụng:
 
-- Tăng giờ làm việc của thành viên A (từ 20h → 28h/tuần trong tuần 9–10).
-- Sử dụng dữ liệu mô phỏng để huấn luyện song song, không chờ dữ liệu thực.
+- Tăng giờ làm việc của thành viên C (từ 20h → 28h/tuần trong tuần 9–10) để tập trung xử lý Kalman Filter và MPC Controller.
+- A hỗ trợ C chuẩn bị dữ liệu mô phỏng từ mô hình ARX để kiểm thử MPC độc lập, không chờ dữ liệu thực.
 - B hỗ trợ kiểm thử phần tích hợp ESP32 ↔ Backend trong khi C tập trung MPC.
 
 ### 8.5.2 Khi chi phí có nguy cơ tăng
@@ -281,13 +283,13 @@ Bảng 41. Phân loại thay đổi
 
 Bảng 42. Nhật ký kiểm soát thay đổi
 
-| STT | Ngày | Mô tả thay đổi | Nguồn | Loại | Tác động | Quyết định |
-|-----|------|----------------|-------|------|----------|------------|
-| 1 | Tuần 3 | Thêm Adaptive Kalman Filter (IAE) thay Kalman cơ bản | Nhóm dev | Quan trọng | +1 tuần phát triển AI | Chấp nhận |
-| 2 | Tuần 5 | Giảng viên yêu cầu thêm chức năng cảnh báo ngưỡng trên Web | Giảng viên | Bổ sung | +3 ngày phát triển Web | Chấp nhận |
-| 3 | Tuần 7 | Đổi giao thức HTTP polling sang WebSocket | Nhóm dev | Quan trọng | Thiết kế lại truyền thông, nhưng cải thiện realtime | Chấp nhận |
-| 4 | Tuần 9 | Thêm trang dự báo xu hướng trên Dashboard | Nhóm dev | Bổ sung | +2 ngày phát triển Web | Chấp nhận |
-| 5 | Tuần 11 | Thay cảm biến DHT22 hỏng bằng cảm biến dự phòng | Kỹ thuật | Ít quan trọng | +60.000 VNĐ chi phí | Chấp nhận |
+| STT | Ngày | Mô tả thay đổi | Người chịu trách nhiệm | Loại | Tác động | Quyết định |
+|-----|------|----------------|-------------------------|------|----------|------------|
+| 1 | Tuần 3 | Kéo dài thiết kế pipeline AI do cần bổ sung Kalman Filter và MPC | A, C | Quan trọng | Hoạt động J trễ 1 tuần, từ 19/01-25/01 thành 19/01-01/02 | Chấp nhận |
+| 2 | Tuần 8-9 | Kéo dài phát triển Kalman Filter để xử lý nhiễu cảm biến | C | Quan trọng | Hoạt động P kéo dài đến 09/04 | Chấp nhận |
+| 3 | Tuần 9-10 | Điều chỉnh tiến độ MPC Controller do tuning phức tạp hơn dự kiến | C | Quan trọng | Hoạt động Q dời thành 10/04-27/04, kéo theo R dời sang 28/04-01/05 | Chấp nhận |
+| 4 | Tuần 12-13 | Rút ngắn kiểm thử module và kiểm thử tích hợp để bù tiến độ | A, B, C | Điều chỉnh tiến độ | T, U, V được rút ngắn nhưng vẫn đảm bảo kiểm thử các chức năng chính | Chấp nhận |
+| 5 | Tuần 11 | Thay cảm biến DHT22 hỏng bằng cảm biến dự phòng | B | Ít quan trọng | Phát sinh 60.000 VNĐ chi phí, không làm trễ mốc cuối | Chấp nhận |
 
 ## 8.7 Kết thúc dự án
 
