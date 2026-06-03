@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #fff; }
+      .head { font: 700 22px Arial, sans-serif; fill: #fff; }
+      .sub { font: 700 18px Arial, sans-serif; }
+      .body { font: 16px Arial, sans-serif; fill: #111; }
+      .tag { font: 700 13px Arial, sans-serif; fill: #fff; }
+      .line { stroke: #333; stroke-width: 2; fill: none; }
+      .soft { fill: #f8fbff; stroke-width: 1.2; }
+      .green { fill: #3b8f20; }
+      .blue { fill: #005bd1; }
+      .orange { fill: #f05a00; }
+      .purple { fill: #6120a7; }
+      .teal { fill: #07828a; }
+      .greenText { fill: #2d7b18; }
+      .blueText { fill: #005bd1; }
+      .orangeText { fill: #f05a00; }
+      .purpleText { fill: #6120a7; }
+      .tealText { fill: #07828a; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#ffffff"/>
+
+  <rect x="470" y="14" width="660" height="58" rx="8" class="blue"/>
+  <text x="800" y="52" text-anchor="middle" class="title">HỆ THỐNG NHÀ KÍNH THÔNG MINH</text>
+
+  <path d="M800 72 V108 M160 108 H1440 M160 108 V130 M460 108 V130 M810 108 V130 M1110 108 V130 M1440 108 V130" class="line"/>
+
+  <!-- Column P1 -->
+  <rect x="24" y="130" width="280" height="54" rx="8" class="green"/>
+  <text x="164" y="164" text-anchor="middle" class="head">P1: Phần cứng</text>
+
+  <path d="M24 156 H8 V900 H24 M8 240 H48 M8 520 H48 M8 690 H48 M8 850 H48" class="line"/>
+  <rect x="48" y="215" width="250" height="50" rx="6" class="soft" stroke="#3b8f20"/>
+  <text x="173" y="247" text-anchor="middle" class="sub greenText">P1.1: Module cảm biến</text>
+  <rect x="70" y="282" width="230" height="62" rx="5" class="soft" stroke="#3b8f20"/>
+  <rect x="82" y="294" width="24" height="24" rx="3" class="green"/><text x="94" y="312" text-anchor="middle" class="tag">T2</text>
+  <text x="175" y="306" text-anchor="middle" class="body"><tspan x="175" dy="0">Thiết kế sơ đồ</tspan><tspan x="175" dy="22">kết nối cảm biến</tspan></text>
+  <rect x="70" y="360" width="230" height="62" rx="5" class="soft" stroke="#3b8f20"/>
+  <rect x="82" y="372" width="24" height="24" rx="3" class="green"/><text x="94" y="390" text-anchor="middle" class="tag">T3</text>
+  <text x="178" y="384" text-anchor="middle" class="body"><tspan x="178" dy="0">Lắp ráp &amp; đấu nối</tspan><tspan x="178" dy="22">DHT22, Soil, LDR</tspan></text>
+  <rect x="70" y="438" width="230" height="62" rx="5" class="soft" stroke="#3b8f20"/>
+  <rect x="82" y="450" width="24" height="24" rx="3" class="green"/><text x="94" y="468" text-anchor="middle" class="tag">T4</text>
+  <text x="178" y="462" text-anchor="middle" class="body"><tspan x="178" dy="0">Kiểm thử giá trị</tspan><tspan x="178" dy="22">cảm biến</tspan></text>
+
+  <rect x="48" y="520" width="250" height="50" rx="6" class="soft" stroke="#3b8f20"/>
+  <text x="173" y="552" text-anchor="middle" class="sub greenText">P1.2: Module relay + actuator</text>
+  <rect x="70" y="585" width="230" height="62" rx="5" class="soft" stroke="#3b8f20"/>
+  <rect x="82" y="597" width="24" height="24" rx="3" class="green"/><text x="94" y="615" text-anchor="middle" class="tag">T3</text>
+  <text x="180" y="608" text-anchor="middle" class="body"><tspan x="180" dy="0">Lắp ráp relay, bơm *2,</tspan><tspan x="180" dy="22">quạt, phun sương, đèn LED</tspan></text>
+
+  <rect x="48" y="690" width="250" height="50" rx="6" class="soft" stroke="#3b8f20"/>
+  <text x="173" y="722" text-anchor="middle" class="sub greenText">P1.3: Mô hình nhà kính</text>
+  <rect x="70" y="755" width="230" height="62" rx="5" class="soft" stroke="#3b8f20"/>
+  <rect x="82" y="767" width="24" height="24" rx="3" class="green"/><text x="94" y="785" text-anchor="middle" class="tag">T3</text>
+  <text x="178" y="778" text-anchor="middle" class="body"><tspan x="178" dy="0">Xây dựng khung</tspan><tspan x="178" dy="22">nhà kính, bố trí thiết bị</tspan></text>
+
+  <rect x="48" y="850" width="250" height="50" rx="6" class="soft" stroke="#3b8f20"/>
+  <text x="173" y="882" text-anchor="middle" class="sub greenText">P1.4: Module Solar Tracking</text>
+  <rect x="70" y="915" width="230" height="62" rx="5" class="soft" stroke="#3b8f20"/>
+  <rect x="82" y="927" width="24" height="24" rx="3" class="green"/><text x="94" y="945" text-anchor="middle" class="tag">T3</text>
+  <text x="180" y="936" text-anchor="middle" class="body"><tspan x="180" dy="0">Lắp ráp tấm pin TP4056,</tspan><tspan x="180" dy="22">servo *2, LDR *4, relay *3</tspan></text>
+
+  <!-- Column P2 -->
+  <rect x="340" y="130" width="280" height="54" rx="8" class="blue"/>
+  <text x="480" y="164" text-anchor="middle" class="head">P2: Firmware ESP32</text>
+  <path d="M340 156 H324 V610 H340 M324 240 H364 M324 390 H364 M324 550 H364" class="line"/>
+  <rect x="365" y="215" width="260" height="50" rx="6" class="soft" stroke="#005bd1"/>
+  <text x="495" y="247" text-anchor="middle" class="sub blueText">P2.1: Module đọc cảm biến</text>
+  <rect x="388" y="282" width="250" height="72" rx="5" class="soft" stroke="#005bd1"/>
+  <rect x="400" y="295" width="24" height="24" rx="3" class="blue"/><text x="412" y="313" text-anchor="middle" class="tag">T3</text>
+  <text x="520" y="308" text-anchor="middle" class="body"><tspan x="520" dy="0">Lập trình đọc</tspan><tspan x="520" dy="22">DHT22, Soil, LDR</tspan></text>
+  <rect x="365" y="390" width="260" height="50" rx="6" class="soft" stroke="#005bd1"/>
+  <text x="495" y="422" text-anchor="middle" class="sub blueText">P2.2: Module WebSocket Client</text>
+  <rect x="388" y="457" width="250" height="72" rx="5" class="soft" stroke="#005bd1"/>
+  <rect x="400" y="470" width="24" height="24" rx="3" class="blue"/><text x="412" y="488" text-anchor="middle" class="tag">T3</text>
+  <text x="520" y="483" text-anchor="middle" class="body"><tspan x="520" dy="0">Lập trình kết nối</tspan><tspan x="520" dy="22">WiFi, gửi/nhận dữ liệu</tspan></text>
+  <rect x="365" y="550" width="260" height="50" rx="6" class="soft" stroke="#005bd1"/>
+  <text x="495" y="582" text-anchor="middle" class="sub blueText">P2.3: Module điều khiển relay</text>
+  <rect x="388" y="617" width="250" height="72" rx="5" class="soft" stroke="#005bd1"/>
+  <rect x="400" y="630" width="24" height="24" rx="3" class="blue"/><text x="412" y="648" text-anchor="middle" class="tag">T3</text>
+  <text x="520" y="642" text-anchor="middle" class="body"><tspan x="520" dy="0">Lập trình nhận lệnh -</tspan><tspan x="520" dy="22">kích relay - ACK,</tspan><tspan x="520" dy="22">Manual/Auto</tspan></text>
+
+  <!-- Column P3 -->
+  <rect x="660" y="130" width="310" height="54" rx="8" class="orange"/>
+  <text x="815" y="164" text-anchor="middle" class="head">P3: Backend + AI</text>
+  <path d="M660 156 H644 V925 H660 M644 240 H690 M644 370 H690 M644 505 H690 M644 675 H690 M644 795 H690 M644 910 H690" class="line"/>
+  <rect x="690" y="215" width="300" height="50" rx="6" class="soft" stroke="#f05a00"/>
+  <text x="840" y="247" text-anchor="middle" class="sub orangeText">P3.1: Django Server + API + Database</text>
+  <rect x="720" y="282" width="270" height="62" rx="5" class="soft" stroke="#f05a00"/>
+  <rect x="732" y="294" width="24" height="24" rx="3" class="orange"/><text x="744" y="312" text-anchor="middle" class="tag">T3</text>
+  <text x="858" y="305" text-anchor="middle" class="body"><tspan x="858" dy="0">Phát triển REST API,</tspan><tspan x="858" dy="22">MySQL schema, migrations</tspan></text>
+  <rect x="690" y="365" width="300" height="50" rx="6" class="soft" stroke="#f05a00"/>
+  <text x="840" y="397" text-anchor="middle" class="sub orangeText">P3.2: Django Channels</text>
+  <rect x="720" y="432" width="270" height="62" rx="5" class="soft" stroke="#f05a00"/>
+  <rect x="732" y="444" width="24" height="24" rx="3" class="orange"/><text x="744" y="462" text-anchor="middle" class="tag">T3</text>
+  <text x="858" y="457" text-anchor="middle" class="body"><tspan x="858" dy="0">Phát triển WebSocket</tspan><tspan x="858" dy="22">Server</tspan></text>
+  <rect x="690" y="500" width="300" height="50" rx="6" class="soft" stroke="#f05a00"/>
+  <text x="840" y="532" text-anchor="middle" class="sub orangeText">P3.3: Mô hình ARX</text>
+  <rect x="720" y="565" width="270" height="62" rx="5" class="soft" stroke="#f05a00"/>
+  <rect x="732" y="577" width="24" height="24" rx="3" class="orange"/><text x="744" y="595" text-anchor="middle" class="tag">T1</text>
+  <text x="858" y="590" text-anchor="middle" class="body"><tspan x="858" dy="0">Thu thập và xử lý dữ liệu</tspan><tspan x="858" dy="22">105, 120 mẫu</tspan></text>
+  <rect x="720" y="635" width="270" height="62" rx="5" class="soft" stroke="#f05a00"/>
+  <rect x="732" y="647" width="24" height="24" rx="3" class="orange"/><text x="744" y="665" text-anchor="middle" class="tag">T3</text>
+  <text x="858" y="660" text-anchor="middle" class="body"><tspan x="858" dy="0">Huấn luyện ARX(5,1,2),</tspan><tspan x="858" dy="22">đánh giá FIT/RMSE</tspan></text>
+  <rect x="690" y="715" width="300" height="50" rx="6" class="soft" stroke="#f05a00"/>
+  <text x="840" y="747" text-anchor="middle" class="sub orangeText">P3.4: Kalman Filter</text>
+  <rect x="720" y="780" width="270" height="62" rx="5" class="soft" stroke="#f05a00"/>
+  <rect x="732" y="792" width="24" height="24" rx="3" class="orange"/><text x="744" y="810" text-anchor="middle" class="tag">T3</text>
+  <text x="858" y="805" text-anchor="middle" class="body"><tspan x="858" dy="0">Phát triển Adaptive</tspan><tspan x="858" dy="22">Kalman Filter với IAE</tspan></text>
+  <rect x="690" y="855" width="300" height="50" rx="6" class="soft" stroke="#f05a00"/>
+  <text x="840" y="887" text-anchor="middle" class="sub orangeText">P3.5: MPC Controller</text>
+  <rect x="720" y="920" width="270" height="62" rx="5" class="soft" stroke="#f05a00"/>
+  <rect x="732" y="932" width="24" height="24" rx="3" class="orange"/><text x="744" y="950" text-anchor="middle" class="tag">T3</text>
+  <text x="858" y="942" text-anchor="middle" class="body"><tspan x="858" dy="0">Phát triển hàm chi phí</tspan><tspan x="858" dy="22">Zone/Range, ràng buộc,</tspan><tspan x="858" dy="22">tối ưu</tspan></text>
+
+  <!-- Column P4 -->
+  <rect x="1010" y="130" width="280" height="54" rx="8" class="purple"/>
+  <text x="1150" y="164" text-anchor="middle" class="head">P4: Web Dashboard</text>
+  <path d="M1010 156 H994 V500 H1010 M994 240 H1035 M994 390 H1035" class="line"/>
+  <rect x="1035" y="215" width="260" height="50" rx="6" class="soft" stroke="#6120a7"/>
+  <text x="1165" y="247" text-anchor="middle" class="sub purpleText">P4.1: Giao diện giám sát</text>
+  <rect x="1060" y="282" width="235" height="92" rx="5" class="soft" stroke="#6120a7"/>
+  <rect x="1072" y="296" width="24" height="24" rx="3" class="purple"/><text x="1084" y="314" text-anchor="middle" class="tag">T3</text>
+  <text x="1188" y="314" text-anchor="middle" class="body"><tspan x="1188" dy="0">Phát triển Dashboard,</tspan><tspan x="1188" dy="22">biểu đồ real-time,</tspan><tspan x="1188" dy="22">cảnh báo</tspan></text>
+  <rect x="1035" y="405" width="260" height="50" rx="6" class="soft" stroke="#6120a7"/>
+  <text x="1165" y="437" text-anchor="middle" class="sub purpleText">P4.2: Giao diện điều khiển</text>
+  <rect x="1060" y="472" width="235" height="92" rx="5" class="soft" stroke="#6120a7"/>
+  <rect x="1072" y="486" width="24" height="24" rx="3" class="purple"/><text x="1084" y="504" text-anchor="middle" class="tag">T3</text>
+  <text x="1188" y="504" text-anchor="middle" class="body"><tspan x="1188" dy="0">Phát triển nút bật/tắt</tspan><tspan x="1188" dy="22">thiết bị, trạng thái</tspan><tspan x="1188" dy="22">tự động (Auto)</tspan></text>
+
+  <!-- Column P5 -->
+  <rect x="1305" y="130" width="270" height="54" rx="8" class="teal"/>
+  <text x="1440" y="164" text-anchor="middle" class="head">P5: Kiểm thử</text>
+  <path d="M1305 156 H1288 V800 H1305 M1288 240 H1330 M1288 520 H1330 M1288 690 H1330" class="line"/>
+  <rect x="1330" y="215" width="245" height="50" rx="6" class="soft" stroke="#07828a"/>
+  <text x="1452" y="247" text-anchor="middle" class="sub tealText">P5.1: Kiểm thử hệ thống</text>
+  <rect x="1360" y="285" width="215" height="74" rx="5" class="soft" stroke="#07828a"/>
+  <rect x="1372" y="300" width="46" height="24" rx="3" class="teal"/><text x="1395" y="318" text-anchor="middle" class="tag">T4_HW</text>
+  <text x="1480" y="306" text-anchor="middle" class="body"><tspan x="1480" dy="0">Kiểm thử phần cứng</tspan><tspan x="1480" dy="22">và firmware</tspan></text>
+  <rect x="1360" y="375" width="215" height="74" rx="5" class="soft" stroke="#07828a"/>
+  <rect x="1372" y="390" width="46" height="24" rx="3" class="teal"/><text x="1395" y="408" text-anchor="middle" class="tag">T4_SW</text>
+  <text x="1480" y="396" text-anchor="middle" class="body"><tspan x="1480" dy="0">Kiểm thử Backend,</tspan><tspan x="1480" dy="22">Web Dashboard và AI</tspan></text>
+  <rect x="1330" y="520" width="245" height="50" rx="6" class="soft" stroke="#07828a"/>
+  <text x="1452" y="552" text-anchor="middle" class="sub tealText">P5.2: Hiệu chỉnh</text>
+  <rect x="1360" y="595" width="215" height="92" rx="5" class="soft" stroke="#07828a"/>
+  <rect x="1372" y="612" width="24" height="24" rx="3" class="teal"/><text x="1384" y="630" text-anchor="middle" class="tag">T4</text>
+  <text x="1480" y="620" text-anchor="middle" class="body"><tspan x="1480" dy="0">Hiệu chỉnh cảm biến,</tspan><tspan x="1480" dy="22">tune tham số MPC,</tspan><tspan x="1480" dy="22">sửa lỗi</tspan></text>
+  <rect x="1330" y="720" width="245" height="50" rx="6" class="soft" stroke="#07828a"/>
+  <text x="1452" y="752" text-anchor="middle" class="sub tealText">P5.3: Hoàn thành dự án</text>
+  <rect x="1360" y="795" width="215" height="92" rx="5" class="soft" stroke="#07828a"/>
+  <rect x="1372" y="812" width="24" height="24" rx="3" class="teal"/><text x="1384" y="830" text-anchor="middle" class="tag">T5</text>
+  <text x="1480" y="820" text-anchor="middle" class="body"><tspan x="1480" dy="0">Demo hoàn chỉnh,</tspan><tspan x="1480" dy="22">báo cáo PBL + QLDA,</tspan><tspan x="1480" dy="22">slide, bảo vệ</tspan></text>
+</svg>
